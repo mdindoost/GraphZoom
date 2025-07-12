@@ -12,7 +12,7 @@ from embed_methods.deepwalk.deepwalk import *
 from embed_methods.node2vec.node2vec import *
 from utils import *
 from scoring import lr
-from cmg_coarsening import cmg_coarse, cmg_coarse_fusion
+from cmg_coarsening_timed import cmg_coarse, cmg_coarse_fusion
 
 
 def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_path, \
@@ -69,6 +69,12 @@ def main():
             help="CMG embedding dimension (only for CMG coarsening)")  
     parser.add_argument("--cmg_threshold", type=float, default=0.1, \
             help="CMG cosine similarity threshold (only for CMG coarsening)")
+    parser.add_argument("--seed", type=int, default=42, \
+            help="Random seed for reproducibility")
+    parser.add_argument("--seed", type=int, default=42, \
+            help="CMG cosine similarity threshold (only for CMG coarsening)")
+    parser.add_argument("--seed", type=int, default=42, \
+            help="Random seed for reproducibility")
 
     parser.add_argument("-c", "--mcr_dir", type=str, default="/opt/matlab/R2018A/", \
             help="directory of matlab compiler runtime (only required by lamg_coarsen)")
@@ -94,11 +100,9 @@ def main():
             help="aggregation function in graphsage")
     parser.add_argument("-w", "--sage_weighted", default=True, action="store_false", \
             help="whether consider weighted reduced graph")
-    parser.add_argument("--seed", type=int, default=42, \
-            help="Random seed for reproducibility")
-    
-    args = parser.parse_args()
 
+    args = parser.parse_args()
+    
     # Set random seed for reproducibility
     import random
     import numpy as np
@@ -221,6 +225,15 @@ def main():
     print(f"Graph Embedding  Time: {embed_time:.3f}")
     print(f"Graph Refinement Time: {refine_time:.3f}")
     print(f"Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = {total_time:.3f}")
+    
+    # Additional timing breakdown for CMG
+    if args.coarse == "cmg":
+        from filtered_timed import get_timing_summary
+        timing_summary = get_timing_summary()
+        if timing_summary:
+            print("\n%%%%%% CMG Detailed Timing %%%%%%")
+            for step, stats in timing_summary.items():
+                print(f"{step:25s}: {stats['latest']:.3f}s")
 
 
 if __name__ == "__main__":

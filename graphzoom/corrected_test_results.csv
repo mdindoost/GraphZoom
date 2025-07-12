@@ -1,0 +1,16 @@
+test_name,dataset,method,level,cmg_k,cmg_d,knn_neighbors,accuracy,time,clusters_found,compression_ratio,notes
+knn_default,cora,cmg,1,10,20,2,0.775,121.206,1025,2.64,completed
+knn_aggressive1,cora,cmg,1,10,20,5,0.759,120.957,1022,2.64,completed
+knn_aggressive2,cora,cmg,1,10,20,10,0.754,122.410,1030,2.62,completed
+knn_very_aggressive,cora,cmg,1,10,20,15,0.755,123.851,1031,2.62,completed
+current_best,cora,cmg,1,10,20,2,0.772,122.606,1025,2.64,completed
+smaller_d1,cora,cmg,1,10,15,2,0.762,123.574,1016,2.66,completed
+smaller_d2,cora,cmg,1,10,10,2,0.793,119.004,1003,2.69,completed
+smaller_d3,cora,cmg,1,10,5,2,0.766,121.552,1020,2.65,completed
+simple_baseline,cora,simple,1,0,0,2,0.776,216.007,1724,1.57,completed
+simple_knn5,cora,simple,1,0,0,5,0.744,189.894,1516,1.78,completed
+cmg_baseline,cora,cmg,1,10,20,2,0.773,118.517,1025,2.64,completed
+cmg_knn5,cora,cmg,1,10,20,5,0.766,120.749,1022,2.64,completed
+level1_compression,cora,cmg,1,10,20,2,0.776,123.339,1025,2.64,completed
+level2_compression,cora,cmg,2,10,20,2,0.774,39.551,412,6.57,completed
+level3_compression,cora,cmg,3,10,20,2,0.765,18.674,245,11.05,completed

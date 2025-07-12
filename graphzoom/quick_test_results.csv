@@ -1,0 +1,15 @@
+test_name,dataset,method,level,k,d,accuracy,time,notes
+level1_baseline,cora,cmg,1,10,20,0.777,120.891,completed
+level2_test,cora,cmg,2,10,20,0.772,39.148,completed
+level3_test,cora,cmg,3,10,20,0.769,19.519,completed
+current_best,cora,cmg,1,10,20,0.78,119.069,completed
+koutis_suggestion1,cora,cmg,1,25,10,0.756,116.004,completed
+koutis_suggestion2,cora,cmg,1,30,5,0.755,114.849,completed
+moderate_aggressive,cora,cmg,1,20,15,0.777,116.871,completed
+stability_run1,cora,cmg,1,10,20,0.759,124.258,completed
+stability_run2,cora,cmg,1,10,20,0.768,118.346,completed
+stability_run3,cora,cmg,1,10,20,0.775,123.913,completed
+simple_level1,cora,simple,1,0,0,0.774,214.126,completed
+simple_level2,cora,simple,2,0,0,0.771,154.199,completed
+cmg_level1_comp,cora,cmg,1,10,20,0.776,122.644,completed
+cmg_level2_comp,cora,cmg,2,10,20,0.772,41.046,completed
