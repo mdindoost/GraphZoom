@@ -1,9 +1,0 @@
-experiment,dataset,coarsening,embedding,accuracy,total_time,notes
-cora_simple_deepwalk,cora,simple,deepwalk,0.766,213.308,completed
-cora_cmg_default,cora,cmg,deepwalk,0.765,122.461,completed
-cora_cmg_k5,cora,cmg,deepwalk,0.77,120.818,completed
-cora_cmg_k15,cora,cmg,deepwalk,0.77,114.697,completed
-cora_cmg_d30,cora,cmg,deepwalk,0.773,119.703,completed
-cora_cmg_thresh05,cora,cmg,deepwalk,0.755,122.708,completed
-citeseer_simple,citeseer,simple,deepwalk,0.501,245.891,completed
-citeseer_cmg,citeseer,cmg,deepwalk,0.5,163.798,completed

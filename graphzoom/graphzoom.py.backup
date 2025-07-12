@@ -94,16 +94,8 @@ def main():
             help="aggregation function in graphsage")
     parser.add_argument("-w", "--sage_weighted", default=True, action="store_false", \
             help="whether consider weighted reduced graph")
-    parser.add_argument("--seed", type=int, default=42, \
-            help="Random seed for reproducibility")
-    
-    args = parser.parse_args()
 
-    # Set random seed for reproducibility
-    import random
-    import numpy as np
-    random.seed(args.seed)
-    np.random.seed(args.seed)
+    args = parser.parse_args()
 
     dataset = args.dataset
     feature_path = "dataset/{}/{}-feats.npy".format(dataset, dataset)

@@ -1,0 +1,87 @@
+#!/bin/bash
+# Quick manual tests for Koutis's ideas
+
+echo "🔬 QUICK MANUAL TESTS FOR KOUTIS IDEAS"
+echo "======================================"
+
+# Create results file
+echo "test_name,dataset,method,level,k,d,accuracy,time,notes" > quick_test_results.csv
+
+run_test() {
+    local name=$1
+    local dataset=$2
+    local method=$3
+    local level=$4
+    local k=$5
+    local d=$6
+    local extra_params=$7
+    
+    echo "🔄 Running: $name"
+    
+    if [ "$method" = "cmg" ]; then
+        timeout 300 python graphzoom.py --dataset $dataset --coarse $method --level $level --cmg_k $k --cmg_d $d --embed_method deepwalk $extra_params > temp_log.txt 2>&1
+    else
+        timeout 300 python graphzoom.py --dataset $dataset --coarse $method --level $level --embed_method deepwalk $extra_params > temp_log.txt 2>&1
+    fi
+    
+    if [ $? -eq 0 ]; then
+        accuracy=$(grep "Test Accuracy:" temp_log.txt | awk '{print $3}')
+        time=$(grep "Total Time" temp_log.txt | awk '{print $NF}')
+        echo "$name,$dataset,$method,$level,$k,$d,$accuracy,$time,completed" >> quick_test_results.csv
+        echo "✅ $name: Accuracy=$accuracy, Time=${time}s"
+    else
+        echo "$name,$dataset,$method,$level,$k,$d,FAILED,TIMEOUT,failed" >> quick_test_results.csv
+        echo "❌ $name: FAILED/TIMEOUT"
+    fi
+    
+    rm -f temp_log.txt
+}
+
+echo ""
+echo "📊 TEST 1: Multi-level Effect"
+echo "----------------------------"
+run_test "level1_baseline" "cora" "cmg" 1 10 20
+run_test "level2_test" "cora" "cmg" 2 10 20  
+run_test "level3_test" "cora" "cmg" 3 10 20
+
+echo ""
+echo "🎯 TEST 2: Koutis Parameter Hypothesis (smaller d, higher k)"
+echo "----------------------------------------------------------"
+run_test "current_best" "cora" "cmg" 1 10 20
+run_test "koutis_suggestion1" "cora" "cmg" 1 25 10
+run_test "koutis_suggestion2" "cora" "cmg" 1 30 5
+run_test "moderate_aggressive" "cora" "cmg" 1 20 15
+
+echo ""
+echo "🔄 TEST 3: Stability Check (3 runs of same config)"
+echo "------------------------------------------------"
+run_test "stability_run1" "cora" "cmg" 1 10 20
+run_test "stability_run2" "cora" "cmg" 1 10 20
+run_test "stability_run3" "cora" "cmg" 1 10 20
+
+echo ""
+echo "⚖️ TEST 4: Simple vs CMG at Multiple Levels"
+echo "-------------------------------------------"
+run_test "simple_level1" "cora" "simple" 1 0 0
+run_test "simple_level2" "cora" "simple" 2 0 0
+run_test "cmg_level1_comp" "cora" "cmg" 1 10 20
+run_test "cmg_level2_comp" "cora" "cmg" 2 10 20
+
+echo ""
+echo "✅ All tests completed!"
+echo "📁 Results saved in: quick_test_results.csv"
+echo ""
+echo "📊 Quick Analysis:"
+echo "------------------"
+
+# Quick analysis
+if [ -f quick_test_results.csv ]; then
+    echo "Total tests run: $(tail -n +2 quick_test_results.csv | wc -l)"
+    echo "Failed tests: $(grep -c "FAILED\|TIMEOUT" quick_test_results.csv)"
+    echo ""
+    echo "Best accuracy: $(tail -n +2 quick_test_results.csv | cut -d',' -f7 | grep -v "FAILED" | sort -nr | head -1)"
+    echo "Fastest time: $(tail -n +2 quick_test_results.csv | cut -d',' -f8 | grep -v "TIMEOUT" | sort -n | head -1)"
+    echo ""
+    echo "📋 Full results:"
+    column -t -s',' quick_test_results.csv
+fi
