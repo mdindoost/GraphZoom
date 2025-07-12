@@ -1,0 +1,30 @@
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+%%%%%% Starting Graph Reduction %%%%%%
+Coarsening Level: 1
+Num of nodes:  14837 Num of edges:  41276
+%%%%%% Starting Graph Embedding %%%%%%
+Walk iteration:
+1 / 10
+2 / 10
+3 / 10
+4 / 10
+5 / 10
+6 / 10
+7 / 10
+8 / 10
+9 / 10
+10 / 10
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.787
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 10.203
+Graph Reduction  Time: 1.986
+Graph Embedding  Time: 1068.139
+Graph Refinement Time: 0.059
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 1080.386

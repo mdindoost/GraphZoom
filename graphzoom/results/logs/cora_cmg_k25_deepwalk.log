@@ -1,0 +1,5656 @@
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+[CMG] Starting CMG fusion coarsening
+[DEBUG] Starting CMG filtered clustering pipeline
+[DEBUG] Parameters: k=25, d=20, threshold=0.1
+[DEBUG] λ_critical ≈ 0.1481 for filter order k = 25
+[DEBUG] Original graph: 2708 nodes, 10556 edges
+[DEBUG] Building normalized Laplacian
+Applying spectral filter with k=25, input shape=(2708, 20)
+Spectral filtering complete. Output shape=(2708, 20)
+Reweighted adjacency matrix has 10148 nonzeros
+[DEBUG] Reweighted graph: 10148 edges
+[DEBUG] Calling CMG on reweighted Laplacian
+[DEBUG] CMG found 878 clusters
+[DEBUG] Converted clusters (0-indexed): [  0   1   2 ... 203 623 222]
+[DEBUG] Unweighted graph: 2708 nodes, 10556 edges
+
+[DEBUG] Cluster 0: 5 nodes [0, 8, 435, 544, 751]
+[DEBUG][φ] cut=10, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 1: 5 nodes [1, 316, 344, 2339, 2617]
+[DEBUG][φ] cut=33, deg_S=41, deg_comp=10515.0
+
+[DEBUG] Cluster 2: 4 nodes [2, 298, 305, 410]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 3: 4 nodes [3, 333, 463, 601]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 4: 2 nodes [4, 170]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 5: 8 nodes [5, 515, 623, 637, 1749, 2164, 2521, 2529]
+[DEBUG][φ] cut=10, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 6: 5 nodes [6, 213, 490, 492, 734]
+[DEBUG][φ] cut=10, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 7: 3 nodes [7, 258, 1031]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 8: 2 nodes [9, 481]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 9: 8 nodes [10, 192, 193, 280, 420, 705, 2549, 2608]
+[DEBUG][φ] cut=16, deg_S=42, deg_comp=10514.0
+
+[DEBUG] Cluster 10: 2 nodes [11, 624]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 11: 5 nodes [12, 117, 155, 452, 513]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 12: 6 nodes [13, 482, 551, 578, 1877, 2215]
+[DEBUG][φ] cut=13, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 13: 5 nodes [14, 384, 393, 437, 443]
+[DEBUG][φ] cut=16, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 14: 3 nodes [15, 80, 234]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 15: 9 nodes [16, 740, 804, 1585, 1599, 1667, 1683, 1697, 1703]
+[DEBUG][φ] cut=21, deg_S=41, deg_comp=10515.0
+
+[DEBUG] Cluster 16: 2 nodes [17, 146]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 17: 3 nodes [18, 866, 890]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 18: 3 nodes [19, 424, 571]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 19: 7 nodes [20, 25, 267, 334, 456, 732, 778]
+[DEBUG][φ] cut=17, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 20: 4 nodes [21, 239, 1378, 1440]
+[DEBUG][φ] cut=17, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 21: 4 nodes [22, 1768, 2257, 2444]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 22: 8 nodes [23, 41, 292, 352, 759, 904, 1372, 1733]
+[DEBUG][φ] cut=19, deg_S=39, deg_comp=10517.0
+
+[DEBUG] Cluster 23: 3 nodes [24, 39, 269]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 24: 5 nodes [26, 724, 1903, 2612, 2625]
+[DEBUG][φ] cut=3, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 25: 2 nodes [27, 532]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 26: 2 nodes [28, 586]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 27: 7 nodes [29, 319, 382, 429, 1514, 1837, 2132]
+[DEBUG][φ] cut=5, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 28: 7 nodes [30, 231, 285, 486, 1148, 1597, 2276]
+[DEBUG][φ] cut=9, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 29: 4 nodes [31, 708, 736, 1116]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 30: 2 nodes [32, 679]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 31: 5 nodes [33, 36, 832, 1701, 2390]
+[DEBUG][φ] cut=14, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 32: 2 nodes [34, 35]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 33: 2 nodes [37, 563]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 34: 3 nodes [38, 273, 372]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 35: 4 nodes [40, 535, 761, 1560]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 36: 6 nodes [42, 144, 189, 395, 2102, 2664]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 37: 22 nodes [43, 73, 83, 113, 175, 229, 235, 315, 336, 349, 353, 369, 386, 494, 526, 545, 599, 610, 620, 628, 665, 747]
+[DEBUG][φ] cut=64, deg_S=106, deg_comp=10450.0
+
+[DEBUG] Cluster 38: 6 nodes [44, 116, 225, 760, 2042, 2428]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 39: 2 nodes [45, 220]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 40: 5 nodes [46, 238, 301, 489, 867]
+[DEBUG][φ] cut=8, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 41: 3 nodes [47, 87, 383]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 42: 4 nodes [48, 1783, 2348, 2682]
+[DEBUG][φ] cut=2, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 43: 3 nodes [49, 222, 581]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 44: 3 nodes [50, 150, 643]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 45: 4 nodes [51, 312, 645, 742]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 46: 4 nodes [52, 1823, 2487, 2580]
+[DEBUG][φ] cut=7, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 47: 3 nodes [53, 243, 1439]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 48: 3 nodes [54, 614, 615]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 49: 9 nodes [55, 141, 361, 844, 860, 974, 1184, 1362, 1784]
+[DEBUG][φ] cut=21, deg_S=41, deg_comp=10515.0
+
+[DEBUG] Cluster 50: 6 nodes [56, 957, 967, 1394, 1400, 1561]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 51: 2 nodes [57, 306]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 52: 8 nodes [58, 805, 930, 990, 1062, 1254, 2059, 2651]
+[DEBUG][φ] cut=7, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 53: 8 nodes [59, 354, 839, 872, 874, 1072, 1526, 1709]
+[DEBUG][φ] cut=20, deg_S=40, deg_comp=10516.0
+
+[DEBUG] Cluster 54: 2 nodes [60, 252]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 55: 2 nodes [61, 240]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 56: 3 nodes [62, 2531, 2566]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 57: 4 nodes [63, 153, 739, 1546]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 58: 2 nodes [64, 284]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 59: 4 nodes [65, 743, 744, 2077]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 60: 3 nodes [66, 69, 149]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 61: 6 nodes [67, 342, 729, 1993, 2016, 2546]
+[DEBUG][φ] cut=15, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 62: 7 nodes [68, 879, 979, 1632, 1844, 1845, 1979]
+[DEBUG][φ] cut=9, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 63: 2 nodes [70, 1692]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 64: 2 nodes [71, 677]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 65: 7 nodes [72, 104, 202, 204, 274, 771, 2650]
+[DEBUG][φ] cut=16, deg_S=30, deg_comp=10526.0
+
+[DEBUG] Cluster 66: 1 nodes [74]
+[DEBUG][φ] cut=40, deg_S=40, deg_comp=10516.0
+
+[DEBUG] Cluster 67: 6 nodes [75, 1855, 1864, 2075, 2122, 2299]
+[DEBUG][φ] cut=11, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 68: 6 nodes [76, 131, 154, 392, 661, 694]
+[DEBUG][φ] cut=17, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 69: 7 nodes [77, 132, 143, 180, 337, 346, 363]
+[DEBUG][φ] cut=3, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 70: 3 nodes [78, 214, 469]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 71: 3 nodes [79, 1786, 2207]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 72: 1 nodes [81]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 73: 1 nodes [82]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 74: 6 nodes [84, 161, 347, 713, 715, 998]
+[DEBUG][φ] cut=19, deg_S=31, deg_comp=10525.0
+
+[DEBUG] Cluster 75: 2 nodes [85, 425]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 76: 4 nodes [86, 249, 373, 652]
+[DEBUG][φ] cut=2, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 77: 2 nodes [88, 762]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 78: 7 nodes [89, 264, 436, 635, 660, 683, 722]
+[DEBUG][φ] cut=23, deg_S=35, deg_comp=10521.0
+
+[DEBUG] Cluster 79: 2 nodes [90, 680]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 80: 5 nodes [91, 458, 561, 666, 745]
+[DEBUG][φ] cut=33, deg_S=41, deg_comp=10515.0
+
+[DEBUG] Cluster 81: 4 nodes [92, 303, 2091, 2438]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 82: 2 nodes [93, 725]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 83: 7 nodes [94, 126, 1761, 2208, 2234, 2235, 2313]
+[DEBUG][φ] cut=1, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 84: 4 nodes [95, 358, 894, 1255]
+[DEBUG][φ] cut=3, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 85: 6 nodes [96, 478, 568, 618, 754, 843]
+[DEBUG][φ] cut=20, deg_S=30, deg_comp=10526.0
+
+[DEBUG] Cluster 86: 4 nodes [97, 388, 439, 2590]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 87: 9 nodes [98, 321, 1192, 1954, 2150, 2179, 2183, 2222, 2305]
+[DEBUG][φ] cut=6, deg_S=36, deg_comp=10520.0
+
+[DEBUG] Cluster 88: 1 nodes [99]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 89: 4 nodes [100, 265, 758, 1980]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 90: 5 nodes [101, 2596, 2669, 2680, 2686]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 91: 2 nodes [102, 404]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 92: 2 nodes [103, 128]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 93: 8 nodes [105, 248, 398, 419, 776, 971, 1326, 2161]
+[DEBUG][φ] cut=16, deg_S=38, deg_comp=10518.0
+
+[DEBUG] Cluster 94: 2 nodes [106, 597]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 95: 6 nodes [107, 108, 304, 498, 898, 1912]
+[DEBUG][φ] cut=11, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 96: 1 nodes [109]
+[DEBUG][φ] cut=19, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 97: 6 nodes [110, 687, 741, 1157, 1700, 1704]
+[DEBUG][φ] cut=12, deg_S=28, deg_comp=10528.0
+
+[DEBUG] Cluster 98: 4 nodes [111, 350, 664, 978]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 99: 2 nodes [112, 572]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 100: 2 nodes [114, 171]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 101: 3 nodes [115, 1713, 1991]
+[DEBUG][φ] cut=21, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 102: 4 nodes [118, 465, 2027, 2672]
+[DEBUG][φ] cut=16, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 103: 5 nodes [119, 381, 430, 547, 651]
+[DEBUG][φ] cut=39, deg_S=47, deg_comp=10509.0
+
+[DEBUG] Cluster 104: 5 nodes [120, 1257, 1959, 2175, 2259]
+[DEBUG][φ] cut=24, deg_S=36, deg_comp=10520.0
+
+[DEBUG] Cluster 105: 7 nodes [121, 201, 233, 283, 595, 1990, 2093]
+[DEBUG][φ] cut=9, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 106: 3 nodes [122, 124, 127]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 107: 3 nodes [123, 553, 2459]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 108: 6 nodes [125, 160, 1857, 2020, 2540, 2681]
+[DEBUG][φ] cut=6, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 109: 1 nodes [129]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 110: 4 nodes [130, 199, 459, 640]
+[DEBUG][φ] cut=17, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 111: 4 nodes [133, 179, 394, 608]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 112: 3 nodes [134, 505, 1118]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 113: 3 nodes [135, 418, 654]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 114: 4 nodes [136, 1479, 2231, 2635]
+[DEBUG][φ] cut=19, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 115: 7 nodes [137, 138, 416, 748, 1926, 1933, 1941]
+[DEBUG][φ] cut=9, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 116: 2 nodes [139, 2361]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 117: 3 nodes [140, 323, 1322]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 118: 7 nodes [142, 230, 391, 823, 1283, 1318, 1547]
+[DEBUG][φ] cut=16, deg_S=40, deg_comp=10516.0
+
+[DEBUG] Cluster 119: 3 nodes [145, 390, 1224]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 120: 2 nodes [147, 479]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 121: 10 nodes [148, 691, 773, 868, 870, 1137, 1213, 1557, 1649, 1687]
+[DEBUG][φ] cut=25, deg_S=49, deg_comp=10507.0
+
+[DEBUG] Cluster 122: 3 nodes [151, 360, 1528]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 123: 4 nodes [152, 1383, 1384, 1398]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 124: 6 nodes [156, 431, 949, 987, 1608, 2137]
+[DEBUG][φ] cut=12, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 125: 1 nodes [157]
+[DEBUG][φ] cut=29, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 126: 3 nodes [158, 184, 433]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 127: 5 nodes [159, 985, 1352, 2066, 2674]
+[DEBUG][φ] cut=9, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 128: 2 nodes [162, 775]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 129: 4 nodes [163, 309, 546, 765]
+[DEBUG][φ] cut=165, deg_S=171, deg_comp=10385.0
+
+[DEBUG] Cluster 130: 3 nodes [164, 517, 1170]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 131: 6 nodes [165, 302, 307, 428, 432, 598]
+[DEBUG][φ] cut=6, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 132: 2 nodes [166, 457]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 133: 8 nodes [167, 210, 552, 559, 644, 653, 671, 2480]
+[DEBUG][φ] cut=57, deg_S=75, deg_comp=10481.0
+
+[DEBUG] Cluster 134: 2 nodes [168, 475]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 135: 2 nodes [169, 212]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 136: 3 nodes [172, 245, 1636]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 137: 3 nodes [173, 575, 2485]
+[DEBUG][φ] cut=18, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 138: 6 nodes [174, 496, 501, 663, 1851, 1896]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 139: 1 nodes [176]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 140: 3 nodes [177, 1743, 2192]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 141: 7 nodes [178, 218, 286, 378, 396, 1963, 2195]
+[DEBUG][φ] cut=23, deg_S=43, deg_comp=10513.0
+
+[DEBUG] Cluster 142: 6 nodes [181, 518, 662, 766, 2417, 2532]
+[DEBUG][φ] cut=8, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 143: 4 nodes [182, 468, 491, 2377]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 144: 3 nodes [183, 454, 541]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 145: 4 nodes [185, 324, 332, 389]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 146: 3 nodes [186, 588, 699]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 147: 2 nodes [187, 462]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 148: 2 nodes [188, 721]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 149: 2 nodes [190, 356]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 150: 2 nodes [191, 448]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 151: 1 nodes [194]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 152: 4 nodes [195, 196, 216, 707]
+[DEBUG][φ] cut=3, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 153: 2 nodes [197, 633]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 154: 2 nodes [198, 655]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 155: 7 nodes [200, 536, 1021, 1100, 1464, 1470, 1891]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 156: 6 nodes [203, 359, 1787, 1871, 2499, 2505]
+[DEBUG][φ] cut=25, deg_S=43, deg_comp=10513.0
+
+[DEBUG] Cluster 157: 4 nodes [205, 600, 1052, 1066]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 158: 5 nodes [206, 1028, 1037, 1042, 1610]
+[DEBUG][φ] cut=9, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 159: 3 nodes [207, 1518, 1536]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 160: 7 nodes [208, 497, 634, 1270, 2197, 2342, 2593]
+[DEBUG][φ] cut=21, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 161: 3 nodes [209, 2407, 2704]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 162: 3 nodes [211, 325, 1201]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 163: 8 nodes [215, 485, 711, 1838, 1908, 2380, 2514, 2561]
+[DEBUG][φ] cut=14, deg_S=40, deg_comp=10516.0
+
+[DEBUG] Cluster 164: 3 nodes [217, 685, 2355]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 165: 2 nodes [219, 1689]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 166: 2 nodes [221, 629]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 167: 3 nodes [223, 686, 2541]
+[DEBUG][φ] cut=17, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 168: 5 nodes [224, 1781, 1819, 2229, 2663]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 169: 1 nodes [226]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 170: 1 nodes [227]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 171: 4 nodes [228, 259, 320, 582]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 172: 3 nodes [232, 268, 613]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 173: 5 nodes [236, 997, 1107, 1271, 1617]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 174: 2 nodes [237, 329]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 175: 4 nodes [241, 763, 1760, 1879]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 176: 4 nodes [242, 1006, 2004, 2040]
+[DEBUG][φ] cut=14, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 177: 2 nodes [244, 750]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 178: 2 nodes [246, 560]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 179: 4 nodes [247, 500, 982, 1767]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 180: 3 nodes [250, 584, 639]
+[DEBUG][φ] cut=16, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 181: 4 nodes [251, 865, 932, 1505]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 182: 4 nodes [253, 1815, 2670, 2671]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 183: 4 nodes [254, 1176, 1866, 2272]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 184: 3 nodes [255, 421, 767]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 185: 4 nodes [256, 928, 983, 1302]
+[DEBUG][φ] cut=11, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 186: 3 nodes [257, 667, 1356]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 187: 4 nodes [260, 619, 1324, 1543]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 188: 2 nodes [261, 626]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 189: 2 nodes [262, 266]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 190: 10 nodes [263, 345, 1829, 1856, 1868, 1924, 2266, 2389, 2421, 2654]
+[DEBUG][φ] cut=15, deg_S=37, deg_comp=10519.0
+
+[DEBUG] Cluster 191: 3 nodes [270, 467, 495]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 192: 5 nodes [271, 718, 2056, 2095, 2230]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 193: 2 nodes [272, 516]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 194: 4 nodes [275, 279, 464, 573]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 195: 3 nodes [276, 2000, 2115]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 196: 4 nodes [277, 367, 483, 749]
+[DEBUG][φ] cut=17, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 197: 6 nodes [278, 326, 327, 945, 1899, 2292]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 198: 8 nodes [281, 460, 858, 991, 1084, 1368, 1904, 2556]
+[DEBUG][φ] cut=8, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 199: 2 nodes [282, 589]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 200: 2 nodes [287, 549]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 201: 3 nodes [288, 2157, 2565]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 202: 3 nodes [289, 2544, 2568]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 203: 6 nodes [290, 1839, 1840, 2216, 2688, 2705]
+[DEBUG][φ] cut=6, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 204: 2 nodes [291, 487]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 205: 2 nodes [293, 387]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 206: 5 nodes [294, 807, 1438, 1564, 1672]
+[DEBUG][φ] cut=38, deg_S=50, deg_comp=10506.0
+
+[DEBUG] Cluster 207: 1 nodes [295]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 208: 6 nodes [296, 861, 1181, 1236, 1431, 1669]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 209: 6 nodes [297, 441, 1129, 1190, 1222, 1321]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 210: 4 nodes [299, 596, 746, 2110]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 211: 2 nodes [300, 593]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 212: 9 nodes [308, 1343, 1363, 1364, 1469, 1661, 1705, 2028, 2653]
+[DEBUG][φ] cut=25, deg_S=45, deg_comp=10511.0
+
+[DEBUG] Cluster 213: 5 nodes [310, 604, 668, 975, 2562]
+[DEBUG][φ] cut=16, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 214: 4 nodes [311, 406, 1939, 2307]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 215: 3 nodes [313, 534, 1377]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 216: 4 nodes [314, 348, 1244, 1596]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 217: 5 nodes [317, 417, 508, 2324, 2326]
+[DEBUG][φ] cut=2, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 218: 5 nodes [318, 1173, 1423, 2333, 2583]
+[DEBUG][φ] cut=15, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 219: 4 nodes [322, 1027, 1336, 1478]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 220: 4 nodes [328, 1774, 1968, 2619]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 221: 3 nodes [330, 731, 1778]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 222: 6 nodes [331, 774, 1389, 1493, 2344, 2707]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 223: 5 nodes [335, 585, 1275, 2290, 2291]
+[DEBUG][φ] cut=17, deg_S=31, deg_comp=10525.0
+
+[DEBUG] Cluster 224: 2 nodes [338, 627]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 225: 3 nodes [339, 1549, 1602]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 226: 1 nodes [340]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 227: 1 nodes [341]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 228: 3 nodes [343, 530, 1098]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 229: 3 nodes [351, 730, 770]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 230: 4 nodes [355, 1093, 2068, 2228]
+[DEBUG][φ] cut=10, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 231: 3 nodes [357, 803, 1563]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 232: 4 nodes [362, 2191, 2275, 2522]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 233: 3 nodes [364, 366, 590]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 234: 3 nodes [365, 2112, 2572]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 235: 8 nodes [368, 511, 579, 611, 696, 716, 1935, 2340]
+[DEBUG][φ] cut=47, deg_S=63, deg_comp=10493.0
+
+[DEBUG] Cluster 236: 3 nodes [370, 875, 933]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 237: 5 nodes [371, 916, 2373, 2374, 2507]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 238: 2 nodes [374, 455]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 239: 5 nodes [375, 836, 1266, 1301, 1576]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 240: 2 nodes [376, 704]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 241: 2 nodes [377, 622]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 242: 1 nodes [379]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 243: 3 nodes [380, 1745, 2641]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 244: 2 nodes [385, 567]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 245: 7 nodes [397, 625, 659, 695, 700, 1967, 2346]
+[DEBUG][φ] cut=10, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 246: 3 nodes [399, 1250, 1251]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 247: 4 nodes [400, 555, 556, 2354]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 248: 4 nodes [401, 442, 1986, 2462]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 249: 3 nodes [402, 681, 2309]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 250: 5 nodes [403, 1353, 1880, 2104, 2302]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 251: 6 nodes [405, 409, 444, 753, 1592, 2582]
+[DEBUG][φ] cut=13, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 252: 6 nodes [407, 512, 1763, 1875, 2439, 2553]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 253: 3 nodes [408, 447, 630]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 254: 7 nodes [411, 755, 757, 1404, 1965, 2058, 2232]
+[DEBUG][φ] cut=18, deg_S=32, deg_comp=10524.0
+
+[DEBUG] Cluster 255: 2 nodes [412, 688]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 256: 1 nodes [413]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 257: 7 nodes [414, 440, 675, 1135, 1442, 1444, 1445]
+[DEBUG][φ] cut=13, deg_S=31, deg_comp=10525.0
+
+[DEBUG] Cluster 258: 1 nodes [415]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 259: 3 nodes [422, 1685, 1691]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 260: 8 nodes [423, 557, 558, 577, 1816, 1934, 2463, 2660]
+[DEBUG][φ] cut=23, deg_S=45, deg_comp=10511.0
+
+[DEBUG] Cluster 261: 1 nodes [426]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 262: 4 nodes [427, 461, 493, 674]
+[DEBUG][φ] cut=62, deg_S=68, deg_comp=10488.0
+
+[DEBUG] Cluster 263: 5 nodes [434, 1024, 1339, 2338, 2443]
+[DEBUG][φ] cut=15, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 264: 3 nodes [438, 692, 720]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 265: 3 nodes [445, 690, 2457]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 266: 2 nodes [446, 554]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 267: 2 nodes [449, 1539]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 268: 3 nodes [450, 646, 2558]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 269: 4 nodes [451, 1846, 2198, 2537]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 270: 4 nodes [453, 706, 1449, 2455]
+[DEBUG][φ] cut=23, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 271: 4 nodes [466, 471, 565, 621]
+[DEBUG][φ] cut=90, deg_S=96, deg_comp=10460.0
+
+[DEBUG] Cluster 272: 1 nodes [470]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 273: 3 nodes [472, 650, 656]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 274: 4 nodes [473, 1459, 2221, 2404]
+[DEBUG][φ] cut=18, deg_S=26, deg_comp=10530.0
+
+[DEBUG] Cluster 275: 2 nodes [474, 698]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 276: 6 nodes [476, 605, 676, 1014, 1056, 1091]
+[DEBUG][φ] cut=3, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 277: 1 nodes [477]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 278: 4 nodes [480, 2043, 2270, 2570]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 279: 3 nodes [484, 1017, 1574]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 280: 5 nodes [488, 2053, 2054, 2685, 2690]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 281: 4 nodes [499, 1128, 1288, 1593]
+[DEBUG][φ] cut=15, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 282: 3 nodes [502, 1957, 2536]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 283: 6 nodes [503, 1583, 1952, 2029, 2393, 2396]
+[DEBUG][φ] cut=13, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 284: 1 nodes [504]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 285: 2 nodes [506, 514]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 286: 3 nodes [507, 2391, 2548]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 287: 2 nodes [509, 669]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 288: 3 nodes [510, 2214, 2223]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 289: 1 nodes [519]
+[DEBUG][φ] cut=13, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 290: 5 nodes [520, 524, 1169, 1284, 1454]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 291: 8 nodes [521, 893, 1081, 1082, 1259, 1944, 2312, 2587]
+[DEBUG][φ] cut=9, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 292: 4 nodes [522, 525, 1419, 1427]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 293: 1 nodes [523]
+[DEBUG][φ] cut=30, deg_S=30, deg_comp=10526.0
+
+[DEBUG] Cluster 294: 2 nodes [527, 2662]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 295: 1 nodes [528]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 296: 1 nodes [529]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 297: 4 nodes [531, 1490, 2187, 2314]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 298: 2 nodes [533, 777]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 299: 2 nodes [537, 606]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 300: 1 nodes [538]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 301: 7 nodes [539, 883, 1152, 1209, 1210, 1453, 1665]
+[DEBUG][φ] cut=5, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 302: 2 nodes [540, 543]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 303: 4 nodes [542, 779, 816, 1203]
+[DEBUG][φ] cut=10, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 304: 2 nodes [548, 1859]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 305: 4 nodes [550, 828, 1273, 1422]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 306: 1 nodes [562]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 307: 4 nodes [564, 738, 1376, 1727]
+[DEBUG][φ] cut=19, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 308: 2 nodes [566, 733]
+[DEBUG][φ] cut=31, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 309: 6 nodes [569, 822, 1092, 1430, 1484, 1522]
+[DEBUG][φ] cut=26, deg_S=40, deg_comp=10516.0
+
+[DEBUG] Cluster 310: 5 nodes [570, 1200, 1258, 1381, 1524]
+[DEBUG][φ] cut=25, deg_S=35, deg_comp=10521.0
+
+[DEBUG] Cluster 311: 5 nodes [574, 1827, 1962, 2083, 2224]
+[DEBUG][φ] cut=13, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 312: 1 nodes [576]
+[DEBUG][φ] cut=30, deg_S=30, deg_comp=10526.0
+
+[DEBUG] Cluster 313: 6 nodes [580, 583, 1126, 2371, 2372, 2489]
+[DEBUG][φ] cut=18, deg_S=34, deg_comp=10522.0
+
+[DEBUG] Cluster 314: 8 nodes [587, 1366, 1373, 1718, 2239, 2413, 2414, 2513]
+[DEBUG][φ] cut=23, deg_S=47, deg_comp=10509.0
+
+[DEBUG] Cluster 315: 1 nodes [591]
+[DEBUG][φ] cut=17, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 316: 3 nodes [592, 1144, 1509]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 317: 4 nodes [594, 717, 1122, 1194]
+[DEBUG][φ] cut=12, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 318: 4 nodes [602, 1114, 1371, 1588]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 319: 4 nodes [603, 670, 1121, 1640]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 320: 4 nodes [607, 821, 1417, 1421]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 321: 4 nodes [609, 719, 1133, 1666]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 322: 2 nodes [612, 1348]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 323: 2 nodes [616, 2046]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 324: 1 nodes [617]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 325: 3 nodes [631, 1562, 1637]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 326: 6 nodes [632, 1545, 1582, 1909, 2017, 2677]
+[DEBUG][φ] cut=11, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 327: 1 nodes [636]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 328: 1 nodes [638]
+[DEBUG][φ] cut=34, deg_S=34, deg_comp=10522.0
+
+[DEBUG] Cluster 329: 2 nodes [641, 1739]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 330: 2 nodes [642, 697]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 331: 1 nodes [647]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 332: 2 nodes [648, 693]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 333: 1 nodes [649]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 334: 8 nodes [657, 936, 961, 988, 1447, 1515, 1581, 1711]
+[DEBUG][φ] cut=6, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 335: 4 nodes [658, 1577, 1580, 1625]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 336: 1 nodes [672]
+[DEBUG][φ] cut=21, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 337: 1 nodes [673]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 338: 1 nodes [678]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 339: 6 nodes [682, 906, 1860, 2430, 2647, 2658]
+[DEBUG][φ] cut=14, deg_S=26, deg_comp=10530.0
+
+[DEBUG] Cluster 340: 2 nodes [684, 1425]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 341: 3 nodes [689, 1826, 2630]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 342: 2 nodes [701, 1644]
+[DEBUG][φ] cut=22, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 343: 1 nodes [702]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 344: 3 nodes [703, 2201, 2233]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 345: 1 nodes [709]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 346: 4 nodes [710, 847, 1402, 1468]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 347: 3 nodes [712, 1036, 1662]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 348: 5 nodes [714, 1035, 1218, 1571, 1670]
+[DEBUG][φ] cut=17, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 349: 1 nodes [723]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 350: 3 nodes [726, 989, 1418]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 351: 6 nodes [727, 800, 935, 1136, 1286, 1594]
+[DEBUG][φ] cut=19, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 352: 3 nodes [728, 1466, 1650]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 353: 5 nodes [735, 1956, 1961, 2100, 2527]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 354: 3 nodes [737, 1932, 2024]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 355: 3 nodes [752, 1448, 1621]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 356: 1 nodes [756]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 357: 2 nodes [764, 769]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 358: 2 nodes [768, 772]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 359: 4 nodes [780, 1139, 1572, 1598]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 360: 2 nodes [781, 846]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 361: 5 nodes [782, 925, 1480, 1487, 1532]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 362: 2 nodes [783, 1407]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 363: 2 nodes [784, 845]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 364: 4 nodes [785, 1155, 1513, 1812]
+[DEBUG][φ] cut=14, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 365: 3 nodes [786, 791, 1004]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 366: 3 nodes [787, 891, 1437]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 367: 5 nodes [788, 1186, 1268, 2323, 2419]
+[DEBUG][φ] cut=15, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 368: 3 nodes [789, 1206, 1544]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 369: 5 nodes [790, 1510, 2057, 2465, 2695]
+[DEBUG][φ] cut=7, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 370: 7 nodes [792, 798, 1026, 1095, 1105, 1433, 1456]
+[DEBUG][φ] cut=7, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 371: 9 nodes [793, 856, 959, 1070, 1127, 1205, 1467, 1715, 1734]
+[DEBUG][φ] cut=36, deg_S=54, deg_comp=10502.0
+
+[DEBUG] Cluster 372: 2 nodes [794, 795]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 373: 1 nodes [796]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 374: 2 nodes [797, 1645]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 375: 4 nodes [799, 1214, 1635, 1706]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 376: 4 nodes [801, 1475, 1542, 1642]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 377: 2 nodes [802, 1168]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 378: 7 nodes [806, 1046, 1047, 1138, 1344, 1345, 1420]
+[DEBUG][φ] cut=15, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 379: 5 nodes [808, 863, 1300, 1320, 1342]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 380: 1 nodes [809]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 381: 9 nodes [810, 905, 976, 1097, 1287, 1393, 1397, 1414, 1502]
+[DEBUG][φ] cut=16, deg_S=42, deg_comp=10514.0
+
+[DEBUG] Cluster 382: 3 nodes [811, 1131, 1253]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 383: 4 nodes [812, 1044, 1341, 1365]
+[DEBUG][φ] cut=7, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 384: 2 nodes [813, 1523]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 385: 2 nodes [814, 1080]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 386: 2 nodes [815, 880]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 387: 4 nodes [817, 818, 819, 1367]
+[DEBUG][φ] cut=9, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 388: 6 nodes [820, 829, 962, 1115, 1146, 1676]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 389: 4 nodes [824, 825, 1215, 1707]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 390: 5 nodes [826, 1237, 1457, 1462, 1657]
+[DEBUG][φ] cut=12, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 391: 5 nodes [827, 909, 913, 1894, 2144]
+[DEBUG][φ] cut=5, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 392: 8 nodes [830, 907, 918, 1159, 1252, 1477, 1485, 1634]
+[DEBUG][φ] cut=6, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 393: 2 nodes [831, 885]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 394: 5 nodes [833, 1516, 1796, 1917, 2001]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 395: 3 nodes [834, 1067, 1814]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 396: 2 nodes [835, 1248]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 397: 6 nodes [837, 1007, 1489, 1686, 2217, 2282]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 398: 3 nodes [838, 1458, 1714]
+[DEBUG][φ] cut=0, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 399: 3 nodes [840, 1038, 1196]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 400: 3 nodes [841, 2076, 2559]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 401: 4 nodes [842, 1045, 1443, 1540]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 402: 2 nodes [848, 1032]
+[DEBUG][φ] cut=13, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 403: 1 nodes [849]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 404: 2 nodes [850, 917]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 405: 5 nodes [851, 903, 1390, 1491, 1605]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 406: 6 nodes [852, 855, 996, 1015, 1338, 1654]
+[DEBUG][φ] cut=3, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 407: 4 nodes [853, 1019, 1732, 2225]
+[DEBUG][φ] cut=15, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 408: 5 nodes [854, 1232, 1971, 2211, 2598]
+[DEBUG][φ] cut=12, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 409: 3 nodes [857, 1483, 2060]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 410: 3 nodes [859, 1198, 1296]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 411: 2 nodes [862, 2364]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 412: 2 nodes [864, 1079]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 413: 4 nodes [869, 1291, 1374, 1548]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 414: 2 nodes [871, 1591]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 415: 2 nodes [873, 920]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 416: 3 nodes [876, 1025, 1712]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 417: 2 nodes [877, 1010]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 418: 5 nodes [878, 1023, 1029, 1090, 1472]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 419: 1 nodes [881]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 420: 4 nodes [882, 1012, 1316, 1616]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 421: 2 nodes [884, 1658]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 422: 1 nodes [886]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 423: 3 nodes [887, 1154, 1531]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 424: 3 nodes [888, 896, 1731]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 425: 2 nodes [889, 892]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 426: 1 nodes [895]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 427: 7 nodes [897, 950, 1141, 1147, 1240, 1241, 1347]
+[DEBUG][φ] cut=22, deg_S=44, deg_comp=10512.0
+
+[DEBUG] Cluster 428: 3 nodes [899, 1088, 1565]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 429: 4 nodes [900, 1207, 1351, 1498]
+[DEBUG][φ] cut=18, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 430: 4 nodes [901, 1552, 1553, 1554]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 431: 11 nodes [902, 964, 965, 966, 981, 1140, 1432, 1481, 1590, 1673, 2294]
+[DEBUG][φ] cut=25, deg_S=69, deg_comp=10487.0
+
+[DEBUG] Cluster 432: 4 nodes [908, 919, 2297, 2304]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 433: 4 nodes [910, 1311, 1573, 1589]
+[DEBUG][φ] cut=29, deg_S=35, deg_comp=10521.0
+
+[DEBUG] Cluster 434: 15 nodes [911, 992, 994, 1001, 1039, 1040, 1089, 1123, 1188, 1304, 1317, 1354, 1426, 1465, 1695]
+[DEBUG][φ] cut=18, deg_S=48, deg_comp=10508.0
+
+[DEBUG] Cluster 435: 5 nodes [912, 1149, 1150, 2044, 2683]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 436: 2 nodes [914, 1551]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 437: 3 nodes [915, 1172, 1294]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 438: 3 nodes [921, 1265, 1725]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 439: 4 nodes [922, 923, 1233, 1416]
+[DEBUG][φ] cut=2, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 440: 2 nodes [924, 1460]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 441: 3 nodes [926, 1112, 1403]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 442: 5 nodes [927, 947, 1101, 1328, 1568]
+[DEBUG][φ] cut=19, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 443: 3 nodes [929, 1559, 1791]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 444: 5 nodes [931, 1000, 1053, 1185, 1521]
+[DEBUG][φ] cut=14, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 445: 3 nodes [934, 940, 1009]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 446: 5 nodes [937, 977, 1187, 1226, 1234]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 447: 3 nodes [938, 2196, 2267]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 448: 1 nodes [939]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 449: 6 nodes [941, 1113, 1380, 1441, 1638, 1717]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 450: 6 nodes [942, 1077, 1153, 1219, 1410, 1675]
+[DEBUG][φ] cut=16, deg_S=26, deg_comp=10530.0
+
+[DEBUG] Cluster 451: 5 nodes [943, 1016, 1110, 1646, 1729]
+[DEBUG][φ] cut=16, deg_S=26, deg_comp=10530.0
+
+[DEBUG] Cluster 452: 4 nodes [944, 1020, 1337, 2343]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 453: 4 nodes [946, 1179, 1293, 1600]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 454: 2 nodes [948, 1446]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 455: 2 nodes [951, 1401]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 456: 4 nodes [952, 1064, 1083, 1660]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 457: 1 nodes [953]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 458: 2 nodes [954, 969]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 459: 2 nodes [955, 1280]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 460: 5 nodes [956, 995, 1231, 1495, 2673]
+[DEBUG][φ] cut=20, deg_S=32, deg_comp=10524.0
+
+[DEBUG] Cluster 461: 3 nodes [958, 1409, 2600]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 462: 6 nodes [960, 1049, 1071, 1292, 1329, 2127]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 463: 6 nodes [963, 1177, 1180, 1519, 1620, 1627]
+[DEBUG][φ] cut=3, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 464: 3 nodes [968, 1285, 1298]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 465: 2 nodes [970, 1396]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 466: 1 nodes [972]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 467: 2 nodes [973, 993]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 468: 2 nodes [980, 1488]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 469: 1 nodes [984]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 470: 4 nodes [986, 2484, 2614, 2616]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 471: 6 nodes [999, 1087, 1235, 1267, 1512, 1671]
+[DEBUG][φ] cut=14, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 472: 2 nodes [1002, 1735]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 473: 1 nodes [1003]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 474: 5 nodes [1005, 1313, 1382, 1623, 1655]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 475: 3 nodes [1008, 1011, 1486]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 476: 1 nodes [1013]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 477: 2 nodes [1018, 1142]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 478: 3 nodes [1022, 1282, 1494]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 479: 3 nodes [1030, 1946, 2516]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 480: 4 nodes [1033, 1074, 1174, 1297]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 481: 3 nodes [1034, 1533, 1730]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 482: 1 nodes [1041]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 483: 2 nodes [1043, 1435]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 484: 1 nodes [1048]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 485: 2 nodes [1050, 1171]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 486: 4 nodes [1051, 2477, 2576, 2678]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 487: 2 nodes [1054, 1249]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 488: 2 nodes [1055, 1059]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 489: 3 nodes [1057, 1307, 1359]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 490: 3 nodes [1058, 1211, 1247]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 491: 3 nodes [1060, 1890, 2039]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 492: 3 nodes [1061, 1578, 1651]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 493: 3 nodes [1063, 1175, 1628]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 494: 2 nodes [1065, 1279]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 495: 7 nodes [1068, 2019, 2147, 2322, 2498, 2500, 2567]
+[DEBUG][φ] cut=14, deg_S=28, deg_comp=10528.0
+
+[DEBUG] Cluster 496: 4 nodes [1069, 1096, 1455, 1694]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 497: 11 nodes [1073, 1165, 1182, 1327, 1569, 1587, 1609, 1679, 1684, 1721, 1726]
+[DEBUG][φ] cut=19, deg_S=49, deg_comp=10507.0
+
+[DEBUG] Cluster 498: 2 nodes [1075, 1340]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 499: 5 nodes [1076, 1078, 1086, 1641, 2461]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 500: 1 nodes [1085]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 501: 2 nodes [1094, 2085]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 502: 7 nodes [1099, 1178, 1230, 1476, 1690, 1736, 1737]
+[DEBUG][φ] cut=18, deg_S=34, deg_comp=10522.0
+
+[DEBUG] Cluster 503: 2 nodes [1102, 1413]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 504: 2 nodes [1103, 1579]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 505: 2 nodes [1104, 1262]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 506: 4 nodes [1106, 1305, 1575, 1740]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 507: 4 nodes [1108, 1308, 1503, 1507]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 508: 5 nodes [1109, 1111, 1412, 1570, 1678]
+[DEBUG][φ] cut=15, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 509: 5 nodes [1117, 1225, 1261, 1603, 2089]
+[DEBUG][φ] cut=15, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 510: 5 nodes [1119, 1411, 2203, 2397, 2405]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 511: 2 nodes [1120, 1677]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 512: 4 nodes [1124, 1358, 1566, 1567]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 513: 2 nodes [1125, 1496]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 514: 2 nodes [1130, 1334]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 515: 2 nodes [1132, 1309]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 516: 4 nodes [1134, 1264, 1738, 2281]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 517: 4 nodes [1143, 1277, 2152, 2429]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 518: 2 nodes [1145, 1323]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 519: 1 nodes [1151]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 520: 1 nodes [1156]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 521: 6 nodes [1158, 1199, 1238, 1550, 1555, 1702]
+[DEBUG][φ] cut=13, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 522: 1 nodes [1160]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 523: 2 nodes [1161, 2657]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 524: 2 nodes [1162, 1613]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 525: 3 nodes [1163, 1278, 1534]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 526: 5 nodes [1164, 1584, 1626, 2037, 2151]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 527: 1 nodes [1166]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 528: 4 nodes [1167, 1330, 1331, 1332]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 529: 3 nodes [1183, 1193, 1202]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 530: 2 nodes [1189, 1643]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 531: 5 nodes [1191, 1290, 1918, 2080, 2329]
+[DEBUG][φ] cut=21, deg_S=33, deg_comp=10523.0
+
+[DEBUG] Cluster 532: 2 nodes [1195, 1630]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 533: 3 nodes [1197, 1876, 2634]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 534: 6 nodes [1204, 2269, 2277, 2317, 2624, 2702]
+[DEBUG][φ] cut=13, deg_S=23, deg_comp=10533.0
+
+[DEBUG] Cluster 535: 3 nodes [1208, 1429, 1434]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 536: 2 nodes [1212, 1497]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 537: 3 nodes [1216, 1299, 1392]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 538: 1 nodes [1217]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 539: 2 nodes [1220, 1618]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 540: 4 nodes [1221, 1797, 2200, 2703]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 541: 2 nodes [1223, 1607]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 542: 1 nodes [1227]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 543: 3 nodes [1228, 1688, 1693]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 544: 3 nodes [1229, 1615, 1639]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 545: 1 nodes [1239]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 546: 1 nodes [1242]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 547: 2 nodes [1243, 1245]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 548: 2 nodes [1246, 1520]
+[DEBUG][φ] cut=18, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 549: 5 nodes [1256, 1862, 1863, 1964, 2675]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 550: 4 nodes [1260, 1269, 1312, 1622]
+[DEBUG][φ] cut=17, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 551: 5 nodes [1263, 1809, 2071, 2441, 2585]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 552: 5 nodes [1272, 1281, 1346, 1451, 1604]
+[DEBUG][φ] cut=4, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 553: 2 nodes [1274, 1303]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 554: 5 nodes [1276, 1415, 1504, 1506, 1525]
+[DEBUG][φ] cut=9, deg_S=27, deg_comp=10529.0
+
+[DEBUG] Cluster 555: 3 nodes [1289, 1375, 1452]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 556: 1 nodes [1295]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 557: 3 nodes [1306, 1310, 1499]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 558: 2 nodes [1314, 1529]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 559: 3 nodes [1315, 2452, 2595]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 560: 1 nodes [1319]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 561: 4 nodes [1325, 2170, 2237, 2274]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 562: 3 nodes [1333, 1369, 1708]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 563: 1 nodes [1335]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 564: 1 nodes [1349]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 565: 1 nodes [1350]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 566: 2 nodes [1355, 1648]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 567: 3 nodes [1357, 1461, 1511]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 568: 1 nodes [1360]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 569: 5 nodes [1361, 1399, 1405, 1406, 1463]
+[DEBUG][φ] cut=6, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 570: 4 nodes [1370, 2038, 2172, 2692]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 571: 2 nodes [1379, 1611]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 572: 2 nodes [1385, 1653]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 573: 3 nodes [1386, 2273, 2360]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 574: 1 nodes [1387]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 575: 2 nodes [1388, 1586]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 576: 1 nodes [1391]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 577: 1 nodes [1395]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 578: 4 nodes [1408, 1921, 1931, 2402]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 579: 2 nodes [1424, 1530]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 580: 4 nodes [1428, 2424, 2539, 2589]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=10538.0
+
+[DEBUG] Cluster 581: 1 nodes [1436]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 582: 2 nodes [1450, 1710]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 583: 3 nodes [1471, 1501, 1633]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 584: 3 nodes [1473, 1474, 1728]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 585: 1 nodes [1482]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 586: 4 nodes [1492, 1508, 1538, 1724]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 587: 6 nodes [1500, 1833, 2180, 2367, 2508, 2577]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 588: 1 nodes [1517]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 589: 2 nodes [1527, 2524]
+[DEBUG][φ] cut=22, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 590: 3 nodes [1535, 1537, 1556]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 591: 1 nodes [1541]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 592: 3 nodes [1558, 1785, 2564]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 593: 1 nodes [1595]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 594: 3 nodes [1601, 2423, 2627]
+[DEBUG][φ] cut=15, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 595: 2 nodes [1606, 2381]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 596: 1 nodes [1612]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 597: 4 nodes [1614, 1619, 1722, 1723]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 598: 1 nodes [1624]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 599: 1 nodes [1629]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 600: 7 nodes [1631, 1696, 1769, 1771, 1872, 2330, 2604]
+[DEBUG][φ] cut=16, deg_S=34, deg_comp=10522.0
+
+[DEBUG] Cluster 601: 4 nodes [1647, 2074, 2084, 2615]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 602: 2 nodes [1652, 1659]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 603: 3 nodes [1656, 1822, 2357]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 604: 4 nodes [1663, 2295, 2504, 2667]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=10541.0
+
+[DEBUG] Cluster 605: 1 nodes [1664]
+[DEBUG][φ] cut=4, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 606: 4 nodes [1668, 2050, 2335, 2378]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 607: 2 nodes [1674, 1680]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 608: 1 nodes [1681]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 609: 1 nodes [1682]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 610: 3 nodes [1698, 2256, 2597]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 611: 2 nodes [1699, 2656]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 612: 2 nodes [1716, 1982]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 613: 4 nodes [1719, 1911, 2087, 2261]
+[DEBUG][φ] cut=12, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 614: 1 nodes [1720]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 615: 2 nodes [1741, 1841]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 616: 2 nodes [1742, 2456]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 617: 1 nodes [1744]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 618: 1 nodes [1746]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 619: 4 nodes [1747, 2069, 2160, 2434]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 620: 2 nodes [1748, 2182]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 621: 2 nodes [1750, 2106]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 622: 1 nodes [1751]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 623: 2 nodes [1752, 2706]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 624: 3 nodes [1753, 2268, 2445]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 625: 4 nodes [1754, 1867, 1869, 2409]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 626: 2 nodes [1755, 2432]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 627: 3 nodes [1756, 2603, 2613]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 628: 3 nodes [1757, 1842, 2341]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 629: 3 nodes [1758, 2255, 2412]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 630: 3 nodes [1759, 2288, 2697]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 631: 4 nodes [1762, 2331, 2495, 2694]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 632: 1 nodes [1764]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 633: 3 nodes [1765, 1770, 1938]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 634: 2 nodes [1766, 1810]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 635: 2 nodes [1772, 2351]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 636: 4 nodes [1773, 1794, 2178, 2545]
+[DEBUG][φ] cut=9, deg_S=17, deg_comp=10539.0
+
+[DEBUG] Cluster 637: 4 nodes [1775, 1793, 1795, 2082]
+[DEBUG][φ] cut=13, deg_S=25, deg_comp=10531.0
+
+[DEBUG] Cluster 638: 3 nodes [1776, 2440, 2543]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 639: 1 nodes [1777]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 640: 3 nodes [1779, 1780, 2007]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 641: 2 nodes [1782, 2328]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 642: 3 nodes [1788, 2143, 2181]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 643: 1 nodes [1789]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 644: 5 nodes [1790, 2103, 2332, 2334, 2353]
+[DEBUG][φ] cut=14, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 645: 2 nodes [1792, 2067]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 646: 1 nodes [1798]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 647: 2 nodes [1799, 2205]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 648: 6 nodes [1800, 1907, 1994, 1995, 2097, 2241]
+[DEBUG][φ] cut=4, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 649: 2 nodes [1801, 1821]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 650: 1 nodes [1802]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 651: 2 nodes [1803, 1913]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 652: 1 nodes [1804]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 653: 1 nodes [1805]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 654: 4 nodes [1806, 2279, 2336, 2579]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 655: 2 nodes [1807, 2490]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 656: 2 nodes [1808, 2210]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 657: 2 nodes [1811, 2410]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 658: 3 nodes [1813, 1818, 2073]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 659: 1 nodes [1817]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 660: 3 nodes [1820, 2383, 2569]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 661: 2 nodes [1824, 2006]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 662: 2 nodes [1825, 1966]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 663: 3 nodes [1828, 2014, 2018]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 664: 3 nodes [1830, 2240, 2466]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 665: 3 nodes [1831, 1832, 1836]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 666: 2 nodes [1834, 1905]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 667: 3 nodes [1835, 2011, 2633]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 668: 3 nodes [1843, 2399, 2626]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 669: 2 nodes [1847, 1927]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 670: 2 nodes [1848, 2483]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 671: 1 nodes [1849]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 672: 2 nodes [1850, 2554]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 673: 2 nodes [1852, 2592]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 674: 3 nodes [1853, 1861, 2320]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 675: 3 nodes [1854, 1976, 2048]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 676: 3 nodes [1858, 2481, 2528]
+[DEBUG][φ] cut=0, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 677: 7 nodes [1865, 1878, 1953, 2107, 2496, 2571, 2574]
+[DEBUG][φ] cut=7, deg_S=21, deg_comp=10535.0
+
+[DEBUG] Cluster 678: 2 nodes [1870, 2362]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 679: 1 nodes [1873]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 680: 1 nodes [1874]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 681: 4 nodes [1881, 2158, 2449, 2450]
+[DEBUG][φ] cut=3, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 682: 1 nodes [1882]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 683: 2 nodes [1883, 2177]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 684: 6 nodes [1884, 1885, 1886, 1887, 1902, 2258]
+[DEBUG][φ] cut=4, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 685: 3 nodes [1888, 2394, 2427]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 686: 2 nodes [1889, 2648]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 687: 2 nodes [1892, 2131]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 688: 2 nodes [1893, 1895]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 689: 2 nodes [1897, 2146]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 690: 3 nodes [1898, 2108, 2140]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 691: 3 nodes [1900, 2492, 2547]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 692: 3 nodes [1901, 2301, 2588]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 693: 1 nodes [1906]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 694: 2 nodes [1910, 2488]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=10543.0
+
+[DEBUG] Cluster 695: 3 nodes [1914, 2176, 2535]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 696: 2 nodes [1915, 2497]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 697: 2 nodes [1916, 2400]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 698: 4 nodes [1919, 2426, 2431, 2493]
+[DEBUG][φ] cut=11, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 699: 1 nodes [1920]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 700: 3 nodes [1922, 2026, 2552]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 701: 4 nodes [1923, 1928, 2114, 2124]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 702: 4 nodes [1925, 2133, 2199, 2392]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 703: 1 nodes [1929]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 704: 1 nodes [1930]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 705: 2 nodes [1936, 1943]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 706: 2 nodes [1937, 2293]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 707: 6 nodes [1940, 2238, 2249, 2250, 2252, 2271]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=10537.0
+
+[DEBUG] Cluster 708: 1 nodes [1942]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 709: 1 nodes [1945]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 710: 2 nodes [1947, 2557]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 711: 1 nodes [1948]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 712: 1 nodes [1949]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 713: 6 nodes [1950, 2139, 2220, 2226, 2478, 2563]
+[DEBUG][φ] cut=13, deg_S=29, deg_comp=10527.0
+
+[DEBUG] Cluster 714: 3 nodes [1951, 2035, 2303]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 715: 5 nodes [1955, 2149, 2188, 2190, 2194]
+[DEBUG][φ] cut=4, deg_S=22, deg_comp=10534.0
+
+[DEBUG] Cluster 716: 1 nodes [1958]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 717: 1 nodes [1960]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 718: 2 nodes [1969, 2051]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 719: 3 nodes [1970, 2486, 2586]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 720: 1 nodes [1972]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 721: 3 nodes [1973, 2446, 2451]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 722: 3 nodes [1974, 2072, 2227]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 723: 2 nodes [1975, 2655]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 724: 5 nodes [1977, 1992, 2153, 2318, 2699]
+[DEBUG][φ] cut=14, deg_S=24, deg_comp=10532.0
+
+[DEBUG] Cluster 725: 3 nodes [1978, 2002, 2510]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 726: 2 nodes [1981, 2491]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 727: 3 nodes [1983, 2078, 2406]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 728: 3 nodes [1984, 2206, 2379]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 729: 3 nodes [1985, 2065, 2086]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 730: 4 nodes [1987, 2310, 2369, 2607]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=10544.0
+
+[DEBUG] Cluster 731: 1 nodes [1988]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 732: 1 nodes [1989]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 733: 1 nodes [1996]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 734: 1 nodes [1997]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 735: 1 nodes [1998]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 736: 3 nodes [1999, 2003, 2515]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 737: 5 nodes [2005, 2141, 2345, 2418, 2511]
+[DEBUG][φ] cut=2, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 738: 3 nodes [2008, 2022, 2219]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 739: 1 nodes [2009]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 740: 2 nodes [2010, 2447]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 741: 3 nodes [2012, 2023, 2135]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 742: 2 nodes [2013, 2382]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 743: 4 nodes [2015, 2034, 2092, 2327]
+[DEBUG][φ] cut=6, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 744: 4 nodes [2021, 2218, 2337, 2610]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 745: 2 nodes [2025, 2693]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 746: 2 nodes [2030, 2130]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 747: 3 nodes [2031, 2032, 2171]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 748: 2 nodes [2033, 2622]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 749: 2 nodes [2036, 2696]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 750: 1 nodes [2041]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 751: 2 nodes [2045, 2550]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 752: 2 nodes [2047, 2111]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 753: 3 nodes [2049, 2306, 2594]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 754: 3 nodes [2052, 2061, 2062]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 755: 2 nodes [2055, 2352]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 756: 1 nodes [2063]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 757: 1 nodes [2064]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 758: 2 nodes [2070, 2602]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 759: 2 nodes [2079, 2609]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 760: 2 nodes [2081, 2159]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 761: 2 nodes [2088, 2525]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 762: 3 nodes [2090, 2415, 2530]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 763: 1 nodes [2094]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 764: 1 nodes [2096]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 765: 3 nodes [2098, 2099, 2156]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 766: 2 nodes [2101, 2470]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 767: 1 nodes [2105]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 768: 1 nodes [2109]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 769: 2 nodes [2113, 2623]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 770: 2 nodes [2116, 2125]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 771: 1 nodes [2117]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 772: 2 nodes [2118, 2442]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 773: 1 nodes [2119]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 774: 1 nodes [2120]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 775: 1 nodes [2121]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 776: 3 nodes [2123, 2482, 2645]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 777: 4 nodes [2126, 2213, 2253, 2591]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=10540.0
+
+[DEBUG] Cluster 778: 3 nodes [2128, 2319, 2479]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 779: 2 nodes [2129, 2454]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 780: 1 nodes [2134]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 781: 1 nodes [2136]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 782: 3 nodes [2138, 2285, 2311]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 783: 1 nodes [2142]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 784: 2 nodes [2145, 2408]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 785: 1 nodes [2148]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 786: 1 nodes [2154]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 787: 3 nodes [2155, 2467, 2468]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 788: 2 nodes [2162, 2599]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 789: 1 nodes [2163]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 790: 3 nodes [2165, 2193, 2363]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=10542.0
+
+[DEBUG] Cluster 791: 2 nodes [2166, 2167]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=10545.0
+
+[DEBUG] Cluster 792: 2 nodes [2168, 2350]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 793: 2 nodes [2169, 2420]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 794: 2 nodes [2173, 2204]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 795: 2 nodes [2174, 2687]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 796: 2 nodes [2184, 2398]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 797: 1 nodes [2185]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 798: 3 nodes [2186, 2321, 2370]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 799: 3 nodes [2189, 2365, 2668]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 800: 2 nodes [2202, 2638]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 801: 2 nodes [2209, 2689]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=10553.0
+
+[DEBUG] Cluster 802: 1 nodes [2212]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 803: 3 nodes [2236, 2262, 2435]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 804: 2 nodes [2242, 2661]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 805: 2 nodes [2243, 2244]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 806: 2 nodes [2245, 2471]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 807: 3 nodes [2246, 2356, 2475]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 808: 1 nodes [2247]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 809: 3 nodes [2248, 2251, 2296]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=10546.0
+
+[DEBUG] Cluster 810: 3 nodes [2254, 2265, 2347]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 811: 2 nodes [2260, 2501]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 812: 1 nodes [2263]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 813: 1 nodes [2264]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 814: 3 nodes [2278, 2283, 2284]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 815: 2 nodes [2280, 2286]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 816: 2 nodes [2287, 2315]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 817: 1 nodes [2289]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 818: 2 nodes [2298, 2518]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 819: 2 nodes [2300, 2636]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 820: 3 nodes [2308, 2637, 2652]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 821: 2 nodes [2316, 2659]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=10547.0
+
+[DEBUG] Cluster 822: 2 nodes [2325, 2538]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 823: 1 nodes [2349]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 824: 1 nodes [2358]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 825: 2 nodes [2359, 2520]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 826: 5 nodes [2366, 2388, 2458, 2506, 2575]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=10536.0
+
+[DEBUG] Cluster 827: 2 nodes [2368, 2642]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 828: 2 nodes [2375, 2416]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 829: 2 nodes [2376, 2422]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 830: 1 nodes [2384]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 831: 2 nodes [2385, 2676]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 832: 1 nodes [2386]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 833: 1 nodes [2387]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 834: 1 nodes [2395]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 835: 1 nodes [2401]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 836: 2 nodes [2403, 2581]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 837: 3 nodes [2411, 2453, 2666]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 838: 2 nodes [2425, 2474]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=10548.0
+
+[DEBUG] Cluster 839: 2 nodes [2433, 2437]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 840: 2 nodes [2436, 2649]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 841: 2 nodes [2448, 2526]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 842: 1 nodes [2460]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 843: 1 nodes [2464]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 844: 1 nodes [2469]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 845: 2 nodes [2472, 2476]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 846: 2 nodes [2473, 2551]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 847: 1 nodes [2494]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 848: 2 nodes [2502, 2605]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 849: 1 nodes [2503]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 850: 2 nodes [2509, 2618]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=10550.0
+
+[DEBUG] Cluster 851: 1 nodes [2512]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 852: 1 nodes [2517]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 853: 1 nodes [2519]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 854: 1 nodes [2523]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 855: 1 nodes [2533]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 856: 1 nodes [2534]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 857: 1 nodes [2542]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+
+[DEBUG] Cluster 858: 2 nodes [2555, 2560]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 859: 1 nodes [2573]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 860: 2 nodes [2578, 2679]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 861: 1 nodes [2584]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 862: 1 nodes [2601]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 863: 2 nodes [2606, 2611]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 864: 1 nodes [2620]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 865: 1 nodes [2621]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 866: 2 nodes [2628, 2629]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=10549.0
+
+[DEBUG] Cluster 867: 1 nodes [2631]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 868: 1 nodes [2632]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 869: 1 nodes [2639]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 870: 1 nodes [2640]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 871: 2 nodes [2643, 2646]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=10552.0
+
+[DEBUG] Cluster 872: 1 nodes [2644]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 873: 1 nodes [2665]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 874: 1 nodes [2684]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 875: 1 nodes [2691]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=10555.0
+
+[DEBUG] Cluster 876: 2 nodes [2698, 2700]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=10551.0
+
+[DEBUG] Cluster 877: 1 nodes [2701]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=10554.0
+[DEBUG] Average unweighted conductance - Standard: 0.6235
+CMG filtered clustering pipeline complete
+[CMG] Fusion found 878 clusters
+%%%%%% Starting Graph Reduction %%%%%%
+[CMG] Starting CMG coarsening with k=25, d=20, threshold=0.1
+[CMG] Coarsening Level: 1
+[CMG] Current nodes: 2708, edges: 6254
+[DEBUG] Starting CMG filtered clustering pipeline
+[DEBUG] Parameters: k=25, d=20, threshold=0.1
+[DEBUG] λ_critical ≈ 0.1481 for filter order k = 25
+[DEBUG] Original graph: 2708 nodes, 12508 edges
+[DEBUG] Building normalized Laplacian
+Applying spectral filter with k=25, input shape=(2708, 20)
+Spectral filtering complete. Output shape=(2708, 20)
+Reweighted adjacency matrix has 11990 nonzeros
+[DEBUG] Reweighted graph: 11990 edges
+[DEBUG] Calling CMG on reweighted Laplacian
+[DEBUG] CMG found 989 clusters
+[DEBUG] Converted clusters (0-indexed): [  0   1   2 ... 218 720 240]
+[DEBUG] Unweighted graph: 2708 nodes, 12508 edges
+
+[DEBUG] Cluster 0: 3 nodes [0, 8, 435]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 1: 4 nodes [1, 316, 2339, 2617]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 2: 4 nodes [2, 298, 305, 410]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 3: 4 nodes [3, 333, 463, 601]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 4: 2 nodes [4, 170]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 5: 9 nodes [5, 515, 623, 637, 1749, 2094, 2164, 2521, 2529]
+[DEBUG][φ] cut=9, deg_S=35, deg_comp=12473.0
+
+[DEBUG] Cluster 6: 4 nodes [6, 213, 490, 734]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 7: 2 nodes [7, 1031]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 8: 2 nodes [9, 481]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 9: 3 nodes [10, 193, 280]
+[DEBUG][φ] cut=15, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 10: 4 nodes [11, 397, 624, 659]
+[DEBUG][φ] cut=10, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 11: 5 nodes [12, 117, 155, 452, 513]
+[DEBUG][φ] cut=4, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 12: 3 nodes [13, 551, 2215]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 13: 1 nodes [14]
+[DEBUG][φ] cut=19, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 14: 4 nodes [15, 80, 234, 701]
+[DEBUG][φ] cut=11, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 15: 4 nodes [16, 804, 1585, 1599]
+[DEBUG][φ] cut=15, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 16: 2 nodes [17, 146]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 17: 3 nodes [18, 866, 890]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 18: 2 nodes [19, 424]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 19: 6 nodes [20, 25, 334, 456, 732, 778]
+[DEBUG][φ] cut=19, deg_S=39, deg_comp=12469.0
+
+[DEBUG] Cluster 20: 3 nodes [21, 239, 1440]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 21: 4 nodes [22, 1768, 2257, 2444]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 22: 7 nodes [23, 93, 292, 352, 725, 759, 1372]
+[DEBUG][φ] cut=14, deg_S=32, deg_comp=12476.0
+
+[DEBUG] Cluster 23: 3 nodes [24, 39, 269]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 24: 2 nodes [26, 724]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 25: 2 nodes [27, 532]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 26: 2 nodes [28, 586]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 27: 5 nodes [29, 382, 429, 1837, 2132]
+[DEBUG][φ] cut=8, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 28: 4 nodes [30, 231, 285, 2276]
+[DEBUG][φ] cut=10, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 29: 4 nodes [31, 708, 736, 1116]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 30: 2 nodes [32, 679]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 31: 1 nodes [33]
+[DEBUG][φ] cut=5, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 32: 2 nodes [34, 35]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 33: 6 nodes [36, 832, 871, 1591, 1701, 2390]
+[DEBUG][φ] cut=17, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 34: 2 nodes [37, 563]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 35: 3 nodes [38, 273, 372]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 36: 4 nodes [40, 535, 761, 1560]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 37: 1 nodes [41]
+[DEBUG][φ] cut=17, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 38: 6 nodes [42, 144, 189, 395, 2102, 2664]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 39: 4 nodes [43, 353, 610, 628]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 40: 6 nodes [44, 116, 225, 760, 2042, 2428]
+[DEBUG][φ] cut=11, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 41: 3 nodes [45, 220, 492]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 42: 5 nodes [46, 238, 301, 489, 867]
+[DEBUG][φ] cut=8, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 43: 3 nodes [47, 87, 383]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 44: 4 nodes [48, 1783, 2348, 2682]
+[DEBUG][φ] cut=2, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 45: 3 nodes [49, 222, 581]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 46: 3 nodes [50, 150, 643]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 47: 4 nodes [51, 312, 645, 742]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 48: 4 nodes [52, 1823, 2487, 2580]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 49: 3 nodes [53, 243, 1439]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 50: 3 nodes [54, 614, 615]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 51: 9 nodes [55, 141, 361, 844, 860, 974, 1184, 1362, 1784]
+[DEBUG][φ] cut=21, deg_S=59, deg_comp=12449.0
+
+[DEBUG] Cluster 52: 4 nodes [56, 957, 1400, 1561]
+[DEBUG][φ] cut=7, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 53: 2 nodes [57, 306]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 54: 8 nodes [58, 805, 930, 990, 1062, 1254, 2059, 2651]
+[DEBUG][φ] cut=7, deg_S=37, deg_comp=12471.0
+
+[DEBUG] Cluster 55: 8 nodes [59, 354, 839, 872, 874, 1072, 1526, 1709]
+[DEBUG][φ] cut=20, deg_S=50, deg_comp=12458.0
+
+[DEBUG] Cluster 56: 2 nodes [60, 252]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 57: 2 nodes [61, 240]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 58: 3 nodes [62, 2531, 2566]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 59: 4 nodes [63, 153, 739, 1546]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 60: 2 nodes [64, 284]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 61: 4 nodes [65, 743, 744, 2077]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 62: 3 nodes [66, 69, 149]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 63: 6 nodes [67, 729, 1945, 1993, 2016, 2546]
+[DEBUG][φ] cut=11, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 64: 4 nodes [68, 979, 1632, 1845]
+[DEBUG][φ] cut=15, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 65: 5 nodes [70, 931, 1000, 1053, 1692]
+[DEBUG][φ] cut=19, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 66: 2 nodes [71, 677]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 67: 7 nodes [72, 104, 202, 204, 274, 771, 2650]
+[DEBUG][φ] cut=16, deg_S=38, deg_comp=12470.0
+
+[DEBUG] Cluster 68: 11 nodes [73, 83, 113, 235, 315, 336, 526, 545, 620, 665, 747]
+[DEBUG][φ] cut=69, deg_S=89, deg_comp=12419.0
+
+[DEBUG] Cluster 69: 1 nodes [74]
+[DEBUG][φ] cut=40, deg_S=40, deg_comp=12468.0
+
+[DEBUG] Cluster 70: 4 nodes [75, 1864, 2075, 2122]
+[DEBUG][φ] cut=14, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 71: 1 nodes [76]
+[DEBUG][φ] cut=17, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 72: 2 nodes [77, 132]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 73: 3 nodes [78, 214, 469]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 74: 3 nodes [79, 1786, 2207]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 75: 1 nodes [81]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 76: 1 nodes [82]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 77: 3 nodes [84, 715, 998]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 78: 2 nodes [85, 425]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 79: 4 nodes [86, 249, 373, 652]
+[DEBUG][φ] cut=2, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 80: 2 nodes [88, 762]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 81: 6 nodes [89, 264, 436, 660, 683, 722]
+[DEBUG][φ] cut=14, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 82: 2 nodes [90, 680]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 83: 4 nodes [91, 458, 561, 666]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 84: 4 nodes [92, 303, 2091, 2438]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 85: 7 nodes [94, 126, 1761, 2208, 2234, 2235, 2313]
+[DEBUG][φ] cut=1, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 86: 4 nodes [95, 358, 894, 1255]
+[DEBUG][φ] cut=3, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 87: 3 nodes [96, 568, 618]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 88: 4 nodes [97, 388, 439, 2590]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 89: 6 nodes [98, 1192, 1954, 2150, 2179, 2222]
+[DEBUG][φ] cut=15, deg_S=39, deg_comp=12469.0
+
+[DEBUG] Cluster 90: 1 nodes [99]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 91: 4 nodes [100, 265, 758, 1980]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 92: 5 nodes [101, 2596, 2669, 2680, 2686]
+[DEBUG][φ] cut=4, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 93: 4 nodes [102, 404, 1893, 1895]
+[DEBUG][φ] cut=7, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 94: 2 nodes [103, 128]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 95: 8 nodes [105, 248, 398, 419, 776, 971, 1326, 2161]
+[DEBUG][φ] cut=16, deg_S=48, deg_comp=12460.0
+
+[DEBUG] Cluster 96: 2 nodes [106, 597]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 97: 6 nodes [107, 108, 304, 498, 898, 1912]
+[DEBUG][φ] cut=11, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 98: 1 nodes [109]
+[DEBUG][φ] cut=19, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 99: 2 nodes [110, 741]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 100: 4 nodes [111, 350, 664, 978]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 101: 2 nodes [112, 572]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 102: 2 nodes [114, 171]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 103: 5 nodes [115, 1713, 1716, 1982, 1991]
+[DEBUG][φ] cut=24, deg_S=38, deg_comp=12470.0
+
+[DEBUG] Cluster 104: 3 nodes [118, 2027, 2672]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 105: 4 nodes [119, 381, 547, 651]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 106: 5 nodes [120, 1257, 1959, 2175, 2259]
+[DEBUG][φ] cut=24, deg_S=40, deg_comp=12468.0
+
+[DEBUG] Cluster 107: 3 nodes [121, 283, 595]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 108: 2 nodes [122, 127]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 109: 3 nodes [123, 553, 2459]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 110: 3 nodes [124, 1916, 2400]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 111: 6 nodes [125, 160, 1857, 2020, 2540, 2681]
+[DEBUG][φ] cut=6, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 112: 1 nodes [129]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 113: 4 nodes [130, 199, 459, 640]
+[DEBUG][φ] cut=17, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 114: 2 nodes [131, 694]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 115: 4 nodes [133, 179, 394, 608]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 116: 3 nodes [134, 505, 1118]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 117: 3 nodes [135, 418, 654]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 118: 1 nodes [136]
+[DEBUG][φ] cut=19, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 119: 5 nodes [137, 748, 1926, 1933, 1941]
+[DEBUG][φ] cut=7, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 120: 4 nodes [138, 416, 1803, 1913]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 121: 2 nodes [139, 2361]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 122: 3 nodes [140, 323, 1322]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 123: 8 nodes [142, 227, 230, 391, 823, 1283, 1318, 1547]
+[DEBUG][φ] cut=18, deg_S=58, deg_comp=12450.0
+
+[DEBUG] Cluster 124: 5 nodes [143, 180, 337, 346, 363]
+[DEBUG][φ] cut=5, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 125: 5 nodes [145, 390, 1224, 2280, 2286]
+[DEBUG][φ] cut=14, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 126: 2 nodes [147, 479]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 127: 1 nodes [148]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 128: 3 nodes [151, 360, 1528]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 129: 4 nodes [152, 1383, 1384, 1398]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 130: 3 nodes [154, 392, 661]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 131: 6 nodes [156, 431, 949, 987, 1608, 2137]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 132: 1 nodes [157]
+[DEBUG][φ] cut=29, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 133: 3 nodes [158, 184, 433]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 134: 5 nodes [159, 985, 1352, 2066, 2674]
+[DEBUG][φ] cut=9, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 135: 3 nodes [161, 347, 713]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 136: 2 nodes [162, 775]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 137: 2 nodes [163, 765]
+[DEBUG][φ] cut=167, deg_S=169, deg_comp=12339.0
+
+[DEBUG] Cluster 138: 3 nodes [164, 517, 1170]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 139: 6 nodes [165, 302, 307, 428, 432, 598]
+[DEBUG][φ] cut=6, deg_S=32, deg_comp=12476.0
+
+[DEBUG] Cluster 140: 2 nodes [166, 457]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 141: 6 nodes [167, 210, 552, 559, 644, 723]
+[DEBUG][φ] cut=51, deg_S=65, deg_comp=12443.0
+
+[DEBUG] Cluster 142: 2 nodes [168, 475]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 143: 2 nodes [169, 212]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 144: 3 nodes [172, 245, 1636]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 145: 3 nodes [173, 575, 2485]
+[DEBUG][φ] cut=18, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 146: 4 nodes [174, 496, 501, 663]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 147: 4 nodes [175, 369, 494, 599]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 148: 1 nodes [176]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 149: 3 nodes [177, 1743, 2192]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 150: 2 nodes [178, 1963]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 151: 6 nodes [181, 518, 662, 766, 2417, 2532]
+[DEBUG][φ] cut=8, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 152: 4 nodes [182, 468, 491, 2377]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 153: 3 nodes [183, 454, 541]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 154: 4 nodes [185, 324, 332, 389]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 155: 3 nodes [186, 588, 699]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 156: 2 nodes [187, 462]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 157: 2 nodes [188, 721]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 158: 2 nodes [190, 356]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 159: 2 nodes [191, 448]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 160: 3 nodes [192, 420, 705]
+[DEBUG][φ] cut=15, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 161: 1 nodes [194]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 162: 4 nodes [195, 196, 216, 707]
+[DEBUG][φ] cut=3, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 163: 2 nodes [197, 633]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 164: 2 nodes [198, 655]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 165: 4 nodes [200, 536, 1464, 1891]
+[DEBUG][φ] cut=15, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 166: 4 nodes [201, 233, 1990, 2093]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 167: 5 nodes [203, 1787, 1871, 2499, 2505]
+[DEBUG][φ] cut=20, deg_S=38, deg_comp=12470.0
+
+[DEBUG] Cluster 168: 2 nodes [205, 600]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 169: 5 nodes [206, 1028, 1037, 1042, 1610]
+[DEBUG][φ] cut=9, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 170: 3 nodes [207, 1518, 1536]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 171: 4 nodes [208, 1270, 2197, 2342]
+[DEBUG][φ] cut=17, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 172: 3 nodes [209, 2407, 2704]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 173: 3 nodes [211, 325, 1201]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 174: 2 nodes [215, 2380]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 175: 2 nodes [217, 685]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 176: 2 nodes [218, 396]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 177: 2 nodes [219, 1689]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 178: 2 nodes [221, 629]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 179: 3 nodes [223, 686, 2541]
+[DEBUG][φ] cut=17, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 180: 5 nodes [224, 1781, 1819, 2229, 2663]
+[DEBUG][φ] cut=5, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 181: 1 nodes [226]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 182: 4 nodes [228, 259, 320, 582]
+[DEBUG][φ] cut=10, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 183: 3 nodes [229, 349, 386]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 184: 2 nodes [232, 268]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 185: 2 nodes [236, 1617]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 186: 2 nodes [237, 329]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 187: 5 nodes [241, 763, 1760, 1879, 2355]
+[DEBUG][φ] cut=4, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 188: 5 nodes [242, 574, 1006, 2004, 2040]
+[DEBUG][φ] cut=18, deg_S=34, deg_comp=12474.0
+
+[DEBUG] Cluster 189: 2 nodes [244, 750]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 190: 4 nodes [246, 560, 2287, 2315]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 191: 1 nodes [247]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 192: 3 nodes [250, 584, 639]
+[DEBUG][φ] cut=16, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 193: 4 nodes [251, 865, 932, 1505]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 194: 4 nodes [253, 1815, 2670, 2671]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 195: 4 nodes [254, 1176, 1866, 2272]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 196: 3 nodes [255, 421, 767]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 197: 4 nodes [256, 928, 983, 1302]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 198: 3 nodes [257, 667, 1356]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 199: 1 nodes [258]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 200: 4 nodes [260, 619, 1324, 1543]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 201: 2 nodes [261, 626]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 202: 2 nodes [262, 266]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 203: 4 nodes [263, 345, 2266, 2654]
+[DEBUG][φ] cut=21, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 204: 1 nodes [267]
+[DEBUG][φ] cut=4, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 205: 3 nodes [270, 467, 495]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 206: 5 nodes [271, 718, 2056, 2095, 2230]
+[DEBUG][φ] cut=5, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 207: 2 nodes [272, 516]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 208: 2 nodes [275, 279]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 209: 3 nodes [276, 2000, 2115]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 210: 4 nodes [277, 367, 483, 749]
+[DEBUG][φ] cut=17, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 211: 6 nodes [278, 326, 327, 945, 1899, 2292]
+[DEBUG][φ] cut=11, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 212: 2 nodes [281, 460]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 213: 2 nodes [282, 589]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 214: 2 nodes [286, 2195]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 215: 2 nodes [287, 549]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 216: 3 nodes [288, 2157, 2565]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 217: 3 nodes [289, 2544, 2568]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 218: 6 nodes [290, 1839, 1840, 2216, 2688, 2705]
+[DEBUG][φ] cut=6, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 219: 2 nodes [291, 487]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 220: 2 nodes [293, 387]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 221: 5 nodes [294, 807, 1438, 1564, 1672]
+[DEBUG][φ] cut=38, deg_S=54, deg_comp=12454.0
+
+[DEBUG] Cluster 222: 1 nodes [295]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 223: 2 nodes [296, 1669]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 224: 5 nodes [297, 441, 1129, 1190, 1222]
+[DEBUG][φ] cut=13, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 225: 4 nodes [299, 596, 746, 2110]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 226: 3 nodes [300, 593, 1621]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 227: 8 nodes [308, 1343, 1364, 1469, 1661, 1705, 2028, 2653]
+[DEBUG][φ] cut=24, deg_S=52, deg_comp=12456.0
+
+[DEBUG] Cluster 228: 2 nodes [309, 546]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 229: 5 nodes [310, 604, 668, 975, 2562]
+[DEBUG][φ] cut=16, deg_S=34, deg_comp=12474.0
+
+[DEBUG] Cluster 230: 4 nodes [311, 406, 1939, 2307]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 231: 3 nodes [313, 534, 1377]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 232: 4 nodes [314, 348, 1244, 1596]
+[DEBUG][φ] cut=9, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 233: 5 nodes [317, 417, 508, 2324, 2326]
+[DEBUG][φ] cut=2, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 234: 3 nodes [318, 1173, 1423]
+[DEBUG][φ] cut=14, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 235: 2 nodes [319, 1514]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 236: 3 nodes [321, 2183, 2305]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 237: 4 nodes [322, 1027, 1336, 1478]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 238: 4 nodes [328, 1774, 1968, 2619]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 239: 5 nodes [330, 731, 1450, 1710, 1778]
+[DEBUG][φ] cut=12, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 240: 6 nodes [331, 774, 1389, 1493, 2344, 2707]
+[DEBUG][φ] cut=8, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 241: 5 nodes [335, 585, 1275, 2290, 2291]
+[DEBUG][φ] cut=17, deg_S=37, deg_comp=12471.0
+
+[DEBUG] Cluster 242: 2 nodes [338, 627]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 243: 3 nodes [339, 1549, 1602]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 244: 1 nodes [340]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 245: 1 nodes [341]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 246: 1 nodes [342]
+[DEBUG][φ] cut=13, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 247: 3 nodes [343, 530, 1098]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 248: 1 nodes [344]
+[DEBUG][φ] cut=31, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 249: 3 nodes [351, 730, 770]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 250: 4 nodes [355, 1093, 2068, 2228]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 251: 3 nodes [357, 803, 1563]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 252: 1 nodes [359]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 253: 4 nodes [362, 2191, 2275, 2522]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 254: 3 nodes [364, 366, 590]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 255: 3 nodes [365, 2112, 2572]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 256: 2 nodes [368, 511]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 257: 3 nodes [370, 875, 933]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 258: 5 nodes [371, 916, 2373, 2374, 2507]
+[DEBUG][φ] cut=12, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 259: 2 nodes [374, 455]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 260: 5 nodes [375, 836, 1266, 1301, 1576]
+[DEBUG][φ] cut=10, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 261: 2 nodes [376, 704]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 262: 2 nodes [377, 622]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 263: 1 nodes [378]
+[DEBUG][φ] cut=26, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 264: 1 nodes [379]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 265: 3 nodes [380, 1745, 2641]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 266: 4 nodes [384, 393, 437, 443]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 267: 2 nodes [385, 567]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 268: 3 nodes [399, 1250, 1251]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 269: 4 nodes [400, 555, 556, 2354]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 270: 4 nodes [401, 442, 1986, 2462]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 271: 3 nodes [402, 681, 2309]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 272: 5 nodes [403, 1353, 1880, 2104, 2302]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 273: 4 nodes [405, 409, 1592, 2582]
+[DEBUG][φ] cut=17, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 274: 3 nodes [407, 1763, 2553]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 275: 3 nodes [408, 447, 630]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 276: 7 nodes [411, 755, 757, 1404, 1965, 2058, 2232]
+[DEBUG][φ] cut=18, deg_S=48, deg_comp=12460.0
+
+[DEBUG] Cluster 277: 2 nodes [412, 688]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 278: 6 nodes [413, 611, 864, 1079, 1935, 2340]
+[DEBUG][φ] cut=47, deg_S=61, deg_comp=12447.0
+
+[DEBUG] Cluster 279: 3 nodes [414, 675, 1445]
+[DEBUG][φ] cut=16, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 280: 1 nodes [415]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 281: 3 nodes [422, 1685, 1691]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 282: 8 nodes [423, 557, 558, 577, 1816, 1934, 2463, 2660]
+[DEBUG][φ] cut=23, deg_S=55, deg_comp=12453.0
+
+[DEBUG] Cluster 283: 1 nodes [426]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 284: 2 nodes [427, 674]
+[DEBUG][φ] cut=64, deg_S=66, deg_comp=12442.0
+
+[DEBUG] Cluster 285: 1 nodes [430]
+[DEBUG][φ] cut=36, deg_S=36, deg_comp=12472.0
+
+[DEBUG] Cluster 286: 3 nodes [434, 1339, 2443]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 287: 3 nodes [438, 692, 720]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 288: 4 nodes [440, 1135, 1442, 1444]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 289: 2 nodes [444, 753]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 290: 3 nodes [445, 690, 2457]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 291: 2 nodes [446, 554]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 292: 2 nodes [449, 1539]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 293: 3 nodes [450, 646, 2558]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 294: 6 nodes [451, 1846, 1847, 1927, 2198, 2537]
+[DEBUG][φ] cut=4, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 295: 1 nodes [453]
+[DEBUG][φ] cut=23, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 296: 2 nodes [461, 493]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 297: 2 nodes [464, 573]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 298: 3 nodes [465, 2368, 2642]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 299: 4 nodes [466, 471, 565, 621]
+[DEBUG][φ] cut=90, deg_S=102, deg_comp=12406.0
+
+[DEBUG] Cluster 300: 4 nodes [470, 478, 754, 843]
+[DEBUG][φ] cut=20, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 301: 3 nodes [472, 650, 656]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 302: 4 nodes [473, 1459, 2221, 2404]
+[DEBUG][φ] cut=18, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 303: 2 nodes [474, 698]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 304: 6 nodes [476, 605, 676, 1014, 1056, 1091]
+[DEBUG][φ] cut=3, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 305: 1 nodes [477]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 306: 4 nodes [480, 2043, 2270, 2570]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 307: 3 nodes [482, 578, 1877]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 308: 3 nodes [484, 1017, 1574]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 309: 4 nodes [485, 711, 1908, 2561]
+[DEBUG][φ] cut=15, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 310: 3 nodes [486, 1148, 1597]
+[DEBUG][φ] cut=15, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 311: 3 nodes [488, 2053, 2685]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 312: 3 nodes [497, 634, 2593]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 313: 3 nodes [499, 1128, 1593]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 314: 3 nodes [500, 982, 1767]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 315: 3 nodes [502, 1957, 2536]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 316: 4 nodes [503, 1952, 2029, 2393]
+[DEBUG][φ] cut=13, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 317: 1 nodes [504]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 318: 2 nodes [506, 514]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 319: 3 nodes [507, 2391, 2548]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 320: 2 nodes [509, 669]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 321: 3 nodes [510, 2214, 2223]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 322: 3 nodes [512, 1875, 2439]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 323: 1 nodes [519]
+[DEBUG][φ] cut=13, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 324: 5 nodes [520, 524, 1169, 1284, 1454]
+[DEBUG][φ] cut=10, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 325: 6 nodes [521, 893, 1081, 1082, 2312, 2587]
+[DEBUG][φ] cut=12, deg_S=36, deg_comp=12472.0
+
+[DEBUG] Cluster 326: 4 nodes [522, 525, 1419, 1427]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 327: 1 nodes [523]
+[DEBUG][φ] cut=30, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 328: 2 nodes [527, 2662]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 329: 1 nodes [528]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 330: 1 nodes [529]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 331: 4 nodes [531, 1490, 2187, 2314]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 332: 2 nodes [533, 777]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 333: 2 nodes [537, 606]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 334: 1 nodes [538]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 335: 1 nodes [539]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 336: 2 nodes [540, 543]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 337: 4 nodes [542, 779, 816, 1203]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 338: 2 nodes [544, 751]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 339: 2 nodes [548, 1859]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 340: 6 nodes [550, 828, 1237, 1273, 1422, 1457]
+[DEBUG][φ] cut=19, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 341: 1 nodes [562]
+[DEBUG][φ] cut=11, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 342: 3 nodes [564, 1376, 1727]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 343: 2 nodes [566, 733]
+[DEBUG][φ] cut=31, deg_S=33, deg_comp=12475.0
+
+[DEBUG] Cluster 344: 1 nodes [569]
+[DEBUG][φ] cut=19, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 345: 3 nodes [570, 1200, 1381]
+[DEBUG][φ] cut=22, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 346: 2 nodes [571, 2331]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 347: 1 nodes [576]
+[DEBUG][φ] cut=30, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 348: 3 nodes [579, 696, 716]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 349: 4 nodes [580, 1126, 2371, 2489]
+[DEBUG][φ] cut=14, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 350: 2 nodes [583, 2372]
+[DEBUG][φ] cut=14, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 351: 7 nodes [587, 1366, 1373, 2239, 2413, 2414, 2513]
+[DEBUG][φ] cut=21, deg_S=49, deg_comp=12459.0
+
+[DEBUG] Cluster 352: 1 nodes [591]
+[DEBUG][φ] cut=17, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 353: 3 nodes [592, 1144, 1509]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 354: 4 nodes [594, 717, 1122, 1194]
+[DEBUG][φ] cut=12, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 355: 2 nodes [602, 1588]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 356: 4 nodes [603, 670, 1121, 1640]
+[DEBUG][φ] cut=12, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 357: 4 nodes [607, 821, 1417, 1421]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 358: 4 nodes [609, 719, 1133, 1666]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 359: 2 nodes [612, 1348]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 360: 3 nodes [613, 616, 2046]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 361: 1 nodes [617]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 362: 5 nodes [625, 695, 700, 1967, 2346]
+[DEBUG][φ] cut=10, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 363: 3 nodes [631, 1562, 1637]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 364: 6 nodes [632, 1545, 1582, 1909, 2017, 2677]
+[DEBUG][φ] cut=11, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 365: 1 nodes [635]
+[DEBUG][φ] cut=21, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 366: 1 nodes [636]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 367: 1 nodes [638]
+[DEBUG][φ] cut=34, deg_S=34, deg_comp=12474.0
+
+[DEBUG] Cluster 368: 2 nodes [641, 1739]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 369: 2 nodes [642, 697]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 370: 1 nodes [647]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 371: 2 nodes [648, 693]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 372: 3 nodes [649, 2403, 2581]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 373: 3 nodes [653, 671, 2480]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 374: 6 nodes [657, 936, 1447, 1515, 1581, 1711]
+[DEBUG][φ] cut=8, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 375: 4 nodes [658, 1577, 1580, 1625]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 376: 1 nodes [672]
+[DEBUG][φ] cut=21, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 377: 1 nodes [673]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 378: 1 nodes [678]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 379: 2 nodes [682, 1860]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 380: 2 nodes [684, 1425]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 381: 1 nodes [687]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 382: 3 nodes [689, 1826, 2630]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 383: 2 nodes [691, 1213]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 384: 1 nodes [702]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 385: 3 nodes [703, 2201, 2233]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 386: 3 nodes [706, 1449, 2455]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 387: 1 nodes [709]
+[DEBUG][φ] cut=3, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 388: 2 nodes [710, 1402]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 389: 3 nodes [712, 1036, 1662]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 390: 3 nodes [714, 1218, 1670]
+[DEBUG][φ] cut=16, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 391: 3 nodes [726, 989, 1418]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 392: 4 nodes [727, 800, 1286, 1594]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 393: 4 nodes [728, 943, 1466, 1650]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 394: 2 nodes [735, 1956]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 395: 3 nodes [737, 1932, 2024]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 396: 1 nodes [738]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 397: 2 nodes [740, 1683]
+[DEBUG][φ] cut=16, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 398: 1 nodes [745]
+[DEBUG][φ] cut=33, deg_S=33, deg_comp=12475.0
+
+[DEBUG] Cluster 399: 2 nodes [752, 1448]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 400: 1 nodes [756]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 401: 2 nodes [764, 769]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 402: 2 nodes [768, 772]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 403: 4 nodes [773, 868, 1137, 1557]
+[DEBUG][φ] cut=20, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 404: 4 nodes [780, 1139, 1572, 1598]
+[DEBUG][φ] cut=4, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 405: 5 nodes [781, 846, 1034, 1533, 1730]
+[DEBUG][φ] cut=10, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 406: 5 nodes [782, 925, 1480, 1487, 1532]
+[DEBUG][φ] cut=5, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 407: 6 nodes [783, 785, 1155, 1407, 1513, 1812]
+[DEBUG][φ] cut=13, deg_S=35, deg_comp=12473.0
+
+[DEBUG] Cluster 408: 2 nodes [784, 845]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 409: 3 nodes [786, 791, 1004]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 410: 3 nodes [787, 891, 1437]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 411: 2 nodes [788, 1268]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 412: 3 nodes [789, 1206, 1544]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 413: 3 nodes [790, 1510, 2057]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 414: 5 nodes [792, 1095, 1105, 1360, 1456]
+[DEBUG][φ] cut=13, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 415: 2 nodes [793, 1127]
+[DEBUG][φ] cut=26, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 416: 2 nodes [794, 795]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 417: 1 nodes [796]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 418: 2 nodes [797, 1645]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 419: 3 nodes [798, 1026, 1433]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 420: 4 nodes [799, 1214, 1635, 1706]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 421: 4 nodes [801, 1475, 1542, 1642]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 422: 2 nodes [802, 1168]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 423: 4 nodes [806, 1138, 1344, 1345]
+[DEBUG][φ] cut=14, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 424: 5 nodes [808, 863, 1300, 1320, 1342]
+[DEBUG][φ] cut=8, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 425: 1 nodes [809]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 426: 5 nodes [810, 905, 1097, 1393, 1502]
+[DEBUG][φ] cut=14, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 427: 3 nodes [811, 1131, 1253]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 428: 4 nodes [812, 1044, 1341, 1365]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 429: 2 nodes [813, 1523]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 430: 2 nodes [814, 1080]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 431: 2 nodes [815, 880]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 432: 4 nodes [817, 818, 819, 1367]
+[DEBUG][φ] cut=9, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 433: 6 nodes [820, 829, 962, 1115, 1146, 1676]
+[DEBUG][φ] cut=8, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 434: 4 nodes [822, 1092, 1430, 1522]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 435: 4 nodes [824, 825, 1215, 1707]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 436: 3 nodes [826, 1462, 1657]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 437: 5 nodes [827, 909, 913, 1894, 2144]
+[DEBUG][φ] cut=5, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 438: 5 nodes [830, 1159, 1477, 1485, 1634]
+[DEBUG][φ] cut=7, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 439: 2 nodes [831, 885]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 440: 2 nodes [833, 1516]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 441: 3 nodes [834, 1067, 1814]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 442: 2 nodes [835, 1248]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 443: 5 nodes [837, 1007, 1489, 1686, 2282]
+[DEBUG][φ] cut=8, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 444: 1 nodes [838]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 445: 3 nodes [840, 1038, 1196]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 446: 3 nodes [841, 2076, 2559]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 447: 4 nodes [842, 1045, 1443, 1540]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 448: 2 nodes [847, 1468]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 449: 2 nodes [848, 1032]
+[DEBUG][φ] cut=13, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 450: 1 nodes [849]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 451: 2 nodes [850, 917]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 452: 5 nodes [851, 903, 1390, 1491, 1605]
+[DEBUG][φ] cut=1, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 453: 6 nodes [852, 855, 996, 1015, 1338, 1654]
+[DEBUG][φ] cut=3, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 454: 4 nodes [853, 1019, 1732, 2225]
+[DEBUG][φ] cut=15, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 455: 3 nodes [854, 1232, 2211]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 456: 9 nodes [856, 959, 1070, 1130, 1205, 1334, 1467, 1715, 1734]
+[DEBUG][φ] cut=27, deg_S=47, deg_comp=12461.0
+
+[DEBUG] Cluster 457: 3 nodes [857, 1483, 2060]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 458: 6 nodes [858, 991, 1084, 1368, 1904, 2556]
+[DEBUG][φ] cut=9, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 459: 3 nodes [859, 1198, 1296]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 460: 3 nodes [861, 1181, 1431]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 461: 2 nodes [862, 2364]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 462: 2 nodes [869, 1548]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 463: 2 nodes [870, 1687]
+[DEBUG][φ] cut=15, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 464: 2 nodes [873, 920]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 465: 3 nodes [876, 1025, 1712]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 466: 2 nodes [877, 1010]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 467: 5 nodes [878, 1023, 1029, 1090, 1472]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 468: 3 nodes [879, 1844, 1979]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 469: 1 nodes [881]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 470: 4 nodes [882, 1012, 1316, 1616]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 471: 4 nodes [883, 1152, 1209, 1665]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 472: 2 nodes [884, 1658]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 473: 1 nodes [886]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 474: 3 nodes [887, 1154, 1531]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 475: 3 nodes [888, 896, 1731]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 476: 2 nodes [889, 892]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 477: 1 nodes [895]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 478: 4 nodes [897, 950, 1141, 1347]
+[DEBUG][φ] cut=14, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 479: 3 nodes [899, 1088, 1565]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 480: 3 nodes [900, 1207, 1351]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 481: 4 nodes [901, 1552, 1553, 1554]
+[DEBUG][φ] cut=5, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 482: 7 nodes [902, 964, 965, 966, 981, 1140, 2294]
+[DEBUG][φ] cut=30, deg_S=58, deg_comp=12450.0
+
+[DEBUG] Cluster 483: 2 nodes [904, 1733]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 484: 4 nodes [906, 2430, 2647, 2658]
+[DEBUG][φ] cut=14, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 485: 2 nodes [907, 918]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 486: 4 nodes [908, 919, 2297, 2304]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 487: 1 nodes [910]
+[DEBUG][φ] cut=22, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 488: 3 nodes [911, 1040, 1304]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 489: 5 nodes [912, 1149, 1150, 2044, 2683]
+[DEBUG][φ] cut=11, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 490: 2 nodes [914, 1551]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 491: 3 nodes [915, 1172, 1294]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 492: 3 nodes [921, 1265, 1725]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 493: 2 nodes [922, 923]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 494: 2 nodes [924, 1460]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 495: 3 nodes [926, 1112, 1403]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 496: 5 nodes [927, 947, 1101, 1328, 1568]
+[DEBUG][φ] cut=19, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 497: 3 nodes [929, 1559, 1791]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 498: 3 nodes [934, 940, 1009]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 499: 2 nodes [935, 1136]
+[DEBUG][φ] cut=17, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 500: 5 nodes [937, 977, 1187, 1226, 1234]
+[DEBUG][φ] cut=8, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 501: 3 nodes [938, 2196, 2267]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 502: 1 nodes [939]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 503: 4 nodes [941, 1441, 1638, 1717]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 504: 4 nodes [942, 1219, 1410, 1675]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 505: 4 nodes [944, 1020, 1337, 2343]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 506: 4 nodes [946, 1179, 1293, 1600]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 507: 5 nodes [948, 1022, 1282, 1446, 1494]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 508: 4 nodes [951, 1401, 2502, 2605]
+[DEBUG][φ] cut=6, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 509: 4 nodes [952, 1064, 1083, 1660]
+[DEBUG][φ] cut=3, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 510: 1 nodes [953]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 511: 2 nodes [954, 969]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 512: 2 nodes [955, 1280]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 513: 5 nodes [956, 995, 1231, 1495, 2673]
+[DEBUG][φ] cut=20, deg_S=34, deg_comp=12474.0
+
+[DEBUG] Cluster 514: 3 nodes [958, 1409, 2600]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 515: 5 nodes [960, 1049, 1071, 1329, 2127]
+[DEBUG][φ] cut=10, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 516: 2 nodes [961, 988]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 517: 2 nodes [963, 1627]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 518: 2 nodes [967, 1394]
+[DEBUG][φ] cut=12, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 519: 3 nodes [968, 1285, 1298]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 520: 2 nodes [970, 1396]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 521: 1 nodes [972]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 522: 2 nodes [973, 993]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 523: 3 nodes [976, 1397, 1414]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 524: 2 nodes [980, 1488]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 525: 1 nodes [984]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 526: 4 nodes [986, 2484, 2614, 2616]
+[DEBUG][φ] cut=8, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 527: 5 nodes [992, 1188, 1426, 1465, 1695]
+[DEBUG][φ] cut=7, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 528: 5 nodes [994, 1001, 1039, 1089, 1317]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 529: 3 nodes [997, 1107, 1271]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 530: 3 nodes [999, 1087, 1512]
+[DEBUG][φ] cut=13, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 531: 2 nodes [1002, 1735]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 532: 1 nodes [1003]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 533: 5 nodes [1005, 1313, 1382, 1623, 1655]
+[DEBUG][φ] cut=1, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 534: 3 nodes [1008, 1011, 1486]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 535: 1 nodes [1013]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 536: 4 nodes [1016, 1110, 1646, 1729]
+[DEBUG][φ] cut=16, deg_S=26, deg_comp=12482.0
+
+[DEBUG] Cluster 537: 2 nodes [1018, 1142]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 538: 1 nodes [1021]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 539: 2 nodes [1024, 2338]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 540: 3 nodes [1030, 1946, 2516]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 541: 4 nodes [1033, 1074, 1174, 1297]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 542: 2 nodes [1035, 1571]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 543: 2 nodes [1041, 1321]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 544: 2 nodes [1043, 1435]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 545: 3 nodes [1046, 1047, 1420]
+[DEBUG][φ] cut=15, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 546: 1 nodes [1048]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 547: 2 nodes [1050, 1171]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 548: 4 nodes [1051, 2477, 2576, 2678]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 549: 2 nodes [1052, 1066]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 550: 2 nodes [1054, 1249]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 551: 2 nodes [1055, 1059]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 552: 3 nodes [1057, 1307, 1359]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 553: 3 nodes [1058, 1211, 1247]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 554: 3 nodes [1060, 1890, 2039]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 555: 3 nodes [1061, 1578, 1651]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 556: 3 nodes [1063, 1175, 1628]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 557: 2 nodes [1065, 1279]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 558: 7 nodes [1068, 2019, 2147, 2322, 2498, 2500, 2567]
+[DEBUG][φ] cut=14, deg_S=36, deg_comp=12472.0
+
+[DEBUG] Cluster 559: 4 nodes [1069, 1096, 1455, 1694]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 560: 2 nodes [1073, 1684]
+[DEBUG][φ] cut=14, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 561: 2 nodes [1075, 1340]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 562: 5 nodes [1076, 1078, 1086, 1641, 2461]
+[DEBUG][φ] cut=7, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 563: 2 nodes [1077, 1153]
+[DEBUG][φ] cut=16, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 564: 2 nodes [1085, 1292]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 565: 2 nodes [1094, 2085]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 566: 6 nodes [1099, 1230, 1476, 1690, 1736, 1737]
+[DEBUG][φ] cut=15, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 567: 2 nodes [1100, 1470]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 568: 2 nodes [1102, 1413]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 569: 2 nodes [1103, 1579]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 570: 2 nodes [1104, 1262]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 571: 4 nodes [1106, 1305, 1575, 1740]
+[DEBUG][φ] cut=11, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 572: 5 nodes [1108, 1308, 1503, 1504, 1507]
+[DEBUG][φ] cut=9, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 573: 5 nodes [1109, 1111, 1412, 1570, 1678]
+[DEBUG][φ] cut=15, deg_S=29, deg_comp=12479.0
+
+[DEBUG] Cluster 574: 2 nodes [1113, 1380]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 575: 2 nodes [1114, 1371]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 576: 5 nodes [1117, 1225, 1261, 1603, 2089]
+[DEBUG][φ] cut=15, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 577: 2 nodes [1119, 1411]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 578: 2 nodes [1120, 1677]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 579: 3 nodes [1123, 1674, 1680]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 580: 4 nodes [1124, 1358, 1566, 1567]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 581: 2 nodes [1125, 1496]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 582: 2 nodes [1132, 1309]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 583: 4 nodes [1134, 1264, 1738, 2281]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 584: 3 nodes [1143, 2152, 2429]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 585: 2 nodes [1145, 1323]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 586: 3 nodes [1147, 1240, 1241]
+[DEBUG][φ] cut=28, deg_S=34, deg_comp=12474.0
+
+[DEBUG] Cluster 587: 1 nodes [1151]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 588: 1 nodes [1156]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 589: 3 nodes [1157, 1700, 1704]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 590: 5 nodes [1158, 1199, 1238, 1555, 1702]
+[DEBUG][φ] cut=11, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 591: 1 nodes [1160]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 592: 2 nodes [1161, 2657]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 593: 2 nodes [1162, 1613]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 594: 3 nodes [1163, 1278, 1534]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 595: 5 nodes [1164, 1584, 1626, 2037, 2151]
+[DEBUG][φ] cut=8, deg_S=22, deg_comp=12486.0
+
+[DEBUG] Cluster 596: 4 nodes [1165, 1609, 1721, 1726]
+[DEBUG][φ] cut=12, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 597: 1 nodes [1166]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 598: 4 nodes [1167, 1330, 1331, 1332]
+[DEBUG][φ] cut=1, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 599: 4 nodes [1177, 1180, 1519, 1620]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 600: 1 nodes [1178]
+[DEBUG][φ] cut=15, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 601: 2 nodes [1182, 1569]
+[DEBUG][φ] cut=21, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 602: 3 nodes [1183, 1193, 1202]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 603: 2 nodes [1185, 1521]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 604: 3 nodes [1186, 2323, 2419]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 605: 2 nodes [1189, 1643]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 606: 5 nodes [1191, 1290, 1918, 2080, 2329]
+[DEBUG][φ] cut=21, deg_S=33, deg_comp=12475.0
+
+[DEBUG] Cluster 607: 2 nodes [1195, 1630]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 608: 3 nodes [1197, 1876, 2634]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 609: 3 nodes [1204, 2269, 2277]
+[DEBUG][φ] cut=10, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 610: 3 nodes [1208, 1429, 1434]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 611: 2 nodes [1210, 1453]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 612: 2 nodes [1212, 1497]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 613: 3 nodes [1216, 1299, 1392]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 614: 1 nodes [1217]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 615: 2 nodes [1220, 1618]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 616: 4 nodes [1221, 1797, 2200, 2703]
+[DEBUG][φ] cut=5, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 617: 2 nodes [1223, 1607]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 618: 2 nodes [1227, 1236]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 619: 3 nodes [1228, 1688, 1693]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 620: 3 nodes [1229, 1615, 1639]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 621: 2 nodes [1233, 1416]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 622: 3 nodes [1235, 1267, 1671]
+[DEBUG][φ] cut=9, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 623: 1 nodes [1239]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 624: 1 nodes [1242]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 625: 4 nodes [1243, 1245, 1258, 1524]
+[DEBUG][φ] cut=13, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 626: 2 nodes [1246, 1520]
+[DEBUG][φ] cut=18, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 627: 1 nodes [1252]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 628: 5 nodes [1256, 1862, 1863, 1964, 2675]
+[DEBUG][φ] cut=12, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 629: 2 nodes [1259, 1944]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 630: 4 nodes [1260, 1269, 1312, 1622]
+[DEBUG][φ] cut=17, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 631: 5 nodes [1263, 1809, 2071, 2441, 2585]
+[DEBUG][φ] cut=4, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 632: 5 nodes [1272, 1281, 1346, 1451, 1604]
+[DEBUG][φ] cut=4, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 633: 5 nodes [1274, 1303, 2254, 2265, 2347]
+[DEBUG][φ] cut=9, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 634: 4 nodes [1276, 1415, 1506, 1525]
+[DEBUG][φ] cut=9, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 635: 3 nodes [1277, 2101, 2470]
+[DEBUG][φ] cut=8, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 636: 1 nodes [1287]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 637: 1 nodes [1288]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 638: 3 nodes [1289, 1375, 1452]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 639: 2 nodes [1291, 1374]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 640: 1 nodes [1295]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 641: 3 nodes [1306, 1310, 1499]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 642: 3 nodes [1311, 1573, 1589]
+[DEBUG][φ] cut=13, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 643: 2 nodes [1314, 1529]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 644: 3 nodes [1315, 2452, 2595]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 645: 1 nodes [1319]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 646: 4 nodes [1325, 2170, 2237, 2274]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 647: 2 nodes [1327, 1587]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 648: 3 nodes [1333, 1369, 1708]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 649: 1 nodes [1335]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 650: 1 nodes [1349]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 651: 1 nodes [1350]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 652: 1 nodes [1354]
+[DEBUG][φ] cut=23, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 653: 2 nodes [1355, 1648]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 654: 3 nodes [1357, 1461, 1511]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 655: 3 nodes [1361, 1406, 1463]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 656: 1 nodes [1363]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 657: 4 nodes [1370, 2038, 2172, 2692]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 658: 1 nodes [1378]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 659: 2 nodes [1379, 1611]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 660: 2 nodes [1385, 1653]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 661: 2 nodes [1386, 2273]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 662: 1 nodes [1387]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 663: 2 nodes [1388, 1586]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 664: 1 nodes [1391]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 665: 1 nodes [1395]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 666: 2 nodes [1399, 1405]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 667: 4 nodes [1408, 1921, 1931, 2402]
+[DEBUG][φ] cut=5, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 668: 2 nodes [1424, 1530]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 669: 4 nodes [1428, 2424, 2539, 2589]
+[DEBUG][φ] cut=12, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 670: 4 nodes [1432, 1481, 1590, 1673]
+[DEBUG][φ] cut=21, deg_S=27, deg_comp=12481.0
+
+[DEBUG] Cluster 671: 1 nodes [1436]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 672: 1 nodes [1458]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 673: 3 nodes [1471, 1501, 1633]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 674: 3 nodes [1473, 1474, 1728]
+[DEBUG][φ] cut=11, deg_S=17, deg_comp=12491.0
+
+[DEBUG] Cluster 675: 3 nodes [1479, 2231, 2635]
+[DEBUG][φ] cut=6, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 676: 2 nodes [1482, 1484]
+[DEBUG][φ] cut=12, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 677: 4 nodes [1492, 1508, 1538, 1724]
+[DEBUG][φ] cut=3, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 678: 1 nodes [1498]
+[DEBUG][φ] cut=13, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 679: 6 nodes [1500, 1833, 2180, 2367, 2508, 2577]
+[DEBUG][φ] cut=9, deg_S=31, deg_comp=12477.0
+
+[DEBUG] Cluster 680: 1 nodes [1517]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 681: 2 nodes [1527, 2524]
+[DEBUG][φ] cut=22, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 682: 3 nodes [1535, 1537, 1556]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 683: 1 nodes [1541]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 684: 2 nodes [1550, 1624]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 685: 3 nodes [1558, 1785, 2564]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 686: 2 nodes [1583, 2396]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 687: 1 nodes [1595]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 688: 2 nodes [1601, 2627]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 689: 2 nodes [1606, 2381]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 690: 1 nodes [1612]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 691: 4 nodes [1614, 1619, 1722, 1723]
+[DEBUG][φ] cut=4, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 692: 1 nodes [1629]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 693: 3 nodes [1631, 2330, 2604]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 694: 1 nodes [1644]
+[DEBUG][φ] cut=21, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 695: 4 nodes [1647, 2074, 2084, 2615]
+[DEBUG][φ] cut=5, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 696: 1 nodes [1649]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 697: 2 nodes [1652, 1659]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 698: 3 nodes [1656, 1822, 2357]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 699: 4 nodes [1663, 2295, 2504, 2667]
+[DEBUG][φ] cut=9, deg_S=21, deg_comp=12487.0
+
+[DEBUG] Cluster 700: 4 nodes [1664, 1667, 1697, 1703]
+[DEBUG][φ] cut=14, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 701: 4 nodes [1668, 2050, 2335, 2378]
+[DEBUG][φ] cut=7, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 702: 1 nodes [1679]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 703: 1 nodes [1681]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 704: 1 nodes [1682]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 705: 4 nodes [1696, 1769, 1771, 1872]
+[DEBUG][φ] cut=13, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 706: 3 nodes [1698, 2256, 2597]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 707: 2 nodes [1699, 2656]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 708: 1 nodes [1714]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 709: 1 nodes [1718]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 710: 4 nodes [1719, 1911, 2087, 2261]
+[DEBUG][φ] cut=12, deg_S=24, deg_comp=12484.0
+
+[DEBUG] Cluster 711: 1 nodes [1720]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 712: 2 nodes [1741, 1841]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 713: 2 nodes [1742, 2456]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 714: 1 nodes [1744]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 715: 1 nodes [1746]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 716: 4 nodes [1747, 2069, 2160, 2434]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 717: 5 nodes [1748, 1835, 2011, 2182, 2633]
+[DEBUG][φ] cut=5, deg_S=19, deg_comp=12489.0
+
+[DEBUG] Cluster 718: 2 nodes [1750, 2106]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 719: 1 nodes [1751]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 720: 2 nodes [1752, 2706]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 721: 3 nodes [1753, 2268, 2445]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 722: 4 nodes [1754, 1867, 1869, 2409]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 723: 2 nodes [1755, 2432]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 724: 3 nodes [1756, 2603, 2613]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 725: 3 nodes [1757, 1842, 2341]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 726: 3 nodes [1758, 2255, 2412]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 727: 3 nodes [1759, 2288, 2697]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 728: 3 nodes [1762, 2495, 2694]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 729: 1 nodes [1764]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 730: 3 nodes [1765, 1770, 1938]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 731: 2 nodes [1766, 1810]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 732: 2 nodes [1772, 2351]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 733: 3 nodes [1773, 1794, 2545]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 734: 4 nodes [1775, 1793, 1795, 2082]
+[DEBUG][φ] cut=13, deg_S=25, deg_comp=12483.0
+
+[DEBUG] Cluster 735: 3 nodes [1776, 2440, 2543]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 736: 1 nodes [1777]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 737: 3 nodes [1779, 1780, 2007]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 738: 2 nodes [1782, 2328]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 739: 3 nodes [1788, 2143, 2181]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 740: 1 nodes [1789]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 741: 5 nodes [1790, 2103, 2332, 2334, 2353]
+[DEBUG][φ] cut=14, deg_S=30, deg_comp=12478.0
+
+[DEBUG] Cluster 742: 2 nodes [1792, 2067]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 743: 3 nodes [1796, 1917, 2001]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 744: 1 nodes [1798]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 745: 2 nodes [1799, 2205]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 746: 6 nodes [1800, 1907, 1994, 1995, 2097, 2241]
+[DEBUG][φ] cut=4, deg_S=28, deg_comp=12480.0
+
+[DEBUG] Cluster 747: 2 nodes [1801, 1821]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 748: 1 nodes [1802]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 749: 1 nodes [1804]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 750: 1 nodes [1805]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 751: 4 nodes [1806, 2279, 2336, 2579]
+[DEBUG][φ] cut=2, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 752: 2 nodes [1807, 2490]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 753: 2 nodes [1808, 2210]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 754: 2 nodes [1811, 2410]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 755: 3 nodes [1813, 1818, 2073]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 756: 1 nodes [1817]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 757: 3 nodes [1820, 2383, 2569]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 758: 2 nodes [1824, 2006]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 759: 2 nodes [1825, 1966]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 760: 4 nodes [1827, 1962, 2083, 2224]
+[DEBUG][φ] cut=7, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 761: 3 nodes [1828, 2014, 2018]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 762: 3 nodes [1829, 1924, 2389]
+[DEBUG][φ] cut=11, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 763: 3 nodes [1830, 2240, 2466]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 764: 3 nodes [1831, 1832, 1836]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 765: 2 nodes [1834, 1905]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 766: 2 nodes [1838, 2514]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 767: 3 nodes [1843, 2399, 2626]
+[DEBUG][φ] cut=3, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 768: 2 nodes [1848, 2483]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 769: 1 nodes [1849]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 770: 2 nodes [1850, 2554]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 771: 2 nodes [1851, 1896]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 772: 2 nodes [1852, 2592]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 773: 3 nodes [1853, 1861, 2320]
+[DEBUG][φ] cut=1, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 774: 1 nodes [1854]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 775: 2 nodes [1855, 2299]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 776: 2 nodes [1856, 1868]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 777: 3 nodes [1858, 2481, 2528]
+[DEBUG][φ] cut=0, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 778: 3 nodes [1865, 1953, 2574]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 779: 2 nodes [1870, 2362]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 780: 1 nodes [1873]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 781: 1 nodes [1874]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 782: 4 nodes [1878, 2107, 2496, 2571]
+[DEBUG][φ] cut=12, deg_S=20, deg_comp=12488.0
+
+[DEBUG] Cluster 783: 2 nodes [1881, 2449]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 784: 1 nodes [1882]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 785: 2 nodes [1883, 2177]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 786: 3 nodes [1884, 1885, 1886]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 787: 3 nodes [1887, 1902, 2258]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 788: 3 nodes [1888, 2394, 2427]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 789: 2 nodes [1889, 2648]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 790: 2 nodes [1892, 2131]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 791: 2 nodes [1897, 2146]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 792: 3 nodes [1898, 2108, 2140]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 793: 3 nodes [1900, 2492, 2547]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 794: 3 nodes [1901, 2301, 2588]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 795: 3 nodes [1903, 2612, 2625]
+[DEBUG][φ] cut=5, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 796: 2 nodes [1906, 2421]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 797: 2 nodes [1910, 2488]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 798: 3 nodes [1914, 2176, 2535]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 799: 2 nodes [1915, 2497]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 800: 4 nodes [1919, 2426, 2431, 2493]
+[DEBUG][φ] cut=11, deg_S=23, deg_comp=12485.0
+
+[DEBUG] Cluster 801: 1 nodes [1920]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 802: 3 nodes [1922, 2026, 2552]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 803: 4 nodes [1923, 1928, 2114, 2124]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 804: 4 nodes [1925, 2133, 2199, 2392]
+[DEBUG][φ] cut=4, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 805: 1 nodes [1929]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 806: 1 nodes [1930]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 807: 2 nodes [1936, 1943]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 808: 2 nodes [1937, 2293]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 809: 3 nodes [1940, 2249, 2252]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 810: 1 nodes [1942]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 811: 2 nodes [1947, 2557]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 812: 1 nodes [1948]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 813: 1 nodes [1949]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 814: 3 nodes [1950, 2139, 2563]
+[DEBUG][φ] cut=12, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 815: 3 nodes [1951, 2035, 2303]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 816: 3 nodes [1955, 2149, 2190]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 817: 3 nodes [1958, 2226, 2478]
+[DEBUG][φ] cut=7, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 818: 1 nodes [1960]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 819: 3 nodes [1961, 2100, 2527]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 820: 2 nodes [1969, 2051]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 821: 3 nodes [1970, 2486, 2586]
+[DEBUG][φ] cut=4, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 822: 2 nodes [1971, 2598]
+[DEBUG][φ] cut=10, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 823: 1 nodes [1972]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 824: 3 nodes [1973, 2446, 2451]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 825: 3 nodes [1974, 2072, 2227]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 826: 2 nodes [1975, 2655]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 827: 2 nodes [1976, 2048]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 828: 4 nodes [1977, 1992, 2318, 2699]
+[DEBUG][φ] cut=8, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 829: 3 nodes [1978, 2002, 2510]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 830: 2 nodes [1981, 2491]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 831: 3 nodes [1983, 2078, 2406]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 832: 3 nodes [1984, 2206, 2379]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 833: 3 nodes [1985, 2065, 2086]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 834: 4 nodes [1987, 2310, 2369, 2607]
+[DEBUG][φ] cut=6, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 835: 1 nodes [1988]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 836: 1 nodes [1989]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 837: 1 nodes [1996]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 838: 1 nodes [1997]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 839: 1 nodes [1998]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 840: 3 nodes [1999, 2003, 2515]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 841: 5 nodes [2005, 2141, 2345, 2418, 2511]
+[DEBUG][φ] cut=2, deg_S=18, deg_comp=12490.0
+
+[DEBUG] Cluster 842: 3 nodes [2008, 2022, 2219]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 843: 1 nodes [2009]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 844: 2 nodes [2010, 2447]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 845: 3 nodes [2012, 2023, 2135]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 846: 2 nodes [2013, 2382]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 847: 4 nodes [2015, 2034, 2092, 2327]
+[DEBUG][φ] cut=6, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 848: 4 nodes [2021, 2218, 2337, 2610]
+[DEBUG][φ] cut=5, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 849: 2 nodes [2025, 2693]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 850: 2 nodes [2030, 2130]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 851: 3 nodes [2031, 2032, 2171]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 852: 2 nodes [2033, 2622]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 853: 2 nodes [2036, 2696]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 854: 1 nodes [2041]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 855: 2 nodes [2045, 2550]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 856: 2 nodes [2047, 2111]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 857: 3 nodes [2049, 2306, 2594]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 858: 3 nodes [2052, 2061, 2062]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 859: 2 nodes [2054, 2690]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 860: 2 nodes [2055, 2352]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 861: 1 nodes [2063]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 862: 1 nodes [2064]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 863: 2 nodes [2070, 2602]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 864: 2 nodes [2079, 2609]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 865: 4 nodes [2081, 2159, 2242, 2661]
+[DEBUG][φ] cut=8, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 866: 2 nodes [2088, 2525]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 867: 3 nodes [2090, 2415, 2530]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 868: 1 nodes [2096]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 869: 3 nodes [2098, 2099, 2156]
+[DEBUG][φ] cut=5, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 870: 1 nodes [2105]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 871: 1 nodes [2109]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 872: 2 nodes [2113, 2623]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 873: 2 nodes [2116, 2125]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 874: 1 nodes [2117]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 875: 2 nodes [2118, 2442]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 876: 1 nodes [2119]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 877: 1 nodes [2120]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 878: 1 nodes [2121]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 879: 3 nodes [2123, 2482, 2645]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 880: 4 nodes [2126, 2213, 2253, 2591]
+[DEBUG][φ] cut=8, deg_S=16, deg_comp=12492.0
+
+[DEBUG] Cluster 881: 3 nodes [2128, 2319, 2479]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 882: 2 nodes [2129, 2454]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 883: 1 nodes [2134]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 884: 1 nodes [2136]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 885: 3 nodes [2138, 2285, 2311]
+[DEBUG][φ] cut=3, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 886: 1 nodes [2142]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 887: 2 nodes [2145, 2408]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 888: 1 nodes [2148]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 889: 1 nodes [2153]
+[DEBUG][φ] cut=14, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 890: 1 nodes [2154]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 891: 3 nodes [2155, 2467, 2468]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 892: 2 nodes [2158, 2450]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 893: 2 nodes [2162, 2599]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 894: 1 nodes [2163]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 895: 3 nodes [2165, 2193, 2363]
+[DEBUG][φ] cut=10, deg_S=14, deg_comp=12494.0
+
+[DEBUG] Cluster 896: 2 nodes [2166, 2167]
+[DEBUG][φ] cut=9, deg_S=11, deg_comp=12497.0
+
+[DEBUG] Cluster 897: 2 nodes [2168, 2350]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 898: 2 nodes [2169, 2420]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 899: 2 nodes [2173, 2204]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 900: 2 nodes [2174, 2687]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 901: 1 nodes [2178]
+[DEBUG][φ] cut=9, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 902: 2 nodes [2184, 2398]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 903: 1 nodes [2185]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 904: 3 nodes [2186, 2321, 2370]
+[DEBUG][φ] cut=1, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 905: 2 nodes [2188, 2194]
+[DEBUG][φ] cut=8, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 906: 3 nodes [2189, 2365, 2668]
+[DEBUG][φ] cut=4, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 907: 2 nodes [2202, 2638]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 908: 3 nodes [2203, 2397, 2405]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 909: 2 nodes [2209, 2689]
+[DEBUG][φ] cut=1, deg_S=3, deg_comp=12505.0
+
+[DEBUG] Cluster 910: 1 nodes [2212]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 911: 1 nodes [2217]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 912: 1 nodes [2220]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 913: 3 nodes [2236, 2262, 2435]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 914: 3 nodes [2238, 2250, 2271]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 915: 2 nodes [2243, 2244]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 916: 2 nodes [2245, 2471]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 917: 3 nodes [2246, 2356, 2475]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 918: 1 nodes [2247]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 919: 3 nodes [2248, 2251, 2296]
+[DEBUG][φ] cut=6, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 920: 2 nodes [2260, 2501]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 921: 1 nodes [2263]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 922: 1 nodes [2264]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 923: 3 nodes [2278, 2283, 2284]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 924: 1 nodes [2289]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 925: 2 nodes [2298, 2518]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 926: 2 nodes [2300, 2636]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 927: 3 nodes [2308, 2637, 2652]
+[DEBUG][φ] cut=2, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 928: 2 nodes [2316, 2659]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 929: 3 nodes [2317, 2624, 2702]
+[DEBUG][φ] cut=9, deg_S=15, deg_comp=12493.0
+
+[DEBUG] Cluster 930: 2 nodes [2325, 2538]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 931: 2 nodes [2333, 2583]
+[DEBUG][φ] cut=11, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 932: 1 nodes [2349]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 933: 1 nodes [2358]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 934: 2 nodes [2359, 2520]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 935: 1 nodes [2360]
+[DEBUG][φ] cut=10, deg_S=10, deg_comp=12498.0
+
+[DEBUG] Cluster 936: 3 nodes [2366, 2388, 2575]
+[DEBUG][φ] cut=7, deg_S=13, deg_comp=12495.0
+
+[DEBUG] Cluster 937: 2 nodes [2375, 2416]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 938: 2 nodes [2376, 2422]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 939: 1 nodes [2384]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 940: 2 nodes [2385, 2676]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 941: 1 nodes [2386]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 942: 1 nodes [2387]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 943: 1 nodes [2395]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 944: 1 nodes [2401]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 945: 3 nodes [2411, 2453, 2666]
+[DEBUG][φ] cut=2, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 946: 1 nodes [2423]
+[DEBUG][φ] cut=12, deg_S=12, deg_comp=12496.0
+
+[DEBUG] Cluster 947: 2 nodes [2425, 2474]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 948: 2 nodes [2433, 2437]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 949: 2 nodes [2436, 2649]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 950: 2 nodes [2448, 2526]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 951: 2 nodes [2458, 2506]
+[DEBUG][φ] cut=7, deg_S=9, deg_comp=12499.0
+
+[DEBUG] Cluster 952: 1 nodes [2460]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 953: 1 nodes [2464]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 954: 2 nodes [2465, 2695]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 955: 1 nodes [2469]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 956: 2 nodes [2472, 2476]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 957: 2 nodes [2473, 2551]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 958: 1 nodes [2494]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 959: 1 nodes [2503]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 960: 2 nodes [2509, 2618]
+[DEBUG][φ] cut=4, deg_S=6, deg_comp=12502.0
+
+[DEBUG] Cluster 961: 1 nodes [2512]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 962: 1 nodes [2517]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 963: 1 nodes [2519]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 964: 1 nodes [2523]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 965: 1 nodes [2533]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 966: 1 nodes [2534]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 967: 1 nodes [2542]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+
+[DEBUG] Cluster 968: 2 nodes [2549, 2608]
+[DEBUG][φ] cut=6, deg_S=8, deg_comp=12500.0
+
+[DEBUG] Cluster 969: 2 nodes [2555, 2560]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 970: 1 nodes [2573]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 971: 2 nodes [2578, 2679]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 972: 1 nodes [2584]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 973: 1 nodes [2601]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 974: 2 nodes [2606, 2611]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 975: 1 nodes [2620]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 976: 1 nodes [2621]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 977: 2 nodes [2628, 2629]
+[DEBUG][φ] cut=5, deg_S=7, deg_comp=12501.0
+
+[DEBUG] Cluster 978: 1 nodes [2631]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 979: 1 nodes [2632]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 980: 1 nodes [2639]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 981: 1 nodes [2640]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 982: 2 nodes [2643, 2646]
+[DEBUG][φ] cut=2, deg_S=4, deg_comp=12504.0
+
+[DEBUG] Cluster 983: 1 nodes [2644]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 984: 1 nodes [2665]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 985: 1 nodes [2684]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 986: 1 nodes [2691]
+[DEBUG][φ] cut=1, deg_S=1, deg_comp=12507.0
+
+[DEBUG] Cluster 987: 2 nodes [2698, 2700]
+[DEBUG][φ] cut=3, deg_S=5, deg_comp=12503.0
+
+[DEBUG] Cluster 988: 1 nodes [2701]
+[DEBUG][φ] cut=2, deg_S=2, deg_comp=12506.0
+[DEBUG] Average unweighted conductance - Standard: 0.6285
+CMG filtered clustering pipeline complete
+[CMG] Found 989 clusters, λ_critical ≈ 0.1481
+[CMG] Coarsened to 989 nodes, 2320 edges
+[CMG] Final graph: 989 nodes, 2320 edges
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.749
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 1.545
+Graph Reduction  Time: 1.394
+Graph Embedding  Time: 113.542
+Graph Refinement Time: 0.012
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 116.493

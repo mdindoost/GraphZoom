@@ -12,9 +12,11 @@ from embed_methods.deepwalk.deepwalk import *
 from embed_methods.node2vec.node2vec import *
 from utils import *
 from scoring import lr
+from cmg_coarsening import cmg_coarse, cmg_coarse_fusion
+
 
 def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_path, \
-                 search_ratio, fusion_output_dir, mapping_path, dataset):
+                 search_ratio, fusion_output_dir, mapping_path, dataset, cmg_params=None):
 
     # obtain mapping operator
     if coarse == "simple":
@@ -23,6 +25,10 @@ def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_p
         os.system('./run_coarsening.sh {} {} {} f {}'.format(mcr_dir, \
                 fusion_input_path, search_ratio, fusion_output_dir))
         mapping = mtx2matrix(mapping_path)
+    elif coarse == "cmg":
+        if cmg_params is None:
+            cmg_params = {'k': 10, 'd': 20, 'threshold': 0.1}
+        mapping = cmg_coarse_fusion(laplacian, **cmg_params)
     else:
         raise NotImplementedError
 
@@ -56,7 +62,14 @@ def main():
     parser.add_argument("-d", "--dataset", type=str, default="cora", \
             help="input dataset")
     parser.add_argument("-o", "--coarse", type=str, default="simple", \
-            help="choose either simple_coarse or lamg_coarse, [simple, lamg]")
+            help="choose either simple_coarse or lamg_coarse, [simple, lamg, cmg]")
+    parser.add_argument("--cmg_k", type=int, default=10, \
+        help="CMG filter order (only for CMG coarsening)")
+    parser.add_argument("--cmg_d", type=int, default=20, \
+            help="CMG embedding dimension (only for CMG coarsening)")  
+    parser.add_argument("--cmg_threshold", type=float, default=0.1, \
+            help="CMG cosine similarity threshold (only for CMG coarsening)")
+
     parser.add_argument("-c", "--mcr_dir", type=str, default="/opt/matlab/R2018A/", \
             help="directory of matlab compiler runtime (only required by lamg_coarsen)")
     parser.add_argument("-s", "--search_ratio", type=int, default=12, \
@@ -107,9 +120,10 @@ def main():
     if args.fusion:
         print("%%%%%% Starting Graph Fusion %%%%%%")
         fusion_start = time.process_time()
-        laplacian    = graph_fusion(laplacian, feature, args.num_neighs, args.mcr_dir, args.coarse,\
-                       fusion_input_path, args.search_ratio, reduce_results, mapping_path, dataset)
-        fusion_time  = time.process_time() - fusion_start
+        cmg_params = {'k': args.cmg_k, 'd': args.cmg_d, 'threshold': args.cmg_threshold}
+        laplacian = graph_fusion(laplacian, feature, args.num_neighs, args.mcr_dir, args.coarse,\
+                fusion_input_path, args.search_ratio, reduce_results, mapping_path, dataset, cmg_params)
+        fusion_time = time.process_time() - fusion_start
 
 ######Graph Reduction######
     print("%%%%%% Starting Graph Reduction %%%%%%")
@@ -126,6 +140,12 @@ def main():
         G = mtx2graph("{}Gs.mtx".format(reduce_results))
         level = read_levels("{}NumLevels.txt".format(reduce_results))
         projections, laplacians = construct_proj_laplacian(laplacian, level, reduce_results)
+
+    elif args.coarse == "cmg":
+        G, projections, laplacians, level = cmg_coarse(
+            laplacian, args.level, args.cmg_k, args.cmg_d, args.cmg_threshold
+        )
+        reduce_time = time.process_time() - reduce_start
 
     else:
         raise NotImplementedError
