@@ -1,0 +1,98 @@
+Command: python graphzoom_timed.py --dataset cora --coarse lamg --mcr_dir /home/mohammad/matlab/R2018a --embed_method deepwalk --seed 42 --reduce_ratio 3 --level 2 --search_ratio 4
+======================
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/cora.mtx'
+
+
+ReductionRatio =
+
+     4
+
+
+Fusion =
+
+  logical
+
+   1
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 3
+	Design gamma     = 1.5
+	Edge  complexity = 1.778
+	Cycle complexity = 5.865
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     5278     1.000  1.000  3.90    3   1.5  3.00  4  
+2  AGG      1208     2607     0.446  0.494  4.32    3   1.5  2.61  5  
+3  AGG      531      1498     0.440  0.575  5.64    0   0.0  0.26  0  
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/fused_cora.mtx'
+
+
+ReductionRatio =
+
+     3
+
+
+Fusion =
+
+  logical
+
+   0
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 3
+	Design gamma     = 1.5
+	Edge  complexity = 1.682
+	Cycle complexity = 5.493
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     7020     1.000  1.000  5.18    3   1.5  3.00  4  
+2  AGG      1240     3127     0.458  0.445  5.04    3   1.5  2.29  5  
+3  AGG      566      1.657500e+03 0.456  0.530  5.86    0   0.0  0.20  0  
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+Successfully Writing Fused Graph.mtx file!!!!!!
+%%%%%% Starting Graph Reduction %%%%%%
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.774
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 0.565
+Graph Reduction  Time: 0.810
+Graph Embedding  Time: 57.255
+Graph Refinement Time: 0.017
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 58.648

@@ -1,0 +1,50 @@
+Quick Validation Results - Sun Jul 13 12:09:28 PM EDT 2025
+=================================
+cmg_cora_deepwalk: SUCCESS - Acc=0.772, Time=119.281s, Compression=2.69x
+cmg_cora_node2vec: SUCCESS - Acc=0.78, Time=58.889s, Compression=2.69x
+cmg_citeseer_deepwalk: SUCCESS - Acc=0.483, Time=160.287s, Compression=2.04x
+cmg_citeseer_node2vec: SUCCESS - Acc=0.504, Time=76.498s, Compression=2.04x
+cmg_pubmed_deepwalk: SUCCESS - Acc=0.762, Time=1022.097s, Compression=2.93x
+cmg_pubmed_node2vec: SUCCESS - Acc=0.8, Time=512.652s, Compression=2.93x
+lamg_cora_deepwalk: SUCCESS - Acc=0.791, Time=145.235s, Compression=2.31x
+lamg_cora_node2vec: SUCCESS - Acc=0.796, Time=67.530s, Compression=2.31x
+lamg_citeseer_deepwalk: SUCCESS - Acc=0.487, Time=168.859s, Compression=2.23x
+lamg_citeseer_node2vec: SUCCESS - Acc=0.515, Time=72.007s, Compression=2.23x
+lamg_pubmed_deepwalk: FAILED - Exit code: 124
+Error log:
+2  AGG      7903     36811    0.401  0.524  9.32    0   0.0  0.21  0  
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+Successfully Writing Fused Graph.mtx file!!!!!!
+%%%%%% Starting Graph Reduction %%%%%%
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+---
+lamg_pubmed_node2vec: SUCCESS - Acc=0.801, Time=553.615s, Compression=2.49x
+simple_cora_deepwalk: SUCCESS - Acc=0.785, Time=217.582s, Compression=1.57x
+simple_cora_node2vec: SUCCESS - Acc=0.781, Time=102.028s, Compression=1.57x
+simple_citeseer_deepwalk: SUCCESS - Acc=0.513, Time=242.773s, Compression=1.44x
+simple_citeseer_node2vec: SUCCESS - Acc=0.498, Time=105.646s, Compression=1.44x
+simple_pubmed_deepwalk: FAILED - Exit code: 124
+Error log:
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+%%%%%% Starting Graph Reduction %%%%%%
+Coarsening Level: 1
+Num of nodes:  14837 Num of edges:  41276
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+---
+simple_pubmed_node2vec: SUCCESS - Acc=0.779, Time=1120.967s, Compression=1.32x
+
+SUMMARY:
+Total tests: 18
+Passed: 16
+Failed: 2
+Success rate: 88.8%

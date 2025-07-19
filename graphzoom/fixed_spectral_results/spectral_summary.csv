@@ -1,0 +1,4 @@
+Method,Nodes,Edges,Fiedler_Value,Spectral_Gap,Compression
+lamg_reduce_2,1169,3938,0.0,0.0,2.316509837467921
+lamg_reduce_3,519,1985,-0.0,0.02421655,5.217726396917149
+lamg_reduce_6,218,979,0.0,0.0,12.422018348623853

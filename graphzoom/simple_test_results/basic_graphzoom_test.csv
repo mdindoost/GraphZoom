@@ -1,0 +1,5 @@
+method,dataset,embedding,accuracy,total_time,status,notes
+default,cora,deepwalk,0.765,209.463,success,completed
+simple,cora,deepwalk,0.773,213.168,success,completed
+lamg,cora,deepwalk,0.788,147.453,success,completed
+default,cora,node2vec,0.777,103.291,success,completed

@@ -1,0 +1,9 @@
+{
+  "shape": [
+    927,
+    927
+  ],
+  "nnz": 5180,
+  "format": "<class 'scipy.sparse.csc.csc_matrix'>",
+  "dtype": "float64"
+}

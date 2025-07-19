@@ -1,0 +1,13 @@
+Command: python graphzoom_timed.py --dataset cora --embed_method deepwalk --seed 42 --num_walks 10 --walk_length 80 --window_size 10 --embedding_dim 128 --coarse simple --level 6
+==============================
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+usage: graphzoom_timed.py [-h] [-d DATASET] [-o COARSE] [--cmg_k CMG_K]
+                          [--cmg_d CMG_D] [--cmg_threshold CMG_THRESHOLD]
+                          [--seed SEED] [-c MCR_DIR] [-s SEARCH_RATIO]
+                          [-r REDUCE_RATIO] [-v LEVEL] [-n NUM_NEIGHS]
+                          [-l LDA] [-e EMBED_PATH] [-m EMBED_METHOD] [-f] [-p]
+                          [-g SAGE_MODEL] [-w]
+graphzoom_timed.py: error: unrecognized arguments: --num_walks 10 --walk_length 80 --window_size 10 --embedding_dim 128

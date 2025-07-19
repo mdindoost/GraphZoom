@@ -1,0 +1,6 @@
+test_name,command,exit_code,accuracy,total_time,status
+basic_default,python graphzoom.py --dataset cora --embed_method deepwalk,0,0.778,216.682,success
+simple_coarsening,python graphzoom.py --dataset cora --coarse simple --embed_method deepwalk,0,0.775,219.086,success
+cmg_basic,python graphzoom.py --dataset cora --coarse cmg --embed_method deepwalk,0,0.772,119.814,success
+cmg_with_params,python graphzoom.py --dataset cora --coarse cmg --cmg_k 15 --cmg_d 20 --embed_method deepwalk,0,0.759,122.254,success
+lamg_basic,python graphzoom.py --dataset cora --coarse lamg --reduce_ratio 2 --search_ratio 12 --mcr_dir /home/mohammad/matlab/R2018a --embed_method deepwalk,0,0.798,140.395,success

@@ -1,3 +1,4 @@
+# Fixed cmg_coarsening_timed.py - Use GraphZoom's standard fusion
 import time
 import numpy as np
 import scipy.sparse as sp
@@ -32,10 +33,11 @@ def scipy_to_pyg_data(laplacian_matrix):
 def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
     """
     CMG coarsening function that matches GraphZoom's sim_coarse interface
+    FIXED: Uses the input laplacian directly (already fused by GraphZoom)
     
     Args:
-        laplacian: scipy sparse Laplacian matrix
-        level: number of coarsening levels (for compatibility)
+        laplacian: scipy sparse Laplacian matrix (ALREADY FUSED by GraphZoom)
+        level: number of coarsening levels
         k: CMG filter order
         d: CMG embedding dimension  
         threshold: CMG cosine similarity threshold
@@ -47,6 +49,7 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
         level: number of levels
     """
     print(f"[CMG] Starting CMG coarsening with k={k}, d={d}, threshold={threshold}")
+    print(f"[CMG] Input graph: {laplacian.shape[0]} nodes, {int((laplacian.nnz - laplacian.shape[0])/2)} edges")
     total_start_time = time.time()
     
     projections = []
@@ -126,41 +129,13 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
 
 def cmg_coarse_fusion(laplacian, k=10, d=20, threshold=0.1):
     """
-    CMG version of fusion coarsening (for graph fusion step)
+    FIXED: CMG fusion now uses GraphZoom's standard fusion instead of custom
+    This function should NOT be called - GraphZoom handles fusion
     
-    Returns a mapping matrix like sim_coarse_fusion
+    Returns the standard GraphZoom fusion result
     """
-    print("[CMG] Starting CMG fusion coarsening")
+    print("[CMG] FIXED: Using GraphZoom's standard fusion (not custom CMG fusion)")
     
-    # Convert to PyG format
-    data = scipy_to_pyg_data(laplacian)
-    
-    # Run CMG clustering  
-    try:
-        clusters, nc, _, _ = cmg_filtered_clustering(
-            data, k=k, d=d, threshold=threshold
-        )
-        print(f"[CMG] Fusion found {nc} clusters")
-        
-    except Exception as e:
-        print(f"[CMG] Fusion error: {e}, falling back to simple")
-        from utils import sim_coarse_fusion
-        return sim_coarse_fusion(laplacian)
-    
-    # Build mapping matrix
-    num_nodes = laplacian.shape[0]
-    row = []
-    col = []
-    data_vals = []
-    
-    for cluster_id in range(nc):
-        cluster_nodes = np.where(clusters == cluster_id)[0]
-        for node_id in cluster_nodes:
-            row.append(cluster_id)
-            col.append(node_id)
-            data_vals.append(1.0)
-    
-    # Mapping: clusters -> nodes (transpose of projection)
-    mapping = csr_matrix((data_vals, (row, col)), shape=(nc, num_nodes))
-    
-    return mapping
+    # Import GraphZoom's standard fusion
+    from utils import sim_coarse_fusion
+    return sim_coarse_fusion(laplacian)

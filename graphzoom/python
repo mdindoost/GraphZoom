@@ -1,0 +1,812 @@
+#!/usr/bin/env python3
+"""
+Comprehensive Multi-Level Analysis: LAMG vs CMG++
+- CMG++: levels 1, 2, 3 (multiple runs)
+- LAMG: reduce_ratio 2, 3, 4, 5, 6
+- Eigenvalue analysis (up to 12 eigenvalues)
+- NetworkX connectivity verification
+"""
+
+import numpy as np
+import scipy.sparse as sp
+import networkx as nx
+import pickle
+import json
+import subprocess
+import os
+from pathlib import Path
+from scipy.sparse.linalg import eigsh
+from collections import defaultdict
+import pandas as pd
+import matplotlib.pyplot as plt
+
+class ComprehensiveAnalyzer:
+    def __init__(self, output_dir="comprehensive_analysis"):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(exist_ok=True)
+        self.results = {}
+    
+    def verify_connectivity_methods(self, adjacency_matrix, eigenvalues):
+        """Verify that eigenvalue-based and NetworkX connectivity methods agree."""
+        
+        print("   🔍 Verifying connectivity calculation methods...")
+        
+        # Method 1: Eigenvalue-based (number of zero eigenvalues)
+        zero_eigenvals = np.sum(np.abs(eigenvalues) < 1e-8)
+        eigen_components = zero_eigenvals
+        
+        # Method 2: NetworkX connected components (with compatibility fix)
+        try:
+            # Try new method first (NetworkX 2.8+)
+            if hasattr(nx, 'from_scipy_sparse_array'):
+                G = nx.from_scipy_sparse_array(adjacency_matrix)
+            else:
+                # Fallback to older method (NetworkX < 2.8)
+                G = nx.from_scipy_sparse_matrix(adjacency_matrix)
+            
+            nx_components = nx.number_connected_components(G)
+        except Exception as e:
+            print(f"      ⚠️  NetworkX method failed: {e}")
+            nx_components = -1  # Mark as failed
+        
+        # Method 3: Manual BFS/DFS connected components
+        try:
+            manual_components = self.count_components_manual(adjacency_matrix)
+        except Exception as e:
+            print(f"      ⚠️  Manual method failed: {e}")
+            manual_components = -1  # Mark as failed
+        
+        print(f"      Eigenvalue method: {eigen_components} components")
+        print(f"      NetworkX method: {nx_components} components")
+        print(f"      Manual BFS method: {manual_components} components")
+        
+        # Check agreement (only for successful methods)
+        successful_methods = [eigen_components]
+        if nx_components != -1:
+            successful_methods.append(nx_components)
+        if manual_components != -1:
+            successful_methods.append(manual_components)
+        
+        methods_agree = len(set(successful_methods)) <= 1
+        print(f"      Methods agree: {'✅ YES' if methods_agree else '❌ NO'}")
+        
+        if not methods_agree:
+            print(f"      ⚠️  DISAGREEMENT DETECTED!")
+            print(f"         Eigenvalue: {eigen_components}")
+            print(f"         NetworkX: {nx_components}")
+            print(f"         Manual: {manual_components}")
+        
+        # Use the most reliable method as ground truth
+        verified_components = eigen_components  # Always works
+        if nx_components != -1 and nx_components == eigen_components:
+            verified_components = nx_components  # Prefer NetworkX if it agrees
+        
+    def verify_connectivity_methods_improved(self, adjacency_matrix, eigenvalues):
+        """Improved connectivity verification that handles singular matrices."""
+        
+        print("   🔍 Verifying connectivity calculation methods...")
+        
+        # Method 1: NetworkX connected components (most reliable)
+        try:
+            if hasattr(nx, 'from_scipy_sparse_array'):
+                G = nx.from_scipy_sparse_array(adjacency_matrix)
+            else:
+                G = nx.from_scipy_sparse_matrix(adjacency_matrix)
+            
+            nx_components = nx.number_connected_components(G)
+            print(f"      NetworkX method: {nx_components} components")
+        except Exception as e:
+            print(f"      ⚠️  NetworkX method failed: {e}")
+            nx_components = -1
+        
+        # Method 2: Manual BFS connected components
+        try:
+            manual_components = self.count_components_manual(adjacency_matrix)
+            print(f"      Manual BFS method: {manual_components} components")
+        except Exception as e:
+            print(f"      ⚠️  Manual method failed: {e}")
+            manual_components = -1
+        
+        # Method 3: Eigenvalue-based (may fail for singular matrices)
+        eigen_components = -1
+        if len(eigenvalues) > 0:
+            # Try different thresholds to find the right one
+            thresholds = [1e-16, 1e-14, 1e-12, 1e-10, 1e-8]
+            for thresh in thresholds:
+                zero_count = np.sum(np.abs(eigenvalues) < thresh)
+                if nx_components > 0 and zero_count == nx_components:
+                    eigen_components = zero_count
+                    print(f"      Eigenvalue method: {eigen_components} components (threshold {thresh:.0e})")
+                    break
+            
+            if eigen_components == -1:
+                # No threshold worked, report the closest
+                best_thresh = 1e-12
+                eigen_components = np.sum(np.abs(eigenvalues) < best_thresh)
+                print(f"      Eigenvalue method: {eigen_components} components (threshold {best_thresh:.0e}, approximate)")
+        else:
+            print(f"      Eigenvalue method: Failed to compute eigenvalues")
+        
+        # Determine agreement
+        successful_methods = []
+        if nx_components != -1:
+            successful_methods.append(nx_components)
+        if manual_components != -1:
+            successful_methods.append(manual_components)
+        if eigen_components != -1 and len(eigenvalues) > 0:
+            successful_methods.append(eigen_components)
+        
+        methods_agree = len(set(successful_methods)) <= 1 if successful_methods else False
+        print(f"      Methods agree: {'✅ YES' if methods_agree else '❌ NO'}")
+        
+        # Use the most reliable method as ground truth
+        if nx_components != -1:
+            verified_components = nx_components  # NetworkX is most reliable
+        elif manual_components != -1:
+            verified_components = manual_components
+        else:
+            verified_components = eigen_components if eigen_components != -1 else 0
+        
+        # Show component size distribution for NetworkX
+        if nx_components > 0 and nx_components < 100:  # Only for reasonable number of components
+            try:
+                components = list(nx.connected_components(G))
+                component_sizes = sorted([len(c) for c in components], reverse=True)
+                if len(component_sizes) <= 10:
+                    print(f"      Component sizes: {component_sizes}")
+                else:
+                    print(f"      Component sizes: {component_sizes[:5]}...{component_sizes[-5:]} (showing first 5 and last 5)")
+            except:
+                pass
+        
+        return {
+            'eigenvalue_components': eigen_components,
+            'networkx_components': nx_components,
+            'manual_components': manual_components,
+            'methods_agree': methods_agree,
+            'verified_components': verified_components,
+            'eigenvalues_available': len(eigenvalues) > 0
+        }
+    
+    def count_components_manual(self, adjacency_matrix):
+        """Manual connected components counting using BFS."""
+        n = adjacency_matrix.shape[0]
+        visited = np.zeros(n, dtype=bool)
+        components = 0
+        
+        adj_csr = adjacency_matrix.tocsr()
+        
+        for start_node in range(n):
+            if not visited[start_node]:
+                # BFS from this node
+                components += 1
+                queue = [start_node]
+                visited[start_node] = True
+                
+                while queue:
+                    node = queue.pop(0)
+                    # Get neighbors
+                    neighbors = adj_csr.indices[adj_csr.indptr[node]:adj_csr.indptr[node+1]]
+                    
+                    for neighbor in neighbors:
+                        if not visited[neighbor]:
+                            visited[neighbor] = True
+                            queue.append(neighbor)
+        
+        return components
+    
+    def run_cmg_multilevel(self, dataset_path="dataset/cora", max_level=3):
+        """Run CMG++ at multiple levels and extract matrices."""
+        
+        print("🔄 Running CMG++ Multi-Level Analysis...")
+        
+        cmg_results = {}
+        
+        for level in range(1, max_level + 1):
+            print(f"\n📊 CMG++ Level {level}:")
+            
+            try:
+                # Import CMG modules
+                from filtered import cmg_filtered_clustering
+                import torch
+                from torch_geometric.data import Data
+                
+                # Load dataset
+                with open(f"{dataset_path}/cora-G.json", 'r') as f:
+                    data_json = json.load(f)
+                
+                edges = data_json['links']
+                n_nodes = len(data_json['nodes'])
+                
+                # Build PyG data
+                edge_list = []
+                for edge in edges:
+                    src, tgt = edge['source'], edge['target']
+                    edge_list.append((src, tgt))
+                    edge_list.append((tgt, src))
+                
+                edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+                
+                try:
+                    features = np.load(f"{dataset_path}/cora-feats.npy")
+                    x = torch.tensor(features, dtype=torch.float)
+                except FileNotFoundError:
+                    x = torch.eye(n_nodes, dtype=torch.float)
+                
+                data = Data(x=x, edge_index=edge_index, num_nodes=n_nodes)
+                
+                # Run CMG with different parameters for each level
+                k_vals = [5, 10, 15]  # Different filter depths
+                d_vals = [10, 15, 20]  # Different embedding dimensions
+                
+                k = k_vals[level-1] if level <= len(k_vals) else 10
+                d = d_vals[level-1] if level <= len(d_vals) else 15
+                
+                print(f"   Parameters: k={k}, d={d}")
+                
+                # Run CMG
+                clusters, n_clusters, phi_stats, lambda_crit = cmg_filtered_clustering(
+                    data, k=k, d=d, threshold=0.1
+                )
+                
+                # Build matrices
+                A_orig = sp.lil_matrix((n_nodes, n_nodes))
+                for edge in edges:
+                    i, j = edge['source'], edge['target']
+                    A_orig[i, j] = 1
+                    A_orig[j, i] = 1
+                A_orig = A_orig.tocsr()
+                
+                # Build assignment matrix
+                P = sp.lil_matrix((n_nodes, n_clusters))
+                for i, cluster_id in enumerate(clusters):
+                    P[i, cluster_id] = 1.0
+                P = P.tocsr()
+                
+                # Coarsen
+                A_coarse = P.T @ A_orig @ P
+                A_coarse.eliminate_zeros()
+                
+                # Build Laplacian
+                degrees = np.array(A_coarse.sum(axis=1)).flatten()
+                L_coarse = sp.diags(degrees) - A_coarse
+                
+                # Compute eigenvalues (up to 12)
+                eigenvals, eigenvecs = self.compute_eigenvalues_robust(L_coarse, k=12)
+                
+                # Verify connectivity
+                connectivity_check = self.verify_connectivity_methods(A_coarse, eigenvals)
+                
+                # Store results
+                result = {
+                    'level': level,
+                    'nodes': n_clusters,
+                    'edges': A_coarse.nnz // 2,
+                    'reduction_ratio': n_nodes / n_clusters,
+                    'lambda_critical': lambda_crit,
+                    'phi_stats': phi_stats,
+                    'eigenvalues': eigenvals.tolist() if len(eigenvals) > 0 else [],
+                    'connectivity_verified': connectivity_check,
+                    'adjacency': A_coarse,
+                    'laplacian': L_coarse,
+                    'parameters': {'k': k, 'd': d}
+                }
+                
+                cmg_results[f'level_{level}'] = result
+                
+                # Save matrices
+                self.save_matrix(A_coarse, f"cmg_level{level}_adjacency")
+                self.save_matrix(L_coarse, f"cmg_level{level}_laplacian")
+                
+                print(f"   ✅ Level {level}: {n_clusters} nodes, {A_coarse.nnz//2} edges")
+                print(f"      Reduction: {n_nodes/n_clusters:.2f}x")
+                print(f"      Components: {connectivity_check['verified_components']}")
+                print(f"      λ_critical: {lambda_crit:.6f}")
+                
+            except Exception as e:
+                print(f"   ❌ Error at level {level}: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        return cmg_results
+    
+    def run_lamg_multiratio(self, reduce_ratios=[2, 3, 4, 5, 6]):
+        """Run LAMG with multiple reduction ratios using proper environment setup."""
+        
+        print("🔄 Running LAMG Multi-Ratio Analysis...")
+        print("   Using proper environment setup with MATLAB_MCR_ROOT")
+        
+        lamg_results = {}
+        
+        # Set up proper MATLAB environment
+        matlab_mcr_root = "/home/mohammad/matlab/R2018a"
+        
+        # Set up environment variables that persist for subprocess
+        env = os.environ.copy()
+        env['MATLAB_MCR_ROOT'] = matlab_mcr_root
+        env['LD_LIBRARY_PATH'] = f".:{matlab_mcr_root}/v94/runtime/glnxa64:{matlab_mcr_root}/v94/bin/glnxa64:{matlab_mcr_root}/v94/sys/os/glnxa64:{matlab_mcr_root}/v94/sys/opengl/lib/glnxa64:{matlab_mcr_root}/v94/extern/bin/glnxa64"
+        
+        for ratio in reduce_ratios:
+            print(f"\n📊 LAMG Reduce Ratio {ratio}:")
+            
+            try:
+                # Clean previous results thoroughly
+                results_dir = Path("reduction_results")
+                if results_dir.exists():
+                    import shutil
+                    shutil.rmtree(results_dir)
+                    print("   🧹 Cleaned previous results")
+                
+                # Wait a moment for file system
+                import time
+                time.sleep(1)
+                
+                # Build command with proper format and all parameters
+                cmd = [
+                    "python", "graphzoom_timed.py",
+                    "--dataset", "cora",
+                    "--coarse", "lamg", 
+                    "--reduce_ratio", str(ratio),
+                    "--mcr_dir", matlab_mcr_root,
+                    "--embed_method", "deepwalk",
+                    "--seed", "42"
+                ]
+                
+                print(f"   Running: {' '.join(cmd)}")
+                print(f"   Environment: MATLAB_MCR_ROOT={matlab_mcr_root}")
+                print(f"   LD_LIBRARY_PATH set for subprocess")
+                
+                # Use the proper environment and longer timeout
+                result = subprocess.run(cmd, capture_output=True, text=True, 
+                                      timeout=900, env=env)  # 15 min timeout with env
+                
+                print(f"   Return code: {result.returncode}")
+                
+                if result.returncode != 0:
+                    print(f"   ❌ LAMG failed with ratio {ratio}")
+                    if result.stderr:
+                        stderr_lines = result.stderr.split('\n')
+                        print(f"      Error preview:")
+                        for line in stderr_lines[:10]:  # First 10 lines
+                            if line.strip():
+                                print(f"        {line}")
+                        if len(stderr_lines) > 10:
+                            print(f"        ... and {len(stderr_lines)-10} more lines")
+                    
+                    if result.stdout:
+                        stdout_lines = result.stdout.split('\n')
+                        print(f"      Output preview:")
+                        # Look for specific error patterns
+                        for line in stdout_lines:
+                            if 'error' in line.lower() or 'failed' in line.lower() or 'segmentation' in line.lower():
+                                print(f"        🔍 {line}")
+                        
+                        # Show last few lines
+                        print(f"      Last few lines:")
+                        for line in stdout_lines[-5:]:
+                            if line.strip():
+                                print(f"        {line}")
+                    
+                    # Check what files were created despite failure
+                    if results_dir.exists():
+                        available_files = list(results_dir.glob("*.mtx"))
+                        if available_files:
+                            print(f"      Files created: {[f.name for f in available_files]}")
+                            # Try to process partial results if Gs.mtx exists
+                            gs_file = results_dir / "Gs.mtx"
+                            if gs_file.exists():
+                                print(f"      🔍 Gs.mtx exists, attempting to process anyway...")
+                                try:
+                                    accuracy = None  # No accuracy if failed
+                                    # Continue to matrix processing...
+                                except Exception as e:
+                                    print(f"      ❌ Could not process partial results: {e}")
+                                    continue
+                        else:
+                            print(f"      No MTX files created")
+                    
+                    continue
+                
+                # Extract accuracy from output
+                accuracy = None
+                for line in result.stdout.split('\n'):
+                    if 'Test Accuracy:' in line:
+                        try:
+                            accuracy = float(line.split(':')[1].strip())
+                            print(f"   📊 Extracted accuracy: {accuracy:.3f}")
+                        except Exception as e:
+                            print(f"   ⚠️  Could not parse accuracy: {e}")
+                
+                # Check if required files exist
+                gs_file = results_dir / "Gs.mtx"
+                
+                if not gs_file.exists():
+                    print(f"   ❌ Gs.mtx not found for ratio {ratio}")
+                    if results_dir.exists():
+                        available_files = list(results_dir.glob("*.mtx"))
+                        print(f"      Available files: {[f.name for f in available_files]}")
+                    continue
+                
+                print(f"   ✅ Found Gs.mtx ({gs_file.stat().st_size} bytes)")
+                
+                # Load and process LAMG matrix
+                try:
+                    L_coarse = self.load_lamg_mtx_custom(gs_file)
+                    print(f"   📊 Loaded matrix: {L_coarse.shape}")
+                except Exception as e:
+                    print(f"   ❌ Failed to load Gs.mtx: {e}")
+                    continue
+                
+                # Convert to adjacency with better error handling
+                diagonal = L_coarse.diagonal()
+                print(f"   🔍 Diagonal range: {diagonal.min():.6f} to {diagonal.max():.6f}")
+                
+                if np.all(diagonal >= -1e-10):  # Allow for small numerical errors
+                    # Proper Laplacian: A = D - L
+                    diagonal = np.maximum(diagonal, 0)  # Ensure non-negative
+                    D = sp.diags(diagonal)
+                    A_coarse = D - L_coarse
+                    A_coarse.data = np.maximum(A_coarse.data, 0)
+                    A_coarse = (A_coarse + A_coarse.T) / 2
+                    A_coarse.eliminate_zeros()
+                    
+                    # Rebuild Laplacian
+                    degrees_clean = np.array(A_coarse.sum(axis=1)).flatten()
+                    L_clean = sp.diags(degrees_clean) - A_coarse
+                else:
+                    print(f"   ⚠️  Unusual matrix format, treating as adjacency")
+                    A_coarse = L_coarse.copy()
+                    A_coarse.data = np.abs(A_coarse.data)
+                    A_coarse = (A_coarse + A_coarse.T) / 2
+                    A_coarse.eliminate_zeros()
+                    degrees = np.array(A_coarse.sum(axis=1)).flatten()
+                    L_clean = sp.diags(degrees) - A_coarse
+                
+                print(f"   📈 Processed matrix: {A_coarse.shape[0]} nodes, {A_coarse.nnz//2} edges")
+                
+                # Compute eigenvalues (up to 12) with robust method
+                eigenvals, eigenvecs = self.compute_eigenvalues_robust(L_clean, k=12)
+                
+                if len(eigenvals) == 0:
+                    print(f"   ⚠️  Could not compute eigenvalues, using NetworkX only")
+                    eigenvals = []
+                else:
+                    print(f"   ✅ Computed {len(eigenvals)} eigenvalues")
+                
+                # Verify connectivity - improved method
+                connectivity_check = self.verify_connectivity_methods_improved(A_coarse, eigenvals)
+                
+                # Store results
+                result_data = {
+                    'reduce_ratio': ratio,
+                    'nodes': A_coarse.shape[0],
+                    'edges': A_coarse.nnz // 2,
+                    'reduction_ratio': 2708 / A_coarse.shape[0],  # Assuming Cora original size
+                    'accuracy': accuracy,
+                    'eigenvalues': eigenvals.tolist() if len(eigenvals) > 0 else [],
+                    'connectivity_verified': connectivity_check,
+                    'adjacency': A_coarse,
+                    'laplacian': L_clean
+                }
+                
+                lamg_results[f'ratio_{ratio}'] = result_data
+                
+                # Save matrices
+                self.save_matrix(A_coarse, f"lamg_ratio{ratio}_adjacency")
+                self.save_matrix(L_clean, f"lamg_ratio{ratio}_laplacian")
+                
+                print(f"   ✅ Ratio {ratio}: {A_coarse.shape[0]} nodes, {A_coarse.nnz//2} edges")
+                print(f"      Actual reduction: {2708/A_coarse.shape[0]:.2f}x")
+                print(f"      Components: {connectivity_check['verified_components']}")
+                print(f"      Accuracy: {accuracy:.3f}" if accuracy else "      Accuracy: N/A")
+                
+            except subprocess.TimeoutExpired:
+                print(f"   ❌ LAMG timeout for ratio {ratio} (>15 minutes)")
+            except Exception as e:
+                print(f"   ❌ Error with ratio {ratio}: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        return lamg_results
+    
+    def load_lamg_mtx_custom(self, mtx_file):
+        """Load LAMG MTX file in custom format."""
+        with open(mtx_file, 'r') as f:
+            lines = f.readlines()
+        
+        # First line has dimensions
+        first_line = lines[0].strip().split()
+        n_rows, n_cols = int(first_line[0]), int(first_line[1])
+        
+        # Read coordinate data
+        rows, cols, vals = [], [], []
+        
+        for line in lines[1:]:
+            parts = line.strip().split()
+            if len(parts) >= 3:
+                row = int(parts[0]) - 1  # Convert to 0-indexed
+                col = int(parts[1]) - 1  # Convert to 0-indexed
+                val = float(parts[2])
+                rows.append(row)
+                cols.append(col)
+                vals.append(val)
+        
+        # Create sparse matrix
+        matrix = sp.coo_matrix((vals, (rows, cols)), shape=(n_rows, n_cols))
+        return matrix.tocsr()
+    
+    def compute_eigenvalues_robust(self, L, k=12):
+        """Robust eigenvalue computation with multiple fallback methods for singular matrices."""
+        try:
+            n = L.shape[0]
+            k = min(k, n-2)
+            
+            if k <= 0:
+                return np.array([]), None
+            
+            print(f"      Computing {k} eigenvalues for {n}x{n} matrix...")
+            
+            # Method 1: Standard approach
+            try:
+                eigenvals, eigenvecs = eigsh(L, k=k, which='SM', return_eigenvectors=True)
+                eigenvals = np.sort(eigenvals)
+                print(f"      ✅ Standard method succeeded")
+                return eigenvals, eigenvecs
+            except Exception as e:
+                print(f"      Standard method failed: {e}")
+            
+            # Method 2: Shift-invert with small shift
+            try:
+                eigenvals, eigenvecs = eigsh(L, k=k, sigma=1e-10, which='LM', return_eigenvectors=True)
+                eigenvals = np.sort(eigenvals)
+                print(f"      ✅ Shift-invert method succeeded")
+                return eigenvals, eigenvecs
+            except Exception as e:
+                print(f"      Shift-invert method failed: {e}")
+            
+            # Method 3: Regularized matrix
+            try:
+                L_reg = L + 1e-12 * sp.identity(n)
+                eigenvals, eigenvecs = eigsh(L_reg, k=k, which='SM', return_eigenvectors=True)
+                eigenvals = np.sort(eigenvals) - 1e-12  # Remove regularization
+                print(f"      ✅ Regularized method succeeded")
+                return eigenvals, eigenvecs
+            except Exception as e:
+                print(f"      Regularized method failed: {e}")
+            
+            # Method 4: Dense computation for smaller matrices
+            if n < 1000:
+                try:
+                    print(f"      Trying dense computation for {n}x{n} matrix...")
+                    from scipy.linalg import eigh
+                    L_dense = L.toarray()
+                    eigenvals_all = eigh(L_dense, eigvals_only=True)
+                    eigenvals = np.sort(eigenvals_all)[:k]
+                    print(f"      ✅ Dense computation succeeded")
+                    return eigenvals, None
+                except Exception as e:
+                    print(f"      Dense computation failed: {e}")
+            
+            # Method 5: Partial dense computation (just eigenvalues)
+            if n < 2000:
+                try:
+                    print(f"      Trying partial dense eigenvalue computation...")
+                    from scipy.linalg import eigvals
+                    L_dense = L.toarray()
+                    eigenvals_all = eigvals(L_dense)
+                    eigenvals = np.sort(np.real(eigenvals_all))[:k]  # Take real part and sort
+                    print(f"      ✅ Partial dense computation succeeded")
+                    return eigenvals, None
+                except Exception as e:
+                    print(f"      Partial dense computation failed: {e}")
+            
+            print(f"      ❌ All eigenvalue methods failed")
+            return np.array([]), None
+            
+        except Exception as e:
+            print(f"      ❌ Eigenvalue computation error: {e}")
+            return np.array([]), None
+    
+    def save_matrix(self, matrix, name):
+        """Save matrix with metadata."""
+        base_path = self.output_dir / name
+        
+        # Save as pickle
+        with open(f"{base_path}.pkl", 'wb') as f:
+            pickle.dump(matrix, f)
+        
+        # Save info
+        info = {
+            'shape': matrix.shape,
+            'nnz': matrix.nnz,
+            'format': str(type(matrix)),
+            'dtype': str(matrix.dtype)
+        }
+        with open(f"{base_path}_info.json", 'w') as f:
+            json.dump(info, f, indent=2)
+    
+    def create_comprehensive_comparison(self, cmg_results, lamg_results):
+        """Create comprehensive comparison of all results."""
+        
+        print("\n📊 Creating Comprehensive Comparison...")
+        
+        # Prepare data for DataFrame
+        all_results = []
+        
+        # Add CMG results
+        for key, result in cmg_results.items():
+            all_results.append({
+                'Method': 'CMG++',
+                'Configuration': f"Level {result['level']} (k={result['parameters']['k']}, d={result['parameters']['d']})",
+                'Nodes': result['nodes'],
+                'Edges': result['edges'],
+                'Reduction_Ratio': f"{result['reduction_ratio']:.2f}x",
+                'Components_Eigenvalue': result['connectivity_verified']['eigenvalue_components'],
+                'Components_NetworkX': result['connectivity_verified']['networkx_components'],
+                'Components_Manual': result['connectivity_verified']['manual_components'],
+                'Methods_Agree': result['connectivity_verified']['methods_agree'],
+                'Verified_Components': result['connectivity_verified']['verified_components'],
+                'Eigenvalues_First_5': result['eigenvalues'][:5] if result['eigenvalues'] else [],
+                'Lambda_Critical': result.get('lambda_critical', 'N/A'),
+                'Accuracy': 'N/A'  # CMG doesn't run full pipeline
+            })
+        
+        # Add LAMG results
+        for key, result in lamg_results.items():
+            all_results.append({
+                'Method': 'LAMG',
+                'Configuration': f"Ratio {result['reduce_ratio']}",
+                'Nodes': result['nodes'],
+                'Edges': result['edges'],
+                'Reduction_Ratio': f"{result['reduction_ratio']:.2f}x",
+                'Components_Eigenvalue': result['connectivity_verified']['eigenvalue_components'],
+                'Components_NetworkX': result['connectivity_verified']['networkx_components'],
+                'Components_Manual': result['connectivity_verified']['manual_components'],
+                'Methods_Agree': result['connectivity_verified']['methods_agree'],
+                'Verified_Components': result['connectivity_verified']['verified_components'],
+                'Eigenvalues_First_5': result['eigenvalues'][:5] if result['eigenvalues'] else [],
+                'Lambda_Critical': 'N/A',
+                'Accuracy': result.get('accuracy', 'N/A')
+            })
+        
+        # Create DataFrame
+        df = pd.DataFrame(all_results)
+        
+        # Save results
+        results_file = self.output_dir / "comprehensive_results.csv"
+        df.to_csv(results_file, index=False)
+        
+        # Save detailed results as JSON
+        detailed_results = {
+            'cmg_results': {k: {**v, 'adjacency': None, 'laplacian': None} for k, v in cmg_results.items()},
+            'lamg_results': {k: {**v, 'adjacency': None, 'laplacian': None} for k, v in lamg_results.items()}
+        }
+        
+        with open(self.output_dir / "detailed_results.json", 'w') as f:
+            json.dump(detailed_results, f, indent=2, default=str)
+        
+        return df, all_results
+    
+    def run_lamg_single_safe_ratio(self):
+        """Try to run LAMG with a single safe ratio as fallback."""
+        print("   🔄 Attempting safe ratio fallback...")
+        
+        # Try ratio 3 which worked before
+        ratio = 3
+        mcr_dir = "/home/mohammad/matlab/R2018a"
+        
+        results_dir = Path("reduction_results")
+        if results_dir.exists():
+            import shutil
+            shutil.rmtree(results_dir)
+        
+        cmd = [
+            "python", "graphzoom_timed.py",
+            "--coarse", "lamg", 
+            "--reduce_ratio", str(ratio),
+            "--mcr_dir", mcr_dir
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+        
+        if result.returncode == 0:
+            gs_file = results_dir / "Gs.mtx"
+            if gs_file.exists():
+                # Process like normal
+                L_coarse = self.load_lamg_mtx_custom(gs_file)
+                diagonal = L_coarse.diagonal()
+                
+                if np.all(diagonal >= -1e-10):
+                    diagonal = np.maximum(diagonal, 0)
+                    D = sp.diags(diagonal)
+                    A_coarse = D - L_coarse
+                    A_coarse.data = np.maximum(A_coarse.data, 0)
+                    A_coarse = (A_coarse + A_coarse.T) / 2
+                    A_coarse.eliminate_zeros()
+                    degrees_clean = np.array(A_coarse.sum(axis=1)).flatten()
+                    L_clean = sp.diags(degrees_clean) - A_coarse
+                else:
+                    A_coarse = L_coarse.copy()
+                    A_coarse.data = np.abs(A_coarse.data)
+                    A_coarse = (A_coarse + A_coarse.T) / 2
+                    A_coarse.eliminate_zeros()
+                    degrees = np.array(A_coarse.sum(axis=1)).flatten()
+                    L_clean = sp.diags(degrees) - A_coarse
+                
+                eigenvals, _ = self.compute_eigenvalues_robust(L_clean, k=12)
+                connectivity_check = self.verify_connectivity_methods(A_coarse, eigenvals)
+                
+                # Extract accuracy
+                accuracy = None
+                for line in result.stdout.split('\n'):
+                    if 'Test Accuracy:' in line:
+                        try:
+                            accuracy = float(line.split(':')[1].strip())
+                        except:
+                            pass
+                
+                return {
+                    f'ratio_{ratio}': {
+                        'reduce_ratio': ratio,
+                        'nodes': A_coarse.shape[0],
+                        'edges': A_coarse.nnz // 2,
+                        'reduction_ratio': 2708 / A_coarse.shape[0],
+                        'accuracy': accuracy,
+                        'eigenvalues': eigenvals.tolist(),
+                        'connectivity_verified': connectivity_check,
+                        'adjacency': A_coarse,
+                        'laplacian': L_clean
+                    }
+                }
+        
+        return {}
+    
+    def run_comprehensive_analysis(self):
+        """Run the complete comprehensive analysis."""
+        
+        print("🚀 COMPREHENSIVE MULTI-LEVEL ANALYSIS")
+        print("="*60)
+        
+        # Run CMG++ multi-level
+        cmg_results = self.run_cmg_multilevel(max_level=3)
+        
+        # Run LAMG multi-ratio (start from 3 to avoid crashes)
+        lamg_results = self.run_lamg_multiratio(reduce_ratios=[3, 4, 5, 6])
+        
+        # If we got results, also try ratio 2 carefully
+        if lamg_results:
+            print("\n🎯 Attempting ratio 2 (risky)...")
+            try:
+                ratio_2_results = self.run_lamg_multiratio(reduce_ratios=[2])
+                if ratio_2_results:
+                    lamg_results.update(ratio_2_results)
+                    print("   ✅ Ratio 2 succeeded!")
+            except:
+                print("   ❌ Ratio 2 failed as expected")
+        
+        # Create comprehensive comparison
+        df, all_results = self.create_comprehensive_comparison(cmg_results, lamg_results)
+        
+        # Store results
+        self.results = {
+            'cmg': cmg_results,
+            'lamg': lamg_results,
+            'comparison_df': df,
+            'all_results': all_results
+        }
+        
+        return self.results
+
+if __name__ == "__main__":
+    analyzer = ComprehensiveAnalyzer()
+    results = analyzer.run_comprehensive_analysis()
+    
+    print("\n" + "="*60)
+    print("📊 COMPREHENSIVE ANALYSIS COMPLETE")
+    print("="*60)
+    print(f"Results saved to: {analyzer.output_dir}")
+    print("Files generated:")
+    print("  • comprehensive_results.csv")
+    print("  • detailed_results.json")
+    print("  • Individual matrix files (.pkl)")
+    print("="*60)

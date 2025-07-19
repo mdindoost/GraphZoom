@@ -1,0 +1,15 @@
+method,dataset,embedding,accuracy,time,clusters,compression,config
+lamg,cora,deepwalk,0.787,140.749,1
+1,unknown,standard
+cmg,cora,deepwalk,0.779,122.073,1025,2.64,default
+cmg,cora,deepwalk,0.783,118.300,1003,2.69,best_params
+cmg,cora,deepwalk,0.746,40.319,412,6.57,multilevel2
+lamg,cora,deepwalk,0.797,146.440,1
+1,unknown,run1
+cmg,cora,deepwalk,0.786,121.800,1003,2.69,run1
+lamg,cora,deepwalk,0.795,146.194,1
+1,unknown,run2
+cmg,cora,deepwalk,0.781,121.801,1003,2.69,run2
+lamg,cora,deepwalk,0.791,144.588,1
+1,unknown,run3
+cmg,cora,deepwalk,0.789,122.245,1003,2.69,run3
