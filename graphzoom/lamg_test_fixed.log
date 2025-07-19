@@ -1,0 +1,21 @@
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/runtime/glnxa64:/home/mohammad/matlab/R2018a/bin/glnxa64:/home/mohammad/matlab/R2018a/sys/os/glnxa64:/home/mohammad/matlab/R2018a/sys/opengl/lib/glnxa64
+./coarsening: error while loading shared libraries: libmwlaunchermain.so: cannot open shared object file: No such file or directory
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+Traceback (most recent call last):
+  File "graphzoom.py", line 227, in <module>
+    sys.exit(main())
+  File "graphzoom.py", line 132, in main
+    laplacian = graph_fusion(laplacian, feature, args.num_neighs, args.mcr_dir, args.coarse,\
+  File "graphzoom.py", line 27, in graph_fusion
+    mapping = mtx2matrix(mapping_path)
+  File "/home/mohammad/GraphZoom/graphzoom/utils.py", line 96, in mtx2matrix
+    with open(proj_name) as ff:
+FileNotFoundError: [Errno 2] No such file or directory: 'reduction_results/Mapping.mtx'

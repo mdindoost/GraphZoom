@@ -17,6 +17,9 @@ from cmg_coarsening_timed import cmg_coarse, cmg_coarse_fusion
 
 def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_path, \
                  search_ratio, fusion_output_dir, mapping_path, dataset, cmg_params=None):
+    """
+    FIXED: Ensure all methods use the same fusion procedure
+    """
 
     # obtain mapping operator
     if coarse == "simple":
@@ -26,9 +29,9 @@ def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_p
                 fusion_input_path, search_ratio, fusion_output_dir))
         mapping = mtx2matrix(mapping_path)
     elif coarse == "cmg":
-        if cmg_params is None:
-            cmg_params = {'k': 10, 'd': 20, 'threshold': 0.1}
-        mapping = cmg_coarse_fusion(laplacian, **cmg_params)
+        # FIXED: Use GraphZoom's standard fusion, not custom CMG fusion
+        print("[FIXED] CMG++ using GraphZoom's standard fusion for fair comparison")
+        mapping = sim_coarse_fusion(laplacian)
     else:
         raise NotImplementedError
 
@@ -68,10 +71,6 @@ def main():
     parser.add_argument("--cmg_d", type=int, default=20, \
             help="CMG embedding dimension (only for CMG coarsening)")  
     parser.add_argument("--cmg_threshold", type=float, default=0.1, \
-            help="CMG cosine similarity threshold (only for CMG coarsening)")
-    parser.add_argument("--seed", type=int, default=42, \
-            help="Random seed for reproducibility")
-    parser.add_argument("--seed", type=int, default=42, \
             help="CMG cosine similarity threshold (only for CMG coarsening)")
     parser.add_argument("--seed", type=int, default=42, \
             help="Random seed for reproducibility")

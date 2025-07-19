@@ -1,0 +1,98 @@
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/cora.mtx'
+
+
+ReductionRatio =
+
+    12
+
+
+Fusion =
+
+  logical
+
+   1
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 5
+	Design gamma     = 1.5
+	Edge  complexity = 2.040
+	Cycle complexity = 9.748
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     5278     1.000  1.000  3.90    3   1.5  3.00  4  
+2  AGG      1208     2607     0.446  0.494  4.32    3   1.5  2.61  5  
+3  AGG      531      1498     0.440  0.575  5.64    3   1.5  2.17  6  
+4  AGG      227      880      0.427  0.587  7.75    3   1.5  1.86  7  
+5  AGG      105      505      0.463  0.574  9.62    0   0.0  0.11  0  
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/fused_cora.mtx'
+
+
+ReductionRatio =
+
+     3
+
+
+Fusion =
+
+  logical
+
+   0
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 3
+	Design gamma     = 1.5
+	Edge  complexity = 1.721
+	Cycle complexity = 5.565
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     8211     1.000  1.000  6.06    3   1.5  3.00  4  
+2  AGG      1169     3.936500e+03 0.432  0.479  6.73    3   1.5  2.40  5  
+3  AGG      519      1985     0.444  0.504  7.65    0   0.0  0.16  0  
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+Successfully Writing Fused Graph.mtx file!!!!!!
+%%%%%% Starting Graph Reduction %%%%%%
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.806
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 0.894
+Graph Reduction  Time: 0.810
+Graph Embedding  Time: 53.427
+Graph Refinement Time: 0.018
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 55.148

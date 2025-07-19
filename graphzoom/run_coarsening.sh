@@ -1,9 +1,5 @@
 #!/bin/sh
-# script for execution of deployed applications
-#
-# Sets up the MATLAB Runtime environment for the current $ARCH and executes 
-# the specified command.
-#
+# Fixed script for MCR 2018a with v94 directory structure
 exe_name=$0
 exe_dir=`dirname "$0"`
 echo "------------------------------------------"
@@ -14,10 +10,12 @@ else
   echo Setting up environment variables
   MCRROOT="$1"
   echo ---
-  LD_LIBRARY_PATH=.:${MCRROOT}/runtime/glnxa64 ;
-  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/bin/glnxa64 ;
-  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/os/glnxa64;
-  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/opengl/lib/glnxa64;
+  # Updated paths for MCR 2018a with v94 directory structure
+  LD_LIBRARY_PATH=.:${MCRROOT}/v94/runtime/glnxa64 ;
+  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/v94/bin/glnxa64 ;
+  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/v94/sys/os/glnxa64;
+  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/v94/sys/opengl/lib/glnxa64;
+  LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/v94/extern/bin/glnxa64;
   export LD_LIBRARY_PATH;
   echo LD_LIBRARY_PATH is ${LD_LIBRARY_PATH};
   shift 1
@@ -30,4 +28,3 @@ else
   eval "\"${exe_dir}/coarsening\"" $args
 fi
 exit
-

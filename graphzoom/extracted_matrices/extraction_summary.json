@@ -1,0 +1,21 @@
+{
+  "extraction_timestamp": "2025-07-19T00:00:09",
+  "methods": {
+    "original": {
+      "nodes": 2708,
+      "edges": 5278,
+      "description": "Original Cora dataset"
+    },
+    "lamg": {
+      "matrices_found": 0,
+      "matrices": {},
+      "description": "LAMG coarsened matrices from .mtx files"
+    },
+    "cmg": {
+      "nodes": 927,
+      "edges": 2590,
+      "lambda_critical": 0.3333333333333333,
+      "description": "CMG++ coarsened matrix from direct computation"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+method,graphzoom_level,dataset,accuracy,total_time,final_nodes,compression_ratio,notes
+cmg,1,cora,0.756,108.667,927,2.92,completed
+cmg,2,cora,0.728,37.734,398,6.80,completed
+cmg,3,cora,0.717,19.388,253,10.70,completed
+lamg,1,cora,0.793,138.298,1169,2.31,completed
+lamg,2,cora,0.797,55.985,519,5.21,completed
+lamg,3,cora,0.798,16.563,218,12.42,completed
+simple,1,cora,0.773,211.964,1724,1.57,completed
+simple,2,cora,0.77,147.124,1261,2.14,completed
+simple,3,cora,0.754,109.414,955,2.83,completed

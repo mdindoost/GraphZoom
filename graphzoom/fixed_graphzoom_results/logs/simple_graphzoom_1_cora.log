@@ -1,0 +1,21 @@
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+%%%%%% Starting Graph Reduction %%%%%%
+Coarsening Level: 1
+Num of nodes:  1724 Num of edges:  3975
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.788
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 0.607
+Graph Reduction  Time: 0.189
+Graph Embedding  Time: 209.431
+Graph Refinement Time: 0.011
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 210.238

@@ -1,0 +1,267 @@
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/cora.mtx'
+
+
+ReductionRatio =
+
+    12
+
+
+Fusion =
+
+  logical
+
+   1
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 5
+	Design gamma     = 1.5
+	Edge  complexity = 2.040
+	Cycle complexity = 9.748
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     5278     1.000  1.000  3.90    3   1.5  3.00  4  
+2  AGG      1208     2607     0.446  0.494  4.32    3   1.5  2.61  5  
+3  AGG      531      1498     0.440  0.575  5.64    3   1.5  2.17  6  
+4  AGG      227      880      0.427  0.587  7.75    3   1.5  1.86  7  
+5  AGG      105      505      0.463  0.574  9.62    0   0.0  0.11  0  
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/fused_cora.mtx'
+
+
+ReductionRatio =
+
+     6
+
+
+Fusion =
+
+  logical
+
+   0
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 4
+	Design gamma     = 1.5
+	Edge  complexity = 1.840
+	Cycle complexity = 7.303
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     8211     1.000  1.000  6.06    3   1.5  3.00  4  
+2  AGG      1169     3.936500e+03 0.432  0.479  6.73    3   1.5  2.40  5  
+3  AGG      519      1985     0.444  0.504  7.65    3   1.5  1.79  6  
+4  AGG      218      979      0.420  0.493  8.98    0   0.0  0.11  0  
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Fusion %%%%%%
+Successfully Writing Fused Graph.mtx file!!!!!!
+%%%%%% Starting Graph Reduction %%%%%%
+%%%%%% Starting Graph Embedding %%%%%%
+/home/mohammad/anaconda3/lib/python3.8/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/home/mohammad/anaconda3/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Process Process-2:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt
+Process Process-21:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "graphzoom_timed.py", line 239, in <module>
+    sys.exit(main())
+  File "graphzoom_timed.py", line 169, in main
+    embeddings  = deepwalk(G)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 8, in deepwalk
+    return DeepWalk_Original(args, embed_dim=args.embed_dim, workers=args.workers, graph=graph, ).get_embeddings()
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 30, in __init__
+    all_paths = self.generate_walks(deep_walk_arguments, graph, workers)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 87, in generate_walks
+    proc.join()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
+Process Process-16:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 60, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/coreviews.py", line 53, in __getitem__
+    def __getitem__(self, key):
+KeyboardInterrupt
+Process Process-15:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 60, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 476, in __getitem__
+    return self.adj[n]
+KeyboardInterrupt
+Process Process-11:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 66, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 452, in __getitem__
+    def __getitem__(self, n):
+KeyboardInterrupt
+Process Process-5:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 66, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 476, in __getitem__
+    return self.adj[n]
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/coreviews.py", line 82, in __getitem__
+    return AtlasView(self._atlas[name])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/coreviews.py", line 44, in __init__
+    def __init__(self, d):
+KeyboardInterrupt
+Process Process-20:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 60, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 476, in __getitem__
+    return self.adj[n]
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 355, in adj
+    return AdjacencyView(self._adj)
+KeyboardInterrupt
+Process Process-14:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 66, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/coreviews.py", line 53, in __getitem__
+    def __getitem__(self, key):
+KeyboardInterrupt
+Process Process-6:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt
+Process Process-13:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 66, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 476, in __getitem__
+    return self.adj[n]
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 355, in adj
+    return AdjacencyView(self._adj)
+KeyboardInterrupt
+Process Process-19:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 66, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 476, in __getitem__
+    return self.adj[n]
+  File "/home/mohammad/anaconda3/lib/python3.8/site-packages/networkx/classes/graph.py", line 355, in adj
+    return AdjacencyView(self._adj)
+KeyboardInterrupt
+Process Process-4:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt
+Process Process-17:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt
+Process Process-8:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 60, in rnd_walk_workers
+    wgts.append(graph[curr_idx][key]['wgt'])
+KeyboardInterrupt
+Process Process-9:
+Traceback (most recent call last):
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/mohammad/anaconda3/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/mohammad/GraphZoom/graphzoom/embed_methods/deepwalk/deepwalk.py", line 67, in rnd_walk_workers
+    path.append(np.random.choice(neigh, p= np.asarray(wgts) / float(sum(wgts))))
+KeyboardInterrupt

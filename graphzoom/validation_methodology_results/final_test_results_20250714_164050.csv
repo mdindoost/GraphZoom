@@ -1,0 +1,4 @@
+method,best_hyperparams,test_accuracy,test_time,compression_ratio,total_search_time,search_configs
+cmg,k=8,d=10,0.774,0.774,38.902,311,20
+lamg,r=2,0.798,138.335,2.31,168,5
+simple,l=1,0.772,216.223,1.57,162,4

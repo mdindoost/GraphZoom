@@ -1,0 +1,11 @@
+{
+  "cmg_results": {
+    "level_1": {
+      "level": 1,
+      "nodes": 1008,
+      "edges": 2852,
+      "reduction_ratio": 2.6865079365079363,
+      "lambda_critical": 0.5714285714285714,
+      "phi_stats": {
+        "phi": {
+          

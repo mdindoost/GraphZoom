@@ -1,0 +1,5 @@
+method,hyperparams,validation_accuracy,validation_time,compression_ratio,phase
+cmg,k=5,d=5,0.758,36.578,6.82,validation
+cmg,k=5,d=10,0.735,40.165,6.50,validation
+cmg,k=5,d=15,0.746,38.708,6.54,validation
+cmg,k=5,d=20,FAILED,TIMEOUT,unknown,validation

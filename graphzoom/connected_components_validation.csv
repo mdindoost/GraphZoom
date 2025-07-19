@@ -1,0 +1,7 @@
+Method,Nodes,Edges,NetworkX_Components,Zero_Eigenvalues,Components_Match,NetworkX_Fiedler,Spectrum_Fiedler,Fiedler_Match,Largest_Component_Size,Largest_Component_Fraction,Component_Sizes
+LAMG reduce_2,1169,3938,6,3.0,False,0.0,1.1359961276927955e-16,True,1066,0.911890504704876,"[1066, 90, 10, 1, 1]"
+LAMG reduce_3,519,1985,3,2.0,False,0.0,-1.0375525091244736e-16,True,475,0.9152215799614644,"[475, 40, 4]"
+LAMG reduce_6,218,979,3,3.0,True,0.0,1.918873252309421e-17,True,204,0.9357798165137615,"[204, 13, 1]"
+CMG++ level_1,927,2203,78,,,0.0,,,757,0.8166127292340885,"[757, 8, 4, 4, 3]"
+CMG++ level_2,392,1203,78,10.0,False,0.0,-1.398946748323449e-16,True,233,0.5943877551020408,"[233, 3, 3, 3, 3]"
+CMG++ level_3,236,645,78,7.0,False,0.0,-2.240957405155872e-16,True,77,0.326271186440678,"[77, 3, 3, 3, 3]"
