@@ -182,3 +182,30 @@ We also evaluate Graphzoom on [ogbn-arxiv](https://ogb.stanford.edu/docs/nodepro
 LAMG Coarsening Code
 ---------------
 The matlab version of lamg-based spectral coarsening code is available in `mat_coarsen/`
+## CMG Integration
+This repository extends GraphZoom with CMG (Combinatorial Multigrid) coarsening...
+
+### Usage
+python graphzoom_timed.py --coarse cmg --dataset cora --cmg_k 10 --cmg_d 15
+
+### Testing  
+python comprehensive_graphzoom_test.py
+
+
+
+## CMG Integration
+This repository extends GraphZoom with CMG (Combinatorial Multigrid) coarsening...
+
+### Usage
+python graphzoom_timed.py --coarse cmg --dataset cora --cmg_k 10 --cmg_d 15
+
+### Testing  
+python comprehensive_graphzoom_test.py"
+## CMG Integration
+This repository extends GraphZoom with CMG (Combinatorial Multigrid) coarsening...
+
+### Usage
+python graphzoom_timed.py --coarse cmg --dataset cora --cmg_k 10 --cmg_d 15
+
+### Testing  
+python comprehensive_graphzoom_test.py"

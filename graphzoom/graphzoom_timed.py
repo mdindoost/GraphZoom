@@ -12,13 +12,13 @@ from embed_methods.deepwalk.deepwalk import *
 from embed_methods.node2vec.node2vec import *
 from utils import *
 from scoring import lr
-from cmg_coarsening_timed import cmg_coarse, cmg_coarse_fusion
+from cmg_coarsening_timed import cmg_coarse, cmg_fusion_mapping
 
 
 def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_path, \
                  search_ratio, fusion_output_dir, mapping_path, dataset, cmg_params=None):
     """
-    FIXED: Ensure all methods use the same fusion procedure
+    Graph fusion with support for simple, lamg, and CMG mapping methods.
     """
 
     # obtain mapping operator
@@ -29,9 +29,11 @@ def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_p
                 fusion_input_path, search_ratio, fusion_output_dir))
         mapping = mtx2matrix(mapping_path)
     elif coarse == "cmg":
-        # FIXED: Use GraphZoom's standard fusion, not custom CMG fusion
-        print("[FIXED] CMG++ using GraphZoom's standard fusion for fair comparison")
-        mapping = sim_coarse_fusion(laplacian)
+        # CMG provides smart node groupings for fusion
+        if cmg_params is None:
+            cmg_params = {'k': 10, 'd': 20, 'threshold': 0.1}
+        mapping = cmg_fusion_mapping(laplacian, cmg_params['k'], cmg_params['d'], cmg_params['threshold'])
+        print(f"[CMG FUSION] Generated mapping: {mapping.shape} (reduction: {laplacian.shape[0] / mapping.shape[0]:.2f}x)")
     else:
         raise NotImplementedError
 
@@ -49,6 +51,7 @@ def graph_fusion(laplacian, feature, num_neighs, mcr_dir, coarse, fusion_input_p
 
     return fused_laplacian
 
+
 def refinement(levels, projections, coarse_laplacian, embeddings, lda, power):
     for i in reversed(range(levels)):
         embeddings = projections[i] @ embeddings
@@ -60,14 +63,17 @@ def refinement(levels, projections, coarse_laplacian, embeddings, lda, power):
             embeddings = filter_ @ (filter_ @ embeddings)
     return embeddings
 
+
 def main():
-    parser = ArgumentParser(description="GraphZoom")
+    parser = ArgumentParser(description="GraphZoom with CMG Integration")
     parser.add_argument("-d", "--dataset", type=str, default="cora", \
             help="input dataset")
     parser.add_argument("-o", "--coarse", type=str, default="simple", \
-            help="choose either simple_coarse or lamg_coarse, [simple, lamg, cmg]")
+            help="choose coarsening method: [simple, lamg, cmg]")
+    
+    # CMG-specific parameters
     parser.add_argument("--cmg_k", type=int, default=10, \
-        help="CMG filter order (only for CMG coarsening)")
+            help="CMG filter order (only for CMG coarsening)")
     parser.add_argument("--cmg_d", type=int, default=20, \
             help="CMG embedding dimension (only for CMG coarsening)")  
     parser.add_argument("--cmg_threshold", type=float, default=0.1, \
@@ -75,6 +81,7 @@ def main():
     parser.add_argument("--seed", type=int, default=42, \
             help="Random seed for reproducibility")
 
+    # Original GraphZoom parameters
     parser.add_argument("-c", "--mcr_dir", type=str, default="/opt/matlab/R2018A/", \
             help="directory of matlab compiler runtime (only required by lamg_coarsen)")
     parser.add_argument("-s", "--search_ratio", type=int, default=12, \
@@ -82,7 +89,7 @@ def main():
     parser.add_argument("-r", "--reduce_ratio", type=int, default=2, \
             help="control graph coarsening levels (only required by lamg_coarsen)")
     parser.add_argument("-v", "--level", type=int, default=1, \
-            help="number of coarsening levels (only required by simple_coarsen)")
+            help="number of coarsening levels")
     parser.add_argument("-n", "--num_neighs", type=int, default=2, \
             help="control k-nearest neighbors in graph fusion process")
     parser.add_argument("-l", "--lda", type=float, default=0.1, \
@@ -145,6 +152,16 @@ def main():
         reduce_time = time.process_time() - reduce_start
 
     elif args.coarse == "lamg":
+        print(f"**********************[LAMG] Coarsening input path: {coarsen_input_path}")
+        
+        with open(coarsen_input_path, 'r') as f:
+            lines = f.readlines()
+            print("[LAMG] Preview of input .mtx:")
+            for i, line in enumerate(lines):
+                if not line.startswith('%'):  # Skip comments
+                    print(line.strip())
+                if i > 100: break  # Only preview first 20 rows
+            
         os.system('./run_coarsening.sh {} {} {} n {}'.format(args.mcr_dir, \
                 coarsen_input_path, args.reduce_ratio, reduce_results))
         reduce_time = read_time("{}CPUtime.txt".format(reduce_results))
@@ -153,6 +170,14 @@ def main():
         projections, laplacians = construct_proj_laplacian(laplacian, level, reduce_results)
 
     elif args.coarse == "cmg":
+        print(f"**********************[CMG] Multi-level coarsening with {args.level} levels")
+        print(f"[CMG] CMG parameters: k={args.cmg_k}, d={args.cmg_d}, threshold={args.cmg_threshold}")
+        
+        if args.fusion:
+            print("[CMG] Processing fused graph (original + features)")
+        else:
+            print("[CMG] Processing original graph (no fusion)")
+            
         G, projections, laplacians, level = cmg_coarse(
             laplacian, args.level, args.cmg_k, args.cmg_d, args.cmg_threshold
         )
@@ -237,4 +262,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-

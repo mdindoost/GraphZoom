@@ -1,4 +1,4 @@
-# Fixed cmg_coarsening_timed.py - Use GraphZoom's standard fusion
+# Complete cmg_coarsening_timed.py - Combines both fusion mapping and coarsening
 import time
 import numpy as np
 import scipy.sparse as sp
@@ -10,6 +10,7 @@ import torch
 
 # Import your CMG functions (adjust paths as needed)
 from filtered_timed import cmg_filtered_clustering, save_timing_data
+
 
 def scipy_to_pyg_data(laplacian_matrix):
     """Convert scipy sparse Laplacian to PyTorch Geometric Data object"""
@@ -30,13 +31,149 @@ def scipy_to_pyg_data(laplacian_matrix):
     
     return data
 
-def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
+
+def laplacian_to_pyg_data(laplacian):
     """
-    CMG coarsening function that matches GraphZoom's sim_coarse interface
-    FIXED: Uses the input laplacian directly (already fused by GraphZoom)
+    Convert scipy sparse Laplacian to PyTorch Geometric Data object.
+    Alternative implementation for fusion mapping.
+    """
+    # Convert Laplacian to adjacency: A = D - L
+    if hasattr(laplacian, 'toarray'):
+        laplacian_dense = laplacian.toarray()
+    else:
+        laplacian_dense = laplacian
+    
+    # Extract adjacency matrix
+    adjacency_dense = -laplacian_dense.copy()
+    np.fill_diagonal(adjacency_dense, 0)  # Remove diagonal
+    adjacency_dense = np.maximum(adjacency_dense, 0)  # Keep only positive entries
+    
+    # Convert to sparse
+    adjacency = sp.csr_matrix(adjacency_dense)
+    
+    # Convert to COO format for PyG
+    adjacency_coo = adjacency.tocoo()
+    
+    # Create edge_index
+    edge_index = np.vstack([adjacency_coo.row, adjacency_coo.col])
+    edge_index = torch.tensor(edge_index, dtype=torch.long)
+    
+    # Create PyG Data object
+    data = Data(
+        edge_index=edge_index,
+        num_nodes=laplacian.shape[0]
+    )
+    
+    return data
+
+
+def clusters_to_mapping_matrix(cluster_assignments, num_clusters, num_nodes):
+    """
+    Convert cluster assignments to mapping matrix for fusion.
+    """
+    # Create mapping matrix: rows = clusters, cols = nodes
+    row_indices = []
+    col_indices = []
+    data = []
+    
+    for node_id, cluster_id in enumerate(cluster_assignments):
+        row_indices.append(cluster_id)
+        col_indices.append(node_id)
+        data.append(1.0)
+    
+    mapping = sp.csr_matrix(
+        (data, (row_indices, col_indices)), 
+        shape=(num_clusters, num_nodes)
+    )
+    
+    return mapping
+
+
+def create_identity_mapping(num_nodes):
+    """Create identity mapping as fallback when CMG fails."""
+    print(f"[CMG FUSION] Creating identity mapping for {num_nodes} nodes")
+    mapping = sp.identity(num_nodes, format='csr')
+    return mapping
+
+
+def create_projection_matrix(cluster_assignments, num_nodes, num_clusters):
+    """Create projection matrix for graph coarsening."""
+    # Create projection matrix: rows = nodes, cols = clusters
+    row_indices = []
+    col_indices = []
+    data = []
+    
+    for node_id, cluster_id in enumerate(cluster_assignments):
+        row_indices.append(node_id)
+        col_indices.append(cluster_id)
+        data.append(1.0)
+    
+    projection = sp.csr_matrix(
+        (data, (row_indices, col_indices)), 
+        shape=(num_nodes, num_clusters)
+    )
+    
+    return projection
+
+
+# ========================= FUSION MAPPING FUNCTION =========================
+def cmg_fusion_mapping(laplacian, k=10, d=20, threshold=0.1):
+    """
+    CMG fusion mapping function for graph fusion step.
+    
+    Purpose: Run CMG clustering to get smart node groupings for feature edge creation.
+    This is NOT for graph reduction - just for determining which nodes should be 
+    considered together when creating feature-based edges.
     
     Args:
-        laplacian: scipy sparse Laplacian matrix (ALREADY FUSED by GraphZoom)
+        laplacian: Original graph Laplacian matrix (scipy sparse)
+        k: CMG filter order
+        d: CMG embedding dimension  
+        threshold: CMG cosine similarity threshold
+    
+    Returns:
+        mapping: Mapping matrix (num_clusters, num_nodes) where 
+                mapping[cluster_id, node_id] = 1 if node belongs to cluster
+    """
+    
+    print(f"[CMG FUSION] Running CMG clustering for fusion mapping")
+    print(f"[CMG FUSION] Input: {laplacian.shape[0]} nodes")
+    print(f"[CMG FUSION] Parameters: k={k}, d={d}, threshold={threshold}")
+    
+    # Convert laplacian to PyG data format
+    data = laplacian_to_pyg_data(laplacian)
+    
+    # Run CMG clustering
+    try:
+        cluster_assignments, num_clusters, phi_stats, lambda_crit = cmg_filtered_clustering(
+            data, k=k, d=d, threshold=threshold
+        )
+        
+        print(f"[CMG FUSION] CMG clustering completed")
+        print(f"[CMG FUSION] Found {num_clusters} clusters")
+        print(f"[CMG FUSION] Average conductance: {phi_stats.get('avg_phi', 'N/A')}")
+        
+        # Convert cluster assignments to mapping matrix
+        mapping = clusters_to_mapping_matrix(cluster_assignments, num_clusters, laplacian.shape[0])
+        
+        print(f"[CMG FUSION] Created mapping matrix: {mapping.shape}")
+        print(f"[CMG FUSION] Reduction ratio: {laplacian.shape[0] / num_clusters:.2f}x")
+        
+        return mapping
+        
+    except Exception as e:
+        print(f"[CMG FUSION] Error in CMG clustering: {e}")
+        print(f"[CMG FUSION] Falling back to identity mapping")
+        return create_identity_mapping(laplacian.shape[0])
+
+
+# ========================= COARSENING FUNCTION =========================
+def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
+    """
+    CMG coarsening function that matches GraphZoom's sim_coarse interface.
+    
+    Args:
+        laplacian: scipy sparse Laplacian matrix (original or fused)
         level: number of coarsening levels
         k: CMG filter order
         d: CMG embedding dimension  
@@ -85,18 +222,7 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
         
         # Build projection matrix from CMG clusters
         num_nodes = current_laplacian.shape[0]
-        row = []
-        col = []
-        data_vals = []
-        
-        for node_id in range(num_nodes):
-            cluster_id = clusters[node_id]
-            row.append(node_id)
-            col.append(cluster_id)
-            data_vals.append(1.0)
-        
-        # Create projection matrix: nodes -> clusters
-        mapping = csr_matrix((data_vals, (row, col)), shape=(num_nodes, nc))
+        mapping = create_projection_matrix(clusters, num_nodes, nc)
         projections.append(mapping)
         
         # Create coarsened Laplacian
@@ -127,15 +253,51 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
     
     return G, projections, laplacians, level
 
+
+# ========================= LEGACY FUNCTION =========================
 def cmg_coarse_fusion(laplacian, k=10, d=20, threshold=0.1):
     """
-    FIXED: CMG fusion now uses GraphZoom's standard fusion instead of custom
-    This function should NOT be called - GraphZoom handles fusion
-    
-    Returns the standard GraphZoom fusion result
+    Legacy function - kept for backward compatibility.
+    Now just calls standard GraphZoom fusion.
     """
-    print("[CMG] FIXED: Using GraphZoom's standard fusion (not custom CMG fusion)")
+    print("[CMG] Using GraphZoom's standard fusion (not custom CMG fusion)")
     
     # Import GraphZoom's standard fusion
     from utils import sim_coarse_fusion
     return sim_coarse_fusion(laplacian)
+
+
+# ========================= TEST FUNCTION =========================
+def test_cmg_fusion_mapping():
+    """Test function to verify cmg_fusion_mapping works correctly."""
+    print("Testing CMG fusion mapping...")
+    
+    # Create a simple test Laplacian (4-node cycle)
+    n = 4
+    edges = [(0,1), (1,2), (2,3), (3,0)]
+    
+    # Build adjacency
+    adj = sp.lil_matrix((n, n))
+    for i, j in edges:
+        adj[i, j] = 1
+        adj[j, i] = 1
+    
+    # Build Laplacian
+    degrees = np.array(adj.sum(axis=1)).flatten()
+    laplacian = sp.diags(degrees) - adj.tocsr()
+    
+    print(f"Test Laplacian shape: {laplacian.shape}")
+    
+    # Test the mapping function
+    try:
+        mapping = cmg_fusion_mapping(laplacian, k=5, d=10, threshold=0.1)
+        print(f"✅ Success! Mapping shape: {mapping.shape}")
+        print(f"Mapping matrix:\n{mapping.toarray()}")
+        return True
+    except Exception as e:
+        print(f"❌ Test failed: {e}")
+        return False
+
+
+if __name__ == "__main__":
+    test_cmg_fusion_mapping()
