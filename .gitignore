@@ -1,0 +1,22 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary results and working directories
+graphzoom/reduction_results/
+graphzoom/results/timing_results/
+
+# Lock files and temporary files
+.~lock.*
+*.lock
+
+# Backup files with timestamps
+*_backup_*.py
+*_original.py
+
+# Experimental/diagnostic files
+*diagnostic*.py
+*parameter_sweep*.py
+*improved_*.py
+*corrected_*.py
