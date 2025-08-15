@@ -199,36 +199,74 @@ def main():
 
     elif args.embed_method == "graphsage":
         from embed_methods.graphsage.graphsage import graphsage
+        
+        print(f"\n=== DEBUGGING GraphSAGE INPUT for {args.coarse} ===")
+        
+        # Original graph info
+        print(f"Original laplacian shape: {laplacian.shape}")
+        print(f"Original features shape: {feature.shape}")
+        
+        # Coarsened graph info
+        print(f"Coarsened graph G nodes: {len(G.nodes())}")
+        print(f"Coarsened graph G edges: {len(G.edges())}")
+        
         nx.set_node_attributes(G, False, "test")
         nx.set_node_attributes(G, False, "val")
 
         ## obtain mapping operator
         if args.coarse == "lamg":
             mapping = normalize(mtx2matrix(mapping_path), norm='l1', axis=1)
+            
+            print(f"LAMG mapping shape: {mapping.shape}")
+            print(f"LAMG mapping type: {type(mapping)}")
+        
         else:
             mapping = identity(feature.shape[0])
             for p in projections:
                 mapping = mapping @ p
             mapping = normalize(mapping, norm='l1', axis=1).transpose()
+            
+            print(f"{args.coarse.upper()} mapping shape: {mapping.shape}")
+            print(f"{args.coarse.upper()} mapping type: {type(mapping)}")
 
         ## control iterations for training
         coarse_ratio = mapping.shape[1]/mapping.shape[0]
 
         ## map node feats to the coarse graph
         feats = mapping @ feature
+        print(f"Mapped features shape: {feats.shape}")
+        print(f"Features per node: {feats.shape[0]} nodes, {feats.shape[1]} dims")
 
+        ## control iterations for training
+        coarse_ratio = mapping.shape[1]/mapping.shape[0]
+        print(f"Coarse ratio: {coarse_ratio}")
+        print(f"Training epochs: {int(1000/coarse_ratio)}")
+        
+        print("=== END DEBUG INFO ===\n")
+    
         embed_start = time.process_time()
         embeddings  = graphsage(G, feats, args.sage_model, args.sage_weighted, int(1000/coarse_ratio))
-
+    print("embed_start= ", embed_start)
+    print("time.process_time()= ", time.process_time())
     embed_time = time.process_time() - embed_start
+    print("embed_time= ", embed_time)
 
 
 ######Refinement######
     print("%%%%%% Starting Graph Refinement %%%%%%")
+    
+    print(f"\n=== DEBUGGING REFINEMENT for {args.coarse} ===")
+    print(f"Input embeddings shape: {embeddings.shape}")
+    print(f"Number of projection levels: {level}")
+    for i, proj in enumerate(projections):
+        print(f"Projection {i} shape: {proj.shape}")
+    
     refine_start = time.process_time()
     embeddings   = refinement(level, projections, laplacians, embeddings, args.lda, args.power)
     refine_time  = time.process_time() - refine_start
 
+    print(f"Final embeddings shape: {embeddings.shape}")
+    print("=== END REFINEMENT DEBUG ===\n")
 
 ######Save Embeddings######
     np.save(args.embed_path, embeddings)

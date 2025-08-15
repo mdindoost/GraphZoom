@@ -145,7 +145,7 @@ def evaluate_phi_conductance(data, labels: np.ndarray) -> dict:
     finite_std = [p for p in standard_phi.values() if p != float('inf')]
     avg_std = np.mean(finite_std) if finite_std else float('inf')
 
-    print(f"[DEBUG] Average unweighted conductance - Standard: {avg_std:.4f}")
+    # print(f"[DEBUG] Average unweighted conductance - Standard: {avg_std:.4f}")
 
     return {
         'phi': standard_phi,
@@ -164,14 +164,14 @@ def compute_restricted_eigenspace(L_norm: sp.spmatrix, Y: np.ndarray):
     """
     Project normalized Laplacian onto span(Y) and compute eigenspace.
     """
-    print("[DEBUG] Computing restricted eigenspace via Rayleigh-Ritz")
+    # print("[DEBUG] Computing restricted eigenspace via Rayleigh-Ritz")
     Q, R = qr(Y, mode='economic')
     L_proj = Q.T @ (L_norm @ Q)
     eigenvalues, x_proj = eigh(L_proj)
     x = Q @ x_proj
     x = x / np.linalg.norm(x, axis=0, keepdims=True)
     
-    print(f"[DEBUG] Eigenvalue range: [{eigenvalues.min():.4f}, {eigenvalues.max():.4f}]")
+    # print(f"[DEBUG] Eigenvalue range: [{eigenvalues.min():.4f}, {eigenvalues.max():.4f}]")
     return x, eigenvalues, {'subspace_dim': Y.shape[1]}
 
 def cmg_filtered_clustering(data, k=10, d=20, threshold=0.1, conductance_method='both'):
@@ -192,11 +192,11 @@ def cmg_filtered_clustering(data, k=10, d=20, threshold=0.1, conductance_method=
     n = data.num_nodes
     
     lambda_crit = compute_lambda_critical(k)
-    print(f"[DEBUG] λ_critical ≈ {lambda_crit:.4f} for filter order k = {k}")
+    # print(f"[DEBUG] λ_critical ≈ {lambda_crit:.4f} for filter order k = {k}")
     
     # Build adjacency matrix (NOT Laplacian)
     A = to_scipy_sparse_matrix(data.edge_index, num_nodes=n).tocsr()
-    print(f"[DEBUG] Original graph: {n} nodes, {A.nnz} edges")
+    # print(f"[DEBUG] Original graph: {n} nodes, {A.nnz} edges")
     
     # Build normalized Laplacian for filtering
     L_norm = build_normalized_laplacian(A)
@@ -213,16 +213,16 @@ def cmg_filtered_clustering(data, k=10, d=20, threshold=0.1, conductance_method=
     degrees = np.array(A_reweighted.sum(axis=1)).flatten()
     L_reweighted = sp.diags(degrees) - A_reweighted
     
-    print(f"[DEBUG] Reweighted graph: {A_reweighted.nnz} edges")
+    # print(f"[DEBUG] Reweighted graph: {A_reweighted.nnz} edges")
     
     # Run CMG clustering
-    print("[DEBUG] Calling CMG on reweighted Laplacian")
+    # print("[DEBUG] Calling CMG on reweighted Laplacian")
     try:
         cI_raw, nc = cmgCluster(L_reweighted.tocsc())
         cI = cI_raw - 1  # Convert from 1-indexed to 0-indexed
         print(f"[DEBUG] CMG found {nc} clusters")
         # print(f"[DEBUG] Raw CMG output (1-indexed): {cI_raw}")
-        print(f"[DEBUG] Converted clusters (0-indexed): {cI}")
+        # print(f"[DEBUG] Converted clusters (0-indexed): {cI}")
     except Exception as e:
         print(f"[ERROR] CMG failed: {e}")
         cI = np.zeros(n, dtype=int)

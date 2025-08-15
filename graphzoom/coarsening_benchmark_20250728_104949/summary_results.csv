@@ -1,0 +1,10 @@
+config,method,level_ratio,dataset,accuracy,total_time,efficiency_score,coarsening_info
+lamg_r6,lamg,r6,cora,0.738,522.329,6.702100648978859,
+cmg_l3,cmg,l3,cora,0.685,583.311,5.570435214590788,Final: 254 nodes
+cmg_l2,cmg,l2,cora,0.724,930.228,3.6918825898262835,Final: 403 nodes
+lamg_r3,lamg,r3,cora,0.716,1220.273,2.783266181997946,
+cmg_l1,cmg,l1,cora,0.741,2187.9,1.6065323021638933,Final: 941 nodes
+simple_l3,simple,l3,cora,0.759,2849.608,1.2634421955749031,
+lamg_r2,lamg,r2,cora,0.708,2798.381,1.200121280712467,
+simple_l2,simple,l2,cora,0.753,3571.854,1.0,
+simple_l1,simple,l1,cora,0.753,4578.788,0.7800872195873668,

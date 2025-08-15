@@ -1,4 +1,9 @@
 #!/bin/sh
+# script for execution of deployed applications
+#
+# Sets up the MATLAB Runtime environment for the current $ARCH and executes 
+# the specified command.
+#
 # Fixed script for MCR 2018a with v94 directory structure
 exe_name=$0
 exe_dir=`dirname "$0"`

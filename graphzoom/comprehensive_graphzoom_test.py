@@ -125,7 +125,7 @@ def run_graphzoom_experiment(dataset, method, fusion_enabled, level_or_ratio, pa
                 mapping = sim_coarse_fusion(laplacian)
             elif method == "lamg":
                 fusion_input_path = f"dataset/{dataset}/{dataset}.mtx"
-                os.system(f'./run_coarsening.sh ~/matlab/R2018a {fusion_input_path} 12 f {reduce_results}')
+                os.system(f'./run_coarsening.sh ~/matlab/R2018a/ {fusion_input_path} 12 f {reduce_results}')
                 mapping = mtx2matrix(mapping_path)
             elif method == "cmg":
                 mapping = cmg_fusion_mapping(laplacian, cmg_params['k'], cmg_params['d'], cmg_params['threshold'])
@@ -177,7 +177,7 @@ def run_graphzoom_experiment(dataset, method, fusion_enabled, level_or_ratio, pa
                 coarsen_input_path = f"dataset/{dataset}/{dataset}.mtx"
             
             # Run LAMG coarsening with reduce_ratio
-            os.system(f'./run_coarsening.sh ~/matlab/R2018a {coarsen_input_path} {reduce_ratio} n {reduce_results}')
+            os.system(f'./run_coarsening.sh ~/matlab/R2018a/ {coarsen_input_path} {reduce_ratio} n {reduce_results}')
             
             # Read LAMG results
             reduce_time_file = read_time(f"{reduce_results}CPUtime.txt")
@@ -299,13 +299,30 @@ def main():
     print("🚀 Starting Comprehensive GraphZoom Testing")
     print("=" * 80)
     
-    # Test configurations
-    datasets = ['cora', 'citeseer', 'pubmed']
+    # Test configurations - 6 datasets for comprehensive evaluation
+    datasets = [
+        #'cora', 'citeseer', 'pubmed',           # Citation networks
+        'dblp', 'blogcatalog'
+        #, 'ppi'           # Co-authorship, Social, Biological
+        # 'erdos_renyi_1500', 'small_world_1500', 'scale_free_1500'
+
+    ]
     methods_config = {
         'cmg': {'levels': [1, 2, 3], 'params': {'k': 10, 'd': 15, 'threshold': 0.1}},
         'lamg': {'reduce_ratios': [2, 3, 6], 'params': None},  # These are reduce_ratios, not levels
         'simple': {'levels': [1, 2, 3], 'params': None}
     }
+    
+    """
+    dblp                :  4057 nodes, 12162 edges,  334 features,  4 classes
+    blogcatalog         :  5196 nodes, 10907 edges, 8189 features,  6 classes
+    ppi                 : 44906 nodes, 613184 edges,   50 features, 26 classes
+    erdos_renyi_1500    :  1500 nodes,  5588 edges,  100 features,  2 classes
+    small_world_1500    :  1500 nodes,  4500 edges,  100 features,  4 classes
+    scale_free_1500     :  1500 nodes,  4491 edges,  100 features,  2 classes
+
+    """
+    
     fusion_options = [True, False]
     
     # Calculate total experiments
@@ -320,6 +337,8 @@ def main():
     
     print(f"📊 Total experiments planned: {total_experiments}")
     print(f"📁 Results will be saved in: results/")
+    print(f"🗃️  Datasets: {', '.join(datasets)}")
+    print(f"⚙️  Methods: {', '.join(methods_config.keys())}")
     print("=" * 80)
     
     # Prepare results storage
@@ -409,7 +428,9 @@ def main():
         print(f"{dataset}: {best['accuracy']:.4f} ({best['method']}, fusion={best['fusion']}, " + 
               (f"level={best['level']}" if best['level'] is not None else f"reduce_ratio={best['reduce_ratio_param']}"))
     
-    print(f"\n✨ Testing completed! Check {results_file} for detailed results.")
+    print(f"\n✨ Comprehensive evaluation completed! ({total_experiments} experiments across {len(datasets)} datasets)")
+    print(f"📊 Results saved to: {results_file}")
+    print(f"🎯 Datasets tested: {', '.join(datasets)}")
     return 0
 
 

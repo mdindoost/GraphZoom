@@ -184,6 +184,7 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
         projections: list of projection matrices
         laplacians: list of Laplacian matrices at each level
         level: number of levels
+        all_cluster_assignments: list of cluster assignments for each level (NEW)
     """
     print(f"[CMG] Starting CMG coarsening with k={k}, d={d}, threshold={threshold}")
     print(f"[CMG] Input graph: {laplacian.shape[0]} nodes, {int((laplacian.nnz - laplacian.shape[0])/2)} edges")
@@ -191,6 +192,7 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
     
     projections = []
     laplacians = []
+    all_cluster_assignments = []  # NEW: Store cluster assignments for each level
     current_laplacian = laplacian.copy()
     
     for i in range(level):
@@ -210,6 +212,9 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
             )
             print(f"[CMG] Found {nc} clusters, λ_critical ≈ {lambda_crit:.4f}")
             
+            # NEW: Store cluster assignments
+            all_cluster_assignments.append(clusters)
+            
         except Exception as e:
             print(f"[CMG] Error in CMG clustering: {e}")
             # Fallback to simple clustering if CMG fails
@@ -218,6 +223,11 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
             filter_ = smooth_filter(current_laplacian, 0.1)
             current_laplacian, mapping = spec_coarsen(filter_, current_laplacian)
             projections.append(mapping)
+            
+            # NEW: Create fallback cluster assignments
+            n_nodes = current_laplacian.shape[0]
+            fallback_assignments = list(range(n_nodes))  # Each node in its own cluster
+            all_cluster_assignments.append(fallback_assignments)
             continue
         
         # Build projection matrix from CMG clusters
@@ -251,7 +261,8 @@ def cmg_coarse(laplacian, level=1, k=10, d=20, threshold=0.1):
     os.makedirs("results/timing_results", exist_ok=True)
     save_timing_data(timing_file)
     
-    return G, projections, laplacians, level
+    # NEW: Return cluster assignments as well
+    return G, projections, laplacians, level, all_cluster_assignments
 
 
 # ========================= LEGACY FUNCTION =========================

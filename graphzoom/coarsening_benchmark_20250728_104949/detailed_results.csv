@@ -1,0 +1,10 @@
+config,method,level_ratio,dataset,accuracy,total_time,fusion_time,reduction_time,embedding_time,refinement_time,coarsening_info,status,efficiency_score
+cmg_l3,cmg,l3,cora,0.685,583.311,0.0,2.058,581.229,0.024,Final: 254 nodes,completed,5.570435214590788
+lamg_r3,lamg,r3,cora,0.716,1220.273,0.0,0.83,1219.426,0.017,,completed,2.783266181997946
+cmg_l2,cmg,l2,cora,0.724,930.228,0.0,1.901,928.31,0.017,Final: 403 nodes,completed,3.6918825898262835
+cmg_l1,cmg,l1,cora,0.741,2187.9,0.0,1.227,2186.659,0.014,Final: 941 nodes,completed,1.6065323021638933
+lamg_r2,lamg,r2,cora,0.708,2798.381,0.0,1.09,2797.277,0.013,,completed,1.200121280712467
+lamg_r6,lamg,r6,cora,0.738,522.329,0.0,0.87,521.438,0.021,,completed,6.702100648978859
+simple_l2,simple,l2,cora,0.753,3571.854,0.0,0.267,3571.571,0.017,,completed,1.0
+simple_l1,simple,l1,cora,0.753,4578.788,0.0,0.163,4578.614,0.012,,completed,0.7800872195873668
+simple_l3,simple,l3,cora,0.759,2849.608,0.0,0.333,2849.254,0.021,,completed,1.2634421955749031

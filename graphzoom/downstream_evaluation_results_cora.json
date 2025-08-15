@@ -1,0 +1,176 @@
+[
+  {
+    "method": "CMG-1 + Original Refinement",
+    "coarsening": "cmg",
+    "enhanced": false,
+    "time": 0.011903047561645508,
+    "val_accuracy": 0.6444444444444445,
+    "test_accuracy": 0.6254612546125461,
+    "val_f1": 0.5866531237525153,
+    "test_f1": 0.5874035553742056,
+    "cmg_levels": 1
+  },
+  {
+    "method": "CMG-1 + Enhanced MP Refinement",
+    "coarsening": "cmg",
+    "enhanced": true,
+    "time": 42.918237924575806,
+    "val_accuracy": 0.6444444444444445,
+    "test_accuracy": 0.6263837638376384,
+    "val_f1": 0.5839454982620007,
+    "test_f1": 0.5882575116952481,
+    "cmg_levels": 1
+  },
+  {
+    "method": "CMG-2 + Original Refinement",
+    "coarsening": "cmg",
+    "enhanced": false,
+    "time": 0.008875846862792969,
+    "val_accuracy": 0.6777777777777778,
+    "test_accuracy": 0.6678966789667896,
+    "val_f1": 0.6246209726656018,
+    "test_f1": 0.6333165592805939,
+    "cmg_levels": 2
+  },
+  {
+    "method": "CMG-2 + Enhanced MP Refinement",
+    "coarsening": "cmg",
+    "enhanced": true,
+    "time": 42.51851296424866,
+    "val_accuracy": 0.6814814814814815,
+    "test_accuracy": 0.6738929889298892,
+    "val_f1": 0.6316360420178043,
+    "test_f1": 0.6396103525483371,
+    "cmg_levels": 2
+  },
+  {
+    "method": "CMG-3 + Original Refinement",
+    "coarsening": "cmg",
+    "enhanced": false,
+    "time": 0.01983499526977539,
+    "val_accuracy": 0.7296296296296296,
+    "test_accuracy": 0.7190959409594095,
+    "val_f1": 0.6712338188943608,
+    "test_f1": 0.6863666170554807,
+    "cmg_levels": 3
+  },
+  {
+    "method": "CMG-3 + Enhanced MP Refinement",
+    "coarsening": "cmg",
+    "enhanced": true,
+    "time": 44.122984886169434,
+    "val_accuracy": 0.7296296296296296,
+    "test_accuracy": 0.7283210332103321,
+    "val_f1": 0.6791477610937633,
+    "test_f1": 0.6958778420491398,
+    "cmg_levels": 3
+  },
+  {
+    "method": "CMG-4 + Original Refinement",
+    "coarsening": "cmg",
+    "enhanced": false,
+    "time": 0.023041725158691406,
+    "val_accuracy": 0.725925925925926,
+    "test_accuracy": 0.7338560885608856,
+    "val_f1": 0.6618887640825081,
+    "test_f1": 0.697497381189654,
+    "cmg_levels": 4
+  },
+  {
+    "method": "CMG-4 + Enhanced MP Refinement",
+    "coarsening": "cmg",
+    "enhanced": true,
+    "time": 45.651708126068115,
+    "val_accuracy": 0.7407407407407407,
+    "test_accuracy": 0.746309963099631,
+    "val_f1": 0.6800110516059377,
+    "test_f1": 0.7119781443876125,
+    "cmg_levels": 4
+  },
+  {
+    "method": "Simple + Original Refinement",
+    "coarsening": "simple",
+    "enhanced": false,
+    "time": 0.004975795745849609,
+    "val_accuracy": 0.6222222222222222,
+    "test_accuracy": 0.621309963099631,
+    "val_f1": 0.54559688445496,
+    "test_f1": 0.5871466738801844
+  },
+  {
+    "method": "Simple + Enhanced MP Refinement",
+    "coarsening": "simple",
+    "enhanced": true,
+    "time": 73.8134822845459,
+    "val_accuracy": 0.6185185185185185,
+    "test_accuracy": 0.6245387453874539,
+    "val_f1": 0.5424032640351426,
+    "test_f1": 0.5905081011489688
+  },
+  {
+    "method": "LAMG-2 + Original Refinement",
+    "coarsening": "lamg",
+    "enhanced": false,
+    "time": 0.005167484283447266,
+    "val_accuracy": 0.6333333333333333,
+    "test_accuracy": 0.6406826568265682,
+    "val_f1": 0.5608721619357067,
+    "test_f1": 0.6030466306164367,
+    "reduce_ratio": 2
+  },
+  {
+    "method": "LAMG-2 + Enhanced MP Refinement",
+    "coarsening": "lamg",
+    "enhanced": true,
+    "time": 47.149436235427856,
+    "val_accuracy": 0.6333333333333333,
+    "test_accuracy": 0.6425276752767528,
+    "val_f1": 0.5616319397643792,
+    "test_f1": 0.6058614225750514,
+    "reduce_ratio": 2
+  },
+  {
+    "method": "LAMG-3 + Original Refinement",
+    "coarsening": "lamg",
+    "enhanced": false,
+    "time": 0.00666356086730957,
+    "val_accuracy": 0.674074074074074,
+    "test_accuracy": 0.6674354243542435,
+    "val_f1": 0.6016742878739498,
+    "test_f1": 0.6380107555600942,
+    "reduce_ratio": 3
+  },
+  {
+    "method": "LAMG-3 + Enhanced MP Refinement",
+    "coarsening": "lamg",
+    "enhanced": true,
+    "time": 53.99584221839905,
+    "val_accuracy": 0.6814814814814815,
+    "test_accuracy": 0.6697416974169742,
+    "val_f1": 0.6157227337464066,
+    "test_f1": 0.6400830814109757,
+    "reduce_ratio": 3
+  },
+  {
+    "method": "LAMG-6 + Original Refinement",
+    "coarsening": "lamg",
+    "enhanced": false,
+    "time": 0.008860111236572266,
+    "val_accuracy": 0.6481481481481481,
+    "test_accuracy": 0.6757380073800738,
+    "val_f1": 0.5904252299951442,
+    "test_f1": 0.6503391286376676,
+    "reduce_ratio": 6
+  },
+  {
+    "method": "LAMG-6 + Enhanced MP Refinement",
+    "coarsening": "lamg",
+    "enhanced": true,
+    "time": 58.37286067008972,
+    "val_accuracy": 0.6592592592592592,
+    "test_accuracy": 0.6826568265682657,
+    "val_f1": 0.5991888112062356,
+    "test_f1": 0.6594285195857721,
+    "reduce_ratio": 6
+  }
+]

@@ -1,0 +1,1245 @@
+Command: python graphzoom_timed.py --embed_method graphsage --dataset cora --seed 42 --coarse lamg --reduce_ratio 3 --mcr_dir ~/matlab/R2018a -f
+Configuration: lamg_r3
+Wall clock start time: Mon Jul 28 11:07:55 AM EDT 2025
+Wall clock start timestamp: 1753715275.738802259
+========================================
+------------------------------------------
+Setting up environment variables
+---
+LD_LIBRARY_PATH is .:/home/mohammad/matlab/R2018a/v94/runtime/glnxa64:/home/mohammad/matlab/R2018a/v94/bin/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/os/glnxa64:/home/mohammad/matlab/R2018a/v94/sys/opengl/lib/glnxa64:/home/mohammad/matlab/R2018a/v94/extern/bin/glnxa64
+Loading Graph to be Reduced......
+
+GraphPath =
+
+    'dataset/cora/cora.mtx'
+
+
+ReductionRatio =
+
+     3
+
+
+Fusion =
+
+  logical
+
+   0
+
+
+SavePath =
+
+    'reduction_results/'
+
+###### Running LamgSetup ######
+Multi-level setup
+	#levels          = 3
+	Design gamma     = 1.5
+	Edge  complexity = 1.778
+	Cycle complexity = 5.865
+l  Type     Nodes    Edges    NodeR  EdgeR   DegL1   Nu  Gam  Work  TV 
+=======================================================================
+1  FINEST   2708     5278     1.000  1.000  3.90    3   1.5  3.00  4  
+2  AGG      1208     2607     0.446  0.494  4.32    3   1.5  2.61  5  
+3  AGG      531      1498     0.440  0.575  5.64    0   0.0  0.26  0  
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:30: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  method='lar', copy_X=True, eps=np.finfo(np.float).eps,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:167: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  method='lar', copy_X=True, eps=np.finfo(np.float).eps,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:284: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  eps=np.finfo(np.float).eps, copy_Gram=True, verbose=0,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:862: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  eps=np.finfo(np.float).eps, copy_X=True, fit_path=True,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:1101: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  eps=np.finfo(np.float).eps, copy_X=True, fit_path=True,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:1127: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  eps=np.finfo(np.float).eps, positive=False):
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:1362: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  max_n_alphas=1000, n_jobs=None, eps=np.finfo(np.float).eps,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:1602: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  max_n_alphas=1000, n_jobs=None, eps=np.finfo(np.float).eps,
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/linear_model/least_angle.py:1738: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  eps=np.finfo(np.float).eps, copy_X=True, positive=False):
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:49: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+%%%%%% Loading Graph Data %%%%%%
+%%%%%% Starting Graph Reduction %%%%%%
+**********************[LAMG] Coarsening input path: dataset/cora/cora.mtx
+[LAMG] Preview of input .mtx:
+2708 2708 7986
+1 1 5
+2 2 1
+3 3 4
+4 4 3
+5 5 1
+6 6 2
+7 7 2
+8 8 1
+9 1 -1
+9 9 5
+10 10 4
+11 11 5
+12 12 2
+13 13 2
+14 14 3
+15 1 -1
+15 9 -1
+15 15 19
+16 16 10
+17 17 4
+18 18 1
+19 19 7
+20 20 2
+21 21 5
+22 22 4
+23 23 5
+24 24 2
+25 25 2
+26 21 -1
+26 26 5
+27 27 3
+28 28 2
+29 29 4
+30 30 4
+31 31 5
+32 15 -1
+32 32 3
+33 33 1
+34 34 3
+35 35 5
+36 35 -1
+36 36 1
+37 37 9
+38 38 1
+39 39 5
+40 25 -1
+40 40 2
+41 41 1
+42 24 -1
+42 42 14
+43 43 4
+44 44 2
+45 45 3
+46 46 4
+47 47 4
+48 48 1
+49 49 4
+50 50 2
+51 51 4
+52 52 3
+53 53 5
+54 54 4
+55 55 5
+56 56 6
+57 57 3
+58 58 5
+59 59 4
+60 60 7
+61 61 5
+62 62 1
+63 63 7
+64 64 4
+65 65 4
+66 66 2
+67 35 -1
+67 67 16
+68 68 1
+69 69 7
+70 67 -1
+70 70 1
+71 71 6
+72 72 8
+73 73 4
+74 74 1
+75 20 -1
+75 72 -1
+75 75 40
+76 76 7
+77 77 16
+78 78 1
+79 79 6
+80 80 2
+81 16 -1
+81 81 2
+82 82 1
+83 40 -1
+83 83 10
+84 84 2
+85 13 -1
+%%%%%% Starting Graph Embedding %%%%%%
+Loading training data..
+Removed 0 nodes that lacked proper annotations due to networkx versioning issues
+Loaded data.. now preprocessing..
+Whether consider weighted graph?????? True
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+The 0-th walk
+The 1-th walk
+The 2-th walk
+The 3-th walk
+The 4-th walk
+The 5-th walk
+The 6-th walk
+The 7-th walk
+The 8-th walk
+The 9-th walk
+The 10-th walk
+The 11-th walk
+The 12-th walk
+The 13-th walk
+The 14-th walk
+The 15-th walk
+The 16-th walk
+The 17-th walk
+The 18-th walk
+The 19-th walk
+The 20-th walk
+The 21-th walk
+The 22-th walk
+The 23-th walk
+The 24-th walk
+The 25-th walk
+The 26-th walk
+The 27-th walk
+The 28-th walk
+The 29-th walk
+The 30-th walk
+The 31-th walk
+The 32-th walk
+The 33-th walk
+The 34-th walk
+The 35-th walk
+The 36-th walk
+The 37-th walk
+The 38-th walk
+The 39-th walk
+The 40-th walk
+The 41-th walk
+The 42-th walk
+The 43-th walk
+The 44-th walk
+The 45-th walk
+The 46-th walk
+The 47-th walk
+The 48-th walk
+The 49-th walk
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:104: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:109: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/models.py:253: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/neigh_samplers.py:27: The name tf.random_shuffle is deprecated. Please use tf.random.shuffle instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/aggregators.py:29: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/inits.py:13: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/aggregators.py:46: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/models.py:394: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/models.py:407: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:210: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:216: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:217: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:220: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /home/mohammad/GraphZoom/graphzoom/embed_methods/graphsage/graphsage.py:231: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+/home/mohammad/anaconda3/envs/graphzoom-tf1/lib/python3.7/site-packages/sklearn/utils/fixes.py:223: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if _joblib.__version__ >= LooseVersion('0.12'):
+Done loading training data..
+Unexpected missing: 0
+531 train nodes
+0 test nodes
+Epoch: 0001
+Iter: 0000 train_loss= 19.18064 train_mrr= 0.38378 train_mrr_ema= 0.38378 val_loss= nan val_mrr= nan val_mrr_ema= nan time= 1.36461
+Iter: 0050 train_loss= 18.60966 train_mrr= 0.36749 train_mrr_ema= 0.37220 val_loss= nan val_mrr= nan val_mrr_ema= nan time= 0.90914
+Iter: 0100 train_loss= 17.82039 train_mrr= 0.41404 train_mrr_ema= 0.36985 val_loss= nan val_mrr= nan val_mrr_ema= nan time= 0.90709
+Iter: 0150 train_loss= 17.54036 train_mrr= 0.33267 train_mrr_ema= 0.37330 val_loss= nan val_mrr= nan val_mrr_ema= nan time= 0.90555
+Optimization Finished!
+embed_start=  4.144311715
+time.process_time()=  1223.570116775
+embed_time=  1219.425813242
+%%%%%% Starting Graph Refinement %%%%%%
+%%%%%% Starting Evaluation %%%%%%
+Loading data...
+Running regression..
+Test Accuracy:  0.716
+%%%%%% CPU time %%%%%%
+Graph Fusion     Time: 0
+Graph Reduction  Time: 0.830
+Graph Embedding  Time: 1219.426
+Graph Refinement Time: 0.017
+Total Time = Fusion_time + Reduction_time + Embedding_time + Refinement_time = 1220.273
+========================================
+Wall clock end time: Mon Jul 28 11:11:09 AM EDT 2025
+Wall clock end timestamp: 1753715469.348081153
+Wall clock duration: 193.609278894s
+Exit code: 0
