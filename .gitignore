@@ -1,38 +1,21 @@
-# Large dataset files and downloads - NEVER track these
+# Dataset files - never track these
 graphzoom/dataset/raw_downloads/
 graphzoom/dataset/*/raw/
 graphzoom/dataset/*/processed/
 graphzoom/dataset/*/*.npy
-graphzoom/dataset/*/*.pkl  
-graphzoom/dataset/*/*.adjlist
+graphzoom/dataset/*/*.pkl
 graphzoom/dataset/*/*.pt
 graphzoom/dataset/*/*.npz
+graphzoom/dataset/*/fused_*.mtx
 
-# Keep only essential small files in dataset folders
-# (like .json, .mtx files for Cora, Citeseer, etc.)
+# Keep only small essential files like .json, .mtx (not fused_*.mtx)
+!graphzoom/dataset/*/*.json
+!graphzoom/dataset/*/*.mtx
+graphzoom/dataset/*/fused_*.mtx
 
-# Results and outputs
+# Results and tools
 embed_results/
 results/
-*.npy
-*.pkl
-*.pt
-*.h5
-*.hdf5
-
-# Temporary and cache files
-.cache/
-__pycache__/
-*.pyc
-*.tmp
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# BFG cleanup artifacts
+reduction_results/
 .git.bfg-report/
 bfg.jar
-
-# Additional working directories
-graphzoom/reduction_results/
