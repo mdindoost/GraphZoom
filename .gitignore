@@ -6,7 +6,7 @@ __pycache__/
 # Temporary results and working directories
 graphzoom/reduction_results/
 graphzoom/results/timing_results/
-
+graphzoom/embed_results/
 # Lock files and temporary files
 .~lock.*
 *.lock
@@ -20,3 +20,6 @@ graphzoom/results/timing_results/
 *parameter_sweep*.py
 *improved_*.py
 *corrected_*.py
+
+
+
