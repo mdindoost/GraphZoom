@@ -412,7 +412,7 @@ def apply_inter_cluster_graphsage(coarsened_graph: nx.Graph,
         
         # Calculate appropriate training iterations
         coarse_ratio = max(1.0, super_features.shape[0] / max(1, coarsened_graph.number_of_nodes()))
-        print("------------------------ coarse_ratio=", coarse_ratio)
+        print("------------------------this is wrong fix it coarse_ratio=", coarse_ratio)
         training_iterations = max(50, int(training_epochs / coarse_ratio))
         
         print(f"[INTER-CLUSTER] Training iterations: {training_iterations}")

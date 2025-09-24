@@ -435,7 +435,7 @@ def main():
     elif args.embed_method == "true_coarsened_graphsage":
         from embed_methods.graphsage.true_coarsened_graphsage import true_coarsened_graphsage
         
-        print("🚀 RUNNING TRUE COARSENED GRAPHSAGE (Your Original Vision)")
+        print("-----++++++++++++RUNNING TRUE COARSENED GRAPHSAGE (New Idea)")
         print(f"🎯 Dataset: {dataset}")
         print(f"🎯 Coarsening method: {args.coarse}")
         print(f"🎯 Fusion enabled: {args.fusion}")
