@@ -19,3 +19,17 @@ results/
 reduction_results/
 .git.bfg-report/
 bfg.jar
+
+# Results and embeddings - never track these
+graphzoom/results/
+graphzoom/embed_results/
+graphzoom/*.npy
+graphzoom/dataset/*/ppi-G.json
+
+# BFG cleanup files
+bfg.jar
+.git.bfg-report/
+
+# Python cache
+graphzoom/__pycache__/
+graphzoom/embed_methods/**/__pycache__/
