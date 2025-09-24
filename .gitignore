@@ -23,3 +23,35 @@ graphzoom/embed_results/
 
 
 
+# Large dataset files
+dataset/*/raw/
+dataset/raw_downloads/
+dataset/*/*.npy
+dataset/*/*.pkl  
+dataset/*/*.adjlist
+dataset/*/processed/
+
+# Results and outputs
+embed_results/
+results/
+*.npy
+*.pkl
+*.pt
+*.h5
+*.hdf5
+# Large dataset files
+graphzoom/dataset/*/raw/
+graphzoom/dataset/raw_downloads/
+graphzoom/dataset/*/*.npy
+graphzoom/dataset/*/*.pkl  
+graphzoom/dataset/*/*.adjlist
+graphzoom/dataset/*/processed/
+
+# Results and outputs
+embed_results/
+results/
+*.npy
+*.pkl
+*.pt
+*.h5
+*.hdf5
